@@ -23,7 +23,17 @@
         <h1>Is the First Amendment really coming first?</h1>
 
         <!-- Visualization placeholders -->
-        <div id="visual-timeline"></div>
+        <div id="visual-timeline">
+          <audio id="saviosound" controls>
+            <source src="data/timeline/savio.mp3" type="audio/mp3">
+          </audio>
+          <div id="info"></div>
+          <div class="wrappe">
+            <video id = "bostonVideo" width="320" height="240" autoplay>
+            <source src="data/timeline/boston.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
         <div id="line-graphs"></div>
         <div id="map-of-schools"></div>
         <div id="disinvited-speakers"></div>
@@ -45,5 +55,6 @@
 
   <!-- Load data, create visualizations -->
   <script src="js/main.js"></script>
+  <script src="js/timeline.js"></script>
 </body>
 </html>

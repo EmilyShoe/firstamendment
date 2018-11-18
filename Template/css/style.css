@@ -20,6 +20,24 @@ h1 .sub-headline {
 	font-weight: 300;
 }
 
+#saviosound {
+    visibility: hidden;
+}
+
+#info {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+#bostonVideo {
+    position: absolute;
+    left: 186.21737194064195px;
+    top: 150px;
+    width: 200px;
+    height: 200px;
+    padding-left: 50px;
+}
 /*
 Specify size of the map container for leaflet
 #station-map {
