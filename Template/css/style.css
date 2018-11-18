@@ -11,15 +11,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-h1 .divider {
-	margin: 0 8px;
-}
-
-h1 .sub-headline {
-	color: #888;
-	font-weight: 300;
-}
-
 #saviosound {
     visibility: hidden;
 }
@@ -38,7 +29,8 @@ h1 .sub-headline {
     height: 200px;
     padding-left: 50px;
 }
-/*
-Specify size of the map container for leaflet
-#station-map {
- */
+
+#line-graphs {
+    width: 50%;
+    height: 500px;
+}
