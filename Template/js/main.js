@@ -1,8 +1,8 @@
-var parseDate = d3.timeParse("%Y");
-
 queue()
 	.defer(d3.csv,"data/gssSpeech.csv")
 	.await(createVis);
+
+var lineGraph;
 
 function createVis(error, gssSpeech) {
     if (error) {
@@ -27,8 +27,14 @@ function createVis(error, gssSpeech) {
         return result;
     });
 
-    var lineGraph = new LineGraph("line-graphs", cleanGssData);
+
+    lineGraph = new LineGraph("line-graphs", cleanGssData);
+
 }
+
+$("#speaker-select").on("change", function(){
+    lineGraph.speakerChanged(this.value);
+});
 
 function allowedEncode(s) {
     if(s==="Not allowed") return 0;

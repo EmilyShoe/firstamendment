@@ -11,16 +11,8 @@ h1 {
   margin-bottom: 20px;
 }
 
-h1 .divider {
-	margin: 0 8px;
-}
 
-h1 .sub-headline {
-	color: #888;
-	font-weight: 300;
+#line-graphs {
+    width: 50%;
+    height: 500px;
 }
-
-/*
-Specify size of the map container for leaflet
-#station-map {
- */
