@@ -17,6 +17,9 @@ LineGraph = function(_parentElement, _data){
  * Initialize visualization (static content, e.g. SVG area or axes)
  */
 
+var parseDate = d3.timeParse("%Y");
+
+
 LineGraph.prototype.initVis = function(){
     var vis = this;
 
@@ -40,20 +43,9 @@ LineGraph.prototype.initVis = function(){
     vis.y = d3.scaleLinear()
         .range([vis.height, 0]);
 
-    vis.xAxis = d3.axisBottom()
-        .scale(vis.x);
-
-    vis.yAxis = d3.axisLeft()
-        .scale(vis.y)
-        .ticks(6);
 
 
-    // Set domains
-    var minMaxY= [0, d3.max(vis.data.map(function(d){ return d.count; }))];
-    vis.y.domain(minMaxY);
 
-    var minMaxX = d3.extent(vis.data.map(function(d){ return d.time; }));
-    vis.x.domain(minMaxX);
 
     vis.svg.append("g")
         .attr("class", "x-axis axis")
@@ -66,7 +58,7 @@ LineGraph.prototype.initVis = function(){
     vis.svg.append("text")
         .attr("x", -50)
         .attr("y", -8)
-        .text("Votes");
+        .text("Should be allowed");
 
 
     // (Filter, aggregate, modify data)
@@ -81,8 +73,34 @@ LineGraph.prototype.initVis = function(){
 
 LineGraph.prototype.wrangleData = function(){
     var vis = this;
+    //console.log(vis.data);
 
-    this.displayData = this.data;
+    var chosen = "spkhomo";
+    vis.displayData = this.data.filter(function(d) {
+        return (d[chosen] < 2);
+    });
+
+    vis.dataTotals = d3.nest()
+        .key(function(d) { return d.year; })
+        .rollup(function(leaves) { return leaves.length; })
+        .entries(vis.displayData);
+
+
+    vis.displayData = d3.nest()
+        .key(function (d) { return d.year; })
+        .rollup((function(values) {
+            return d3.sum(values, function(v) { return v[chosen]; });
+        }))
+        .entries(vis.displayData);
+
+    vis.displayData.map(function(d, index) {
+        d.value = d.value / vis.dataTotals[index].value;
+        d.key = parseDate(d.key);
+    });
+
+    console.log(vis.displayData);
+
+
 
     // Update the visualization
     vis.updateVis();
@@ -98,6 +116,34 @@ LineGraph.prototype.wrangleData = function(){
 LineGraph.prototype.updateVis = function(){
     var vis = this;
 
+
+    // Set domains
+    var minMaxY= [0, d3.max(vis.displayData.map(function(d){ return d.value; }))];
+    vis.y.domain(minMaxY);
+
+    var minMaxX = d3.extent(vis.displayData.map(function(d){ return d.key; }));
+    vis.x.domain(minMaxX);
+
+
+    vis.xAxis = d3.axisBottom()
+        .scale(vis.x);
+
+    vis.yAxis = d3.axisLeft()
+        .scale(vis.y)
+        .ticks(6);
+
+    var line = d3.line()
+        .x(function(d) { return vis.x(d.key)})
+        .y(function(d) { return vis.y(d.value)});
+
+    vis.svg.append("path")
+        .datum(vis.displayData)
+        .attr("fill", "none")
+        .attr("stroke", "steelblue")
+       // .attr("stroke-linejoin", "round")
+      //  .attr("stroke-linecap", "round")
+        .attr("stroke-width", 1.5)
+        .attr("d", line);
 
     // Call axis functions with the new domain
     vis.svg.select(".x-axis").call(vis.xAxis);

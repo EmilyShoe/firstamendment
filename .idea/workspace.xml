@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09f3d807-07ef-4362-b5bb-85e1e60db361" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Template/js/d3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Template/js/lineGraph.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Template/js/queue.v1.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/data/gssSpeech.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Template/data/gssSpeech.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/js/lineGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/Template/js/lineGraph.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Template/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Template/js/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -28,7 +27,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="1" />
+          <entry key="csv" value="3" />
           <entry key="html" value="1" />
           <entry key="js" value="5" />
         </counts>
@@ -37,19 +36,19 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="5" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="163" />
-          <entry key="js" value="165" />
+          <entry key="html" value="186" />
+          <entry key="js" value="1747" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="163" />
-          <entry key="JavaScript" value="165" />
+          <entry key="HTML" value="186" />
+          <entry key="JavaScript" value="1747" />
         </counts>
       </usages-collector>
     </session>
@@ -60,25 +59,34 @@
         <entry file="file://$PROJECT_DIR$/Template/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="615">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Template/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+              <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Template/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="11" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Template/data/gssSpeech.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11016">
+              <caret line="56360" column="13" lean-forward="true" selection-start-line="56360" selection-start-column="13" selection-end-line="56360" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Template/js/lineGraph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+            <state relative-caret-position="244">
+              <caret line="79" column="31" lean-forward="true" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -110,8 +118,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Template/index.html" />
-        <option value="$PROJECT_DIR$/Template/js/lineGraph.js" />
         <option value="$PROJECT_DIR$/Template/js/main.js" />
+        <option value="$PROJECT_DIR$/Template/data/gssSpeech.csv" />
+        <option value="$PROJECT_DIR$/Template/js/lineGraph.js" />
       </list>
     </option>
   </component>
@@ -121,10 +130,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="898" />
+    <option name="height" value="957" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -204,15 +213,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542402068187</updated>
-      <workItem from="1542402071081" duration="5399000" />
+      <workItem from="1542402071081" duration="12164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5399000" />
+    <option name="totallyTimeSpent" value="12164000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="957" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="957" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -223,7 +232,7 @@
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32908458" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32857144" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -241,11 +250,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Template/data/gssSpeech.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-70209" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Template/js/bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -261,24 +265,36 @@
     <entry file="file://$PROJECT_DIR$/Template/js/d3.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Template/js/lineGraph.js">
+    <entry file="file://$PROJECT_DIR$/Template/data/old.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
+        <state relative-caret-position="-2" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Template/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Template/data/gssSpeech.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11016">
+          <caret line="56360" column="13" lean-forward="true" selection-start-line="56360" selection-start-column="13" selection-end-line="56360" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Template/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        <state>
+          <caret column="11" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Template/js/lineGraph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="79" column="31" lean-forward="true" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
         </state>
       </provider>
     </entry>
