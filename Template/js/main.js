@@ -1,16 +1,17 @@
 queue()
 	.defer(d3.csv,"data/gssSpeech.csv")
     .defer(d3.json,"data/collegesData.geojson")
+    .defer(d3.json,"data/us-10m.json")
 	.await(createVis);
 
 var lineGraph;
 
-function createVis(error, gssSpeech, colleges) {
+function createVis(error, gssSpeech, colleges, usmap) {
     if (error) {
         console.log(error);
     }
 
-    //console.log(gssSpeech);
+    //Prepare and draw gss line graph
     cleanGssData = gssSpeech.map(function(d){
         var result = {
             year : +d.year,
@@ -30,7 +31,11 @@ function createVis(error, gssSpeech, colleges) {
 
 
     lineGraph = new LineGraph("line-graphs", cleanGssData);
-    collegeMap = new CollegeMap("map-of-schools", colleges);
+
+    //prepare and draw colleges on map
+    var usa = topojson.feature(usmap, usmap.objects.states).features;
+
+    collegeMap = new CollegeMap("map", colleges, usa);
 
 }
 

@@ -3519,7 +3519,7 @@
     },
     "properties": {
     "School":"University of North Carolina - Charlotte",
-    "Light":"",
+    "Light":"green",
     "Private":"FALSE",
     "Ivy":"FALSE"
     }

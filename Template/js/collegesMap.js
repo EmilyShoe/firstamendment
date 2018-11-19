@@ -5,9 +5,10 @@
  * @param _data				-- the actual data: gssSpeech
  */
 
-CollegeMap = function(_parentElement, _data){
+CollegeMap = function(_parentElement, _data, _mapdata){
     this.parentElement = _parentElement;
     this.data = _data;
+    this.mapdata = _mapdata;
     this.initVis();
 };
 
@@ -35,26 +36,20 @@ CollegeMap.prototype.initVis = function(){
         .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
 
-    var projection = d3.geoAlbersUsa();
-        // .scale(150)
-        // .translate([width / 2, height / 2]);
+    vis.projection = d3.geoAlbersUsa()
+        .scale(750)
+        .translate([width / 3.5, height / 2]);
 
-    var path = d3.geoPath()
-        .projection(projection);
+   vis.path = d3.geoPath()
+        .projection(vis.projection);
+
 
     // Render the map by using the path generator
-    svg.selectAll("path")
-        .data(vis.data.features)
+    vis.svg.selectAll("path")
+        .data(vis.mapdata)
         .enter().append("path")
-        .attr("d", path);
-
-    // svg.selectAll(".point")
-    //     .data(vis.data.nodes)
-    //     .enter().append("circle")
-    //     .attr("class", "point")
-    //     .attr("r", 5)
-    //     .attr("cx", function(d) {return projection([d.longitude, d.latitude])[0];})
-    //     .attr("cy", function(d) {return projection([d.longitude, d.latitude])[1];});
+        .attr("class", "usmap")
+        .attr("d", vis.path);
 
     // (Filter, aggregate, modify data)
     vis.wrangleData();
@@ -84,6 +79,19 @@ CollegeMap.prototype.wrangleData = function(){
 
 CollegeMap.prototype.updateVis = function(){
     var vis = this;
+
+    vis.circles = vis.svg.selectAll(".point")
+        .data(vis.data.features);
+
+    vis.circles.enter().append("circle")
+        .attr("class", "point")
+        .merge(vis.circles)
+        .attr("r", 3)
+        .attr("cx", function(d) {return vis.projection(d.geometry.coordinates)[0];})
+        .attr("cy", function(d) {return vis.projection(d.geometry.coordinates)[1];})
+        .attr("fill", function(d) {return d.properties.Light;});
+
+    vis.circles.exit().remove();
 
 };
 

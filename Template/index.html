@@ -23,11 +23,14 @@
         <h1>Is the First Amendment really coming first?</h1>
         <!-- Intro page -->
             <div id="first-amendment">
-              HERE IS THE TEXT OF THE FIRST AMENDMENT (styled as a quote) + a couple of sentences explaining why
-                we are making this visualization.
+                <div id="text-first-amendment">
+                    "Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances."
+                </div>
             </div>
             <div id="founding-fathers">
-              HERE ARE SOME FOUNDING FATHERS (images)
+                <img class="founding-fathers" src="img/foundingFathers/foundingFathersGroup1.png">
+                <img class="founding-fathers" src="img/foundingFathers/foundingFathersGroup2.png">
+                <img class="founding-fathers" src="img/foundingFathers/foundingFathersGroup3.png">
             </div>
 
             <!-- Visualization placeholders -->
@@ -50,7 +53,7 @@
             <div class="col-6" id="linegraph-description">
               Text here explaining the line graph data and general trends to look for.
             </div>
-            <div class="col-lg-6" id= "linegraph"> Should a
+            <div class="col-lg-6" id= "linegraph"> Should a(n)
               <select id="speaker-select">
                 <option value="spkcom">Communist</option>
                 <option value="spkmil">Militarist</option>
@@ -76,17 +79,17 @@
       </div>
       <div id="data-links">Links to data, sources for images, link to process book.</div>
 
-
+  </div>
 
   <!-- Load JS libraries -->
   <script src="js/jquery.min.js"></script>
   <script src="js/queue.v1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/topojson.min.js"></script>
   <script src="js/d3.min.js"></script>
   <script src="js/lineGraph.js"></script>
   <script src="js/collegesMap.js"></script>
-
 
   <!-- Visualization objects -->
 

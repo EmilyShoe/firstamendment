@@ -9,6 +9,7 @@ h1 {
   font-size: 30px;
   margin-top: 50px;
   margin-bottom: 20px;
+    text-align: center;
 }
 
 #saviosound {
@@ -39,14 +40,29 @@ h1 {
 #first-amendment {
     width: 100%;
     height: 300px;
-    background-color: #868e96;
+    background-image: url("../img/constitution.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     text-anchor: middle;
+}
+
+#text-first-amendment {
+    color: white;
+    background-color: #654C33;
+    opacity: 0.7;
+    text-align: center;
+    width: 30%;
+
 }
 
 #founding-fathers{
     width: 100%;
     height: 150px;
     background-color: #6c757d;
+}
+.founding-fathers{
+    width: 33%;
+    background-color: white;
 }
 
 #linegraph-description, #map-description {
@@ -55,6 +71,10 @@ h1 {
 
 #mapViz {
     height: 500px;
+}
+
+#map .usmap{
+    fill: #dddddd;
 }
 
 #disinvitation-visualization {
