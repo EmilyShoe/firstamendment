@@ -9,11 +9,11 @@ var data =[
     {
         "year": 1964,
         "title": "The Free Speech Movement, UC Berkeley, 1964",
-        "text": "The Free Speech Movement, was a large-scale student protest" +
+        "text": "The Free Speech Movement, was a large-scale student protest " +
             "on the campus of University of California, Berkeley. Lead by Mario " +
-            "Savio, it was started in response to an administrative decision" +
-            "to ban political activism on campus. On December 2nd 1964, around" +
-            "4000 students sat in Sproul Hall as a last resort to negotiate with" +
+            "Savio, it was started in response to an administrative decision " +
+            "to ban political activism on campus. On December 2nd 1964, around " +
+            " 4000 students sat in Sproul Hall as a last resort to negotiate with " +
             "administrators."
     },
     {
@@ -115,7 +115,6 @@ $("#savio")
         savioSpeech.pause();
     });
 
-console.log(x(1965));
 var bostonVid = $("#bostonVideo")[0];
 $("#boston")
     .mouseenter(function() {
