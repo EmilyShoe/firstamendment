@@ -22,7 +22,7 @@ var parseDate = d3.timeParse("%Y");
 LineGraph.prototype.initVis = function(){
     var vis = this;
 
-    vis.margin = { top: 40, right: 0, bottom: 60, left: 60 };
+    vis.margin = { top: 40, right: 60, bottom: 60, left: 60 };
 
     var parentElementSelector = ("#" + vis.parentElement);
     vis.width = $(parentElementSelector).width() - vis.margin.left - vis.margin.right;
