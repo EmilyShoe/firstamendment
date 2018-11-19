@@ -1,0 +1,4425 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.45653,36.98868 ]
+    },
+    "properties": {
+    "School":"Adams State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -100.47464,31.43325 ]
+    },
+    "properties": {
+    "School":"Alabama A&M University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.81952,33.49486 ]
+    },
+    "properties": {
+    "School":"Alabama State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.137292,31.874204 ]
+    },
+    "properties": {
+    "School":"Alcorn State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.088803,38.937495 ]
+    },
+    "properties": {
+    "School":"American University",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.517003,42.37091 ]
+    },
+    "properties": {
+    "School":"Amherst College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -100.460276,31.438269 ]
+    },
+    "properties": {
+    "School":"Angelo State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.684145,36.213484 ]
+    },
+    "properties": {
+    "School":"Appalachian State University",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.928053,33.42424 ]
+    },
+    "properties": {
+    "School":"Arizona State University",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.674859,35.843086 ]
+    },
+    "properties": {
+    "School":"Arkansas State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.965095,34.805408 ]
+    },
+    "properties": {
+    "School":"Athens State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.495166,32.593357 ]
+    },
+    "properties": {
+    "School":"Auburn University",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.406986,40.206103 ]
+    },
+    "properties": {
+    "School":"Ball State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.910054,42.02039 ]
+    },
+    "properties": {
+    "School":"Bard College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.963963,40.809097 ]
+    },
+    "properties": {
+    "School":"Barnard College",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.202186,44.105722 ]
+    },
+    "properties": {
+    "School":"Bates College",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.874622,47.486357 ]
+    },
+    "properties": {
+    "School":"Bemidgi State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.969705,42.089355 ]
+    },
+    "properties": {
+    "School":"Binghamton University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -103.871264,44.496505 ]
+    },
+    "properties": {
+    "School":"Black Hills State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.447275,41.008112 ]
+    },
+    "properties": {
+    "School":"Bloomsburg University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.20146,43.602695 ]
+    },
+    "properties": {
+    "School":"Boise State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.168495,42.335549 ]
+    },
+    "properties": {
+    "School":"Boston College",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.105399,42.3505 ]
+    },
+    "properties": {
+    "School":"Boston University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -69.963997,43.907693 ]
+    },
+    "properties": {
+    "School":"Bowdoin College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.630083,41.379779 ]
+    },
+    "properties": {
+    "School":"Bowling Green State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.258701,42.36548 ]
+    },
+    "properties": {
+    "School":"Brandeis University",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.96655,41.987662 ]
+    },
+    "properties": {
+    "School":"Bridgewater State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.952392,40.631232 ]
+    },
+    "properties": {
+    "School":"Brooklyn College",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.402548,41.826772 ]
+    },
+    "properties": {
+    "School":"Brown University",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"TRUE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.315234,40.028107 ]
+    },
+    "properties": {
+    "School":"Bryn Mawr College",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.885076,40.954772 ]
+    },
+    "properties": {
+    "School":"Bucknell University",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.125269,34.137658 ]
+    },
+    "properties": {
+    "School":"California Institute of Technology",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.230277,38.069186 ]
+    },
+    "properties": {
+    "School":"California Maritime Academy",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.662494,35.305005 ]
+    },
+    "properties": {
+    "School":"California Polytechnic State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -98.436244,34.604966 ]
+    },
+    "properties": {
+    "School":"Cameron University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.155826,44.461365 ]
+    },
+    "properties": {
+    "School":"Carleton College",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.943013,40.442808 ]
+    },
+    "properties": {
+    "School":"Carnegie Mellon University",
+    "Light":"green",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.608384,41.504341 ]
+    },
+    "properties": {
+    "School":"Case Western Reserve University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.764167,41.693255 ]
+    },
+    "properties": {
+    "School":"Central Connecticut State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.775636,43.581909 ]
+    },
+    "properties": {
+    "School":"Central Michigan University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.535898,47.007366 ]
+    },
+    "properties": {
+    "School":"Central Washington University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.781506,37.645692 ]
+    },
+    "properties": {
+    "School":"Centre College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.609374,41.717958 ]
+    },
+    "properties": {
+    "School":"Chicago State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.494413,37.064674 ]
+    },
+    "properties": {
+    "School":"Christopher Newport University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.707922,34.101777 ]
+    },
+    "properties": {
+    "School":"Claremont McKenna College",
+    "Light":"green",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.82467,42.252345 ]
+    },
+    "properties": {
+    "School":"Clark University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.836637,34.676111 ]
+    },
+    "properties": {
+    "School":"Clemson University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.674718,41.502497 ]
+    },
+    "properties": {
+    "School":"Cleveland State University",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -69.662636,44.563869 ]
+    },
+    "properties": {
+    "School":"Colby College",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.540176,42.816615 ]
+    },
+    "properties": {
+    "School":"Colgate University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.807961,42.239239 ]
+    },
+    "properties": {
+    "School":"College of the Holy Cross",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.222571,39.751014 ]
+    },
+    "properties": {
+    "School":"Colorado School of Mines",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.086547,40.573436 ]
+    },
+    "properties": {
+    "School":"Colorado State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.962573,40.807536 ]
+    },
+    "properties": {
+    "School":"Columbia University",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"TRUE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.473503,42.453449 ]
+    },
+    "properties": {
+    "School":"Cornell University",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"TRUE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.288694,43.704441 ]
+    },
+    "properties": {
+    "School":"Dartmouth College",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"TRUE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.844672,35.500802 ]
+    },
+    "properties": {
+    "School":"Davidson College",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.542273,39.186137 ]
+    },
+    "properties": {
+    "School":"Delaware State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.735451,33.745378 ]
+    },
+    "properties": {
+    "School":"Delta State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.938229,36.001426 ]
+    },
+    "properties": {
+    "School":"Duke University",
+    "Light":"green",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.364565,35.605511 ]
+    },
+    "properties": {
+    "School":"East Carolina University",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.175151,39.483672 ]
+    },
+    "properties": {
+    "School":"Eastern Illinois University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.298672,37.735321 ]
+    },
+    "properties": {
+    "School":"Eastern Kentucky University",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.624089,42.25068 ]
+    },
+    "properties": {
+    "School":"Eastern Michigan University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -103.348426,34.177787 ]
+    },
+    "properties": {
+    "School":"Eastern New Mexico University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.586089,47.490593 ]
+    },
+    "properties": {
+    "School":"Eastern Washington University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.120803,41.871572 ]
+    },
+    "properties": {
+    "School":"Edinboro University of Pennsylvania",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.323999,33.79252 ]
+    },
+    "properties": {
+    "School":"Emory University",
+    "Light":"green",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.977078,47.072903 ]
+    },
+    "properties": {
+    "School":"Evergreen State College",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.788914,42.590017 ]
+    },
+    "properties": {
+    "School":"Fitchburg State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.375719,25.756303 ]
+    },
+    "properties": {
+    "School":"Florida International University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.298489,30.441878 ]
+    },
+    "properties": {
+    "School":"Florida State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.885699,40.86204 ]
+    },
+    "properties": {
+    "School":"Fordham University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -107.871038,37.273745 ]
+    },
+    "properties": {
+    "School":"Fort Lewis College",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.436075,42.298107 ]
+    },
+    "properties": {
+    "School":"Framingham State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.440072,34.926016 ]
+    },
+    "properties": {
+    "School":"Furman University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.311489,38.831494 ]
+    },
+    "properties": {
+    "School":"George Mason University",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.048599,38.899715 ]
+    },
+    "properties": {
+    "School":"George Washington University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.072258,38.907609 ]
+    },
+    "properties": {
+    "School":"Georgetown University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.396285,33.775618 ]
+    },
+    "properties": {
+    "School":"Georgia Institute of Technology",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.786535,32.420549 ]
+    },
+    "properties": {
+    "School":"Georgia Southern University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.385282,33.753068 ]
+    },
+    "properties": {
+    "School":"Georgia State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.235634,39.835694 ]
+    },
+    "properties": {
+    "School":"Gettysburg College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.716819,41.448693 ]
+    },
+    "properties": {
+    "School":"Governors State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.719296,32.521291 ]
+    },
+    "properties": {
+    "School":"Grambling State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.888949,42.96393 ]
+    },
+    "properties": {
+    "School":"Grand Valley State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.72013,41.749057 ]
+    },
+    "properties": {
+    "School":"Grinnell College",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.405795,43.052426 ]
+    },
+    "properties": {
+    "School":"Hamilton College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.11666,42.377003 ]
+    },
+    "properties": {
+    "School":"Harvard University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"TRUE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.71047,34.106082 ]
+    },
+    "properties": {
+    "School":"Harvey Mudd College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.305656,40.009348 ]
+    },
+    "properties": {
+    "School":"Haverford College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.059123,34.13081 ]
+    },
+    "properties": {
+    "School":"Henderson State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.019438,38.922684 ]
+    },
+    "properties": {
+    "School":"Howard University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -112.429716,42.862723 ]
+    },
+    "properties": {
+    "School":"Idaho State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.408235,39.471109 ]
+    },
+    "properties": {
+    "School":"Indiana State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.646465,42.026619 ]
+    },
+    "properties": {
+    "School":"Iowa State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.206396,32.296885 ]
+    },
+    "properties": {
+    "School":"Jackson State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.768108,33.823059 ]
+    },
+    "properties": {
+    "School":"Jacksonville State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.869755,38.435092 ]
+    },
+    "properties": {
+    "School":"James Madison University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.620518,39.329901 ]
+    },
+    "properties": {
+    "School":"Johns Hopkins University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.584725,39.197444 ]
+    },
+    "properties": {
+    "School":"Kansas State University",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.234286,40.678071 ]
+    },
+    "properties": {
+    "School":"Kean University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.280354,42.925497 ]
+    },
+    "properties": {
+    "School":"Keene State College",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.581572,34.038078 ]
+    },
+    "properties": {
+    "School":"Kennesaw State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.341465,41.149063 ]
+    },
+    "properties": {
+    "School":"Kent State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.855831,38.200258 ]
+    },
+    "properties": {
+    "School":"Kentucky State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.398308,40.371897 ]
+    },
+    "properties": {
+    "School":"Kenyon College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.20873,40.69862 ]
+    },
+    "properties": {
+    "School":"Lafayette College",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.363877,46.491793 ]
+    },
+    "properties": {
+    "School":"Lake Superior State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.378283,40.606909 ]
+    },
+    "properties": {
+    "School":"Lehigh University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.026346,46.411426 ]
+    },
+    "properties": {
+    "School":"Lewis-Clark State College",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.927338,39.807212 ]
+    },
+    "properties": {
+    "School":"Lincoln University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.396197,37.29718 ]
+    },
+    "properties": {
+    "School":"Longwood University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.64811,32.526375 ]
+    },
+    "properties": {
+    "School":"Louisiana Tech University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.929755,43.038222 ]
+    },
+    "properties": {
+    "School":"Marquette University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.025198,44.535557 ]
+    },
+    "properties": {
+    "School":"Lyndon State College",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.169043,44.937893 ]
+    },
+    "properties": {
+    "School":"Macalester College",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.09416,42.360091 ]
+    },
+    "properties": {
+    "School":"Massachusetts Institute of Technology",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.215629,30.178366 ]
+    },
+    "properties": {
+    "School":"McNeese State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.074363,44.95755 ]
+    },
+    "properties": {
+    "School":"Metropolitan State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.730877,39.510533 ]
+    },
+    "properties": {
+    "School":"Miami University of Ohio",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.482172,42.701848 ]
+    },
+    "properties": {
+    "School":"Michigan State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.546022,47.116775 ]
+    },
+    "properties": {
+    "School":"Michigan Technological University",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.732887,32.810503 ]
+    },
+    "properties": {
+    "School":"Middle Georgia State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.364881,35.848611 ]
+    },
+    "properties": {
+    "School":"Middle Tennessee State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.177315,44.00826 ]
+    },
+    "properties": {
+    "School":"Middlebury College",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.794377,33.455174 ]
+    },
+    "properties": {
+    "School":"Mississippi State University",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.280681,37.200555 ]
+    },
+    "properties": {
+    "School":"Missouri State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.775627,37.953708 ]
+    },
+    "properties": {
+    "School":"Missouri University of Science and Technology",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.054621,45.667352 ]
+    },
+    "properties": {
+    "School":"Montana State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.197809,40.862256 ]
+    },
+    "properties": {
+    "School":"Montclair State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.431003,38.18943 ]
+    },
+    "properties": {
+    "School":"Morehead State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.576139,42.253254 ]
+    },
+    "properties": {
+    "School":"Mount Holyoke College",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.321498,36.616384 ]
+    },
+    "properties": {
+    "School":"Murray State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.558703,27.384828 ]
+    },
+    "properties": {
+    "School":"New College of Florida",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.179341,40.742335 ]
+    },
+    "properties": {
+    "School":"New Jersey Institute of Technology",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.747906,32.278774 ]
+    },
+    "properties": {
+    "School":"New Mexico State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.996461,40.729513 ]
+    },
+    "properties": {
+    "School":"New York University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.80286,29.790742 ]
+    },
+    "properties": {
+    "School":"Nicholls State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.262085,36.848016 ]
+    },
+    "properties": {
+    "School":"Norfolk State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.898101,35.974737 ]
+    },
+    "properties": {
+    "School":"North Carolina Central University",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.803171,46.896243 ]
+    },
+    "properties": {
+    "School":"North Dakota State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.7182,41.980502 ]
+    },
+    "properties": {
+    "School":"Northeastern Illinois University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.089172,42.339807 ]
+    },
+    "properties": {
+    "School":"Northeastern University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.654707,35.18519 ]
+    },
+    "properties": {
+    "School":"Northern Arizona University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.774069,41.934233 ]
+    },
+    "properties": {
+    "School":"Northern Illinois University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.462534,39.031204 ]
+    },
+    "properties": {
+    "School":"Northern Kentucky University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.404487,46.559603 ]
+    },
+    "properties": {
+    "School":"Northern Michigan University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -98.668234,36.795119 ]
+    },
+    "properties": {
+    "School":"Northwestern Oklahoma State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.675267,42.056459 ]
+    },
+    "properties": {
+    "School":"Northwestern University",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.208182,42.667916 ]
+    },
+    "properties": {
+    "School":"Oakland University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.2236,41.293483 ]
+    },
+    "properties": {
+    "School":"Oberlin College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.210115,34.127319 ]
+    },
+    "properties": {
+    "School":"Occidental College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.101389,39.324358 ]
+    },
+    "properties": {
+    "School":"Ohio University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.305879,36.885322 ]
+    },
+    "properties": {
+    "School":"Old Dominion University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.279444,44.563781 ]
+    },
+    "properties": {
+    "School":"Oregon State University",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.859908,40.798213 ]
+    },
+    "properties": {
+    "School":"Pennsylvania State University - University Park",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.691571,37.390286 ]
+    },
+    "properties": {
+    "School":"Pittsburg State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.704719,34.104662 ]
+    },
+    "properties": {
+    "School":"Pitzer College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.688254,43.759503 ]
+    },
+    "properties": {
+    "School":"Plymouth State University",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.711803,34.097743 ]
+    },
+    "properties": {
+    "School":"Pomona College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.683342,45.51111 ]
+    },
+    "properties": {
+    "School":"Portland State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.651448,40.343989 ]
+    },
+    "properties": {
+    "School":"Princeton University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"TRUE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.921195,40.423705 ]
+    },
+    "properties": {
+    "School":"Purdue University",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.550622,37.138269 ]
+    },
+    "properties": {
+    "School":"Radford University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.630372,45.480978 ]
+    },
+    "properties": {
+    "School":"Reed College",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.678803,42.730172 ]
+    },
+    "properties": {
+    "School":"Rensselaer Polytechnic Institute",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.461204,41.842207 ]
+    },
+    "properties": {
+    "School":"Rhode Island College",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.401831,29.717394 ]
+    },
+    "properties": {
+    "School":"Rice University",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.640635,36.318252 ]
+    },
+    "properties": {
+    "School":"Rogers State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.118948,39.70986 ]
+    },
+    "properties": {
+    "School":"Rowan University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.447399,40.500819 ]
+    },
+    "properties": {
+    "School":"Rutgers University - New Brunswick",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.962356,43.514273 ]
+    },
+    "properties": {
+    "School":"Saginaw Valley State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.151514,45.551186 ]
+    },
+    "properties": {
+    "School":"Saint Cloud State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.890682,42.503103 ]
+    },
+    "properties": {
+    "School":"Salem State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.550357,30.713198 ]
+    },
+    "properties": {
+    "School":"Sam Houston State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.071889,32.775722 ]
+    },
+    "properties": {
+    "School":"San Diego State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.478209,37.721897 ]
+    },
+    "properties": {
+    "School":"San Francisco State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.881072,37.335187 ]
+    },
+    "properties": {
+    "School":"San Jose State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.710213,34.103935 ]
+    },
+    "properties": {
+    "School":"Scripps College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.917661,35.20518 ]
+    },
+    "properties": {
+    "School":"Sewanee, The University of the South",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.992097,38.730864 ]
+    },
+    "properties": {
+    "School":"Shawnee State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.523436,40.060394 ]
+    },
+    "properties": {
+    "School":"Shippensburg University of Pennsylvania",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.782673,43.099227 ]
+    },
+    "properties": {
+    "School":"Skidmore College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.041169,41.063025 ]
+    },
+    "properties": {
+    "School":"Slippery Rock University of Pennsylvania",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.637234,42.318096 ]
+    },
+    "properties": {
+    "School":"Smith College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.673066,38.340924 ]
+    },
+    "properties": {
+    "School":"Sonoma State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.783968,44.318946 ]
+    },
+    "properties": {
+    "School":"South Dakota State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.528044,37.314878 ]
+    },
+    "properties": {
+    "School":"Southeast Missouri State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.468857,30.517316 ]
+    },
+    "properties": {
+    "School":"Southeastern Louisiana University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.947462,41.332566 ]
+    },
+    "properties": {
+    "School":"Southern Connecticut State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.222594,37.710021 ]
+    },
+    "properties": {
+    "School":"Southern Illinois University at Carbondale",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.995654,38.793103 ]
+    },
+    "properties": {
+    "School":"Southern Illinois University at Edwardsville",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.784517,32.841218 ]
+    },
+    "properties": {
+    "School":"Southern Methodist University",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.695907,42.186 ]
+    },
+    "properties": {
+    "School":"Southern Oregon University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.759773,44.456088 ]
+    },
+    "properties": {
+    "School":"Southwest Minnesota State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.182678,44.461663 ]
+    },
+    "properties": {
+    "School":"St. Olaf College",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.169719,37.427475 ]
+    },
+    "properties": {
+    "School":"Stanford University",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.025683,40.744838 ]
+    },
+    "properties": {
+    "School":"Stevens Institute of Technology",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.53343,39.493305 ]
+    },
+    "properties": {
+    "School":"Stockton University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.123389,40.912376 ]
+    },
+    "properties": {
+    "School":"Stony Brook University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.352317,39.904035 ]
+    },
+    "properties": {
+    "School":"Swarthmore College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.135116,43.039153 ]
+    },
+    "properties": {
+    "School":"Syracuse University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -98.215954,32.216043 ]
+    },
+    "properties": {
+    "School":"Tarleton State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.155351,39.981194 ]
+    },
+    "properties": {
+    "School":"Temple University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.827582,36.166822 ]
+    },
+    "properties": {
+    "School":"Tennessee State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.507022,36.175903 ]
+    },
+    "properties": {
+    "School":"Tennessee Technological University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.360612,29.721763 ]
+    },
+    "properties": {
+    "School":"Texas Southern University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.878282,33.584259 ]
+    },
+    "properties": {
+    "School":"Texas Tech University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.127103,33.226288 ]
+    },
+    "properties": {
+    "School":"Texas Woman's University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.949272,40.820047 ]
+    },
+    "properties": {
+    "School":"The City College of New York",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.777862,40.268308 ]
+    },
+    "properties": {
+    "School":"The College of New Jersey",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.713378,37.271674 ]
+    },
+    "properties": {
+    "School":"The College of William and Mary",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.612639,39.392512 ]
+    },
+    "properties": {
+    "School":"Towson University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.690334,41.747933 ]
+    },
+    "properties": {
+    "School":"Trinity College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.957228,31.80189 ]
+    },
+    "properties": {
+    "School":"Troy University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.119023,42.407484 ]
+    },
+    "properties": {
+    "School":"Tufts University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.120728,29.940348 ]
+    },
+    "properties": {
+    "School":"Tulane University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.929599,42.817713 ]
+    },
+    "properties": {
+    "School":"Union College",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.511339,41.076655 ]
+    },
+    "properties": {
+    "School":"University of Akron",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.539142,33.214023 ]
+    },
+    "properties": {
+    "School":"University of Alabama",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -110.950109,32.231885 ]
+    },
+    "properties": {
+    "School":"University of Arizona",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.25854,37.871899 ]
+    },
+    "properties": {
+    "School":"University of California, Berkeley",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.761712,38.538232 ]
+    },
+    "properties": {
+    "School":"University of California, Davis",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.844296,33.640495 ]
+    },
+    "properties": {
+    "School":"University of California, Irvine",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.445181,34.068921 ]
+    },
+    "properties": {
+    "School":"University of California, Los Angeles",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.234013,32.88006 ]
+    },
+    "properties": {
+    "School":"University of California, San Diego",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.848947,34.413963 ]
+    },
+    "properties": {
+    "School":"University of California, Santa Barbara",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.058277,36.991585 ]
+    },
+    "properties": {
+    "School":"University of California, Santa Cruz",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.457938,35.078091 ]
+    },
+    "properties": {
+    "School":"University of Central Arkansas",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.20006,28.602427 ]
+    },
+    "properties": {
+    "School":"University of Central Florida",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.738372,38.758082 ]
+    },
+    "properties": {
+    "School":"University of Central Missouri",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.471463,35.654866 ]
+    },
+    "properties": {
+    "School":"University of Central Oklahoma",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.598713,41.788608 ]
+    },
+    "properties": {
+    "School":"University of Chicago",
+    "Light":"green",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.51495,39.132922 ]
+    },
+    "properties": {
+    "School":"University of Cincinnati",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.265942,40.007581 ]
+    },
+    "properties": {
+    "School":"University of Colorado at Boulder",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.253981,41.807741 ]
+    },
+    "properties": {
+    "School":"University of Connecticut",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.750611,39.67795 ]
+    },
+    "properties": {
+    "School":"University of Delaware",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -104.961896,39.676617 ]
+    },
+    "properties": {
+    "School":"University of Denver",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.35493,29.643633 ]
+    },
+    "properties": {
+    "School":"University of Florida",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.377322,33.948005 ]
+    },
+    "properties": {
+    "School":"University of Georgia",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.342233,29.719949 ]
+    },
+    "properties": {
+    "School":"University of Houston",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.012608,46.728812 ]
+    },
+    "properties": {
+    "School":"University of Idaho",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.5549,41.662696 ]
+    },
+    "properties": {
+    "School":"University of Iowa",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.255796,38.954344 ]
+    },
+    "properties": {
+    "School":"University of Kansas",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.50397,38.030651 ]
+    },
+    "properties": {
+    "School":"University of Kentucky",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.020412,30.21144 ]
+    },
+    "properties": {
+    "School":"University of Louisiana at Lafayette",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.758502,38.212276 ]
+    },
+    "properties": {
+    "School":"University of Louisville",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -68.666651,44.90122 ]
+    },
+    "properties": {
+    "School":"University of Maine",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.47447,38.301304 ]
+    },
+    "properties": {
+    "School":"University of Mary Washington",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.942554,38.986918 ]
+    },
+    "properties": {
+    "School":"University of Maryland - College Park",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.526712,42.391157 ]
+    },
+    "properties": {
+    "School":"University of Massachusetts - Amherst",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.037585,42.314905 ]
+    },
+    "properties": {
+    "School":"University of Massachusetts - Boston",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.006156,41.629293 ]
+    },
+    "properties": {
+    "School":"University of Massachusetts at Dartmouth",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.324716,42.655259 ]
+    },
+    "properties": {
+    "School":"University of Massachusetts at Lowell",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.937141,35.118741 ]
+    },
+    "properties": {
+    "School":"University of Memphis",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.15361,26.275742 ]
+    },
+    "properties": {
+    "School":"University of Miami",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.738224,42.278044 ]
+    },
+    "properties": {
+    "School":"University of Michigan - Ann Arbor",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.538443,34.364732 ]
+    },
+    "properties": {
+    "School":"University of Mississippi",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.30828,38.70924 ]
+    },
+    "properties": {
+    "School":"University of Missouri-St. Louis",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -113.985208,46.860067 ]
+    },
+    "properties": {
+    "School":"University of Montana",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -112.638862,45.208689 ]
+    },
+    "properties": {
+    "School":"University of Montana Western",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.865417,33.106719 ]
+    },
+    "properties": {
+    "School":"University of Montevallo",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.700476,40.820197 ]
+    },
+    "properties": {
+    "School":"University of Nebraska - Lincoln",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.143171,36.10852 ]
+    },
+    "properties": {
+    "School":"University of Nevada, Las Vegas",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.816397,39.544192 ]
+    },
+    "properties": {
+    "School":"University of Nevada, Reno",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.937025,43.138948 ]
+    },
+    "properties": {
+    "School":"University of New Hampshire",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.619781,35.084319 ]
+    },
+    "properties": {
+    "School":"University of New Mexico",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.066036,30.028596 ]
+    },
+    "properties": {
+    "School":"University of New Orleans",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.681168,34.807456 ]
+    },
+    "properties": {
+    "School":"University of North Alabama",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.735164,35.307093 ]
+    },
+    "properties": {
+    "School":"University of North Carolina - Charlotte",
+    "Light":"",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.076801,47.922891 ]
+    },
+    "properties": {
+    "School":"University of North Dakota",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.507231,30.26612 ]
+    },
+    "properties": {
+    "School":"University of North Florida",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.984442,34.527862 ]
+    },
+    "properties": {
+    "School":"University of North Georgia",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.152586,33.207488 ]
+    },
+    "properties": {
+    "School":"University of North Texas",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -104.696108,40.405524 ]
+    },
+    "properties": {
+    "School":"University of Northern Colorado",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.462003,42.513389 ]
+    },
+    "properties": {
+    "School":"University of Northern Iowa",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.235339,41.705572 ]
+    },
+    "properties": {
+    "School":"University of Notre Dame",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.445714,35.205894 ]
+    },
+    "properties": {
+    "School":"University of Oklahoma",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.072606,44.04483 ]
+    },
+    "properties": {
+    "School":"University of Oregon",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.193214,39.952219 ]
+    },
+    "properties": {
+    "School":"University of Pennsylvania",
+    "Light":"green",
+    "Private":"TRUE",
+    "Ivy":"TRUE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.960835,40.444353 ]
+    },
+    "properties": {
+    "School":"University of Pittsburgh",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.530854,41.486065 ]
+    },
+    "properties": {
+    "School":"University of Rhode Island",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.540974,37.575868 ]
+    },
+    "properties": {
+    "School":"University of Richmond",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.626003,43.130553 ]
+    },
+    "properties": {
+    "School":"University of Rochester",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.184236,30.695941 ]
+    },
+    "properties": {
+    "School":"University of South Alabama",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.027428,33.996112 ]
+    },
+    "properties": {
+    "School":"University of South Carolina Columbia",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.925338,42.788302 ]
+    },
+    "properties": {
+    "School":"University of South Dakota",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.413854,28.058703 ]
+    },
+    "properties": {
+    "School":"University of South Florida",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.285117,34.022352 ]
+    },
+    "properties": {
+    "School":"University of Southern California",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.674694,37.958244 ]
+    },
+    "properties": {
+    "School":"University of Southern Indiana",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.275694,43.662248 ]
+    },
+    "properties": {
+    "School":"University of Southern Maine",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.334042,31.330012 ]
+    },
+    "properties": {
+    "School":"University of Southern Mississippi",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.929456,35.954401 ]
+    },
+    "properties": {
+    "School":"University of Tennessee - Knoxville",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.734057,30.284919 ]
+    },
+    "properties": {
+    "School":"University of Texas at Austin",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.750099,32.985762 ]
+    },
+    "properties": {
+    "School":"University of Texas at Dallas",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -98.61972,29.58297 ]
+    },
+    "properties": {
+    "School":"University of Texas at San Antonio",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.61407,41.658031 ]
+    },
+    "properties": {
+    "School":"University of Toledo",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.946,36.151988 ]
+    },
+    "properties": {
+    "School":"University of Tulsa",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.842102,40.764937 ]
+    },
+    "properties": {
+    "School":"University of Utah",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.196464,44.477853 ]
+    },
+    "properties": {
+    "School":"University of Vermont",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.507977,38.033553 ]
+    },
+    "properties": {
+    "School":"University of Virginia",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.30352,47.655335 ]
+    },
+    "properties": {
+    "School":"University of Washington",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.186951,32.597138 ]
+    },
+    "properties": {
+    "School":"University of West Alabama",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.216141,30.547469 ]
+    },
+    "properties": {
+    "School":"University of West Florida",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.10283,33.573547 ]
+    },
+    "properties": {
+    "School":"University of West Georgia",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.412487,43.076592 ]
+    },
+    "properties": {
+    "School":"University of Wisconsin - Madison",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.566574,41.314875 ]
+    },
+    "properties": {
+    "School":"University of Wyoming",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.809742,41.745161 ]
+    },
+    "properties": {
+    "School":"Utah State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.715197,40.278831 ]
+    },
+    "properties": {
+    "School":"Utah Valley University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.289206,30.848949 ]
+    },
+    "properties": {
+    "School":"Valdosta State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.802655,36.144703 ]
+    },
+    "properties": {
+    "School":"Vanderbilt University",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.423417,37.228384 ]
+    },
+    "properties": {
+    "School":"Virginia Polytechnic Institute and State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.419872,37.238461 ]
+    },
+    "properties": {
+    "School":"Virginia State University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.277895,36.134099 ]
+    },
+    "properties": {
+    "School":"Wake Forest University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.444956,37.790486 ]
+    },
+    "properties": {
+    "School":"Washington & Lee University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.154212,46.731923 ]
+    },
+    "properties": {
+    "School":"Washinton State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.310796,38.64879 ]
+    },
+    "properties": {
+    "School":"Washington University in St. Louis",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.066546,42.359139 ]
+    },
+    "properties": {
+    "School":"Wayne State Unviersity",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.941874,41.192445 ]
+    },
+    "properties": {
+    "School":"Weber State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.305928,42.293573 ]
+    },
+    "properties": {
+    "School":"Wellesley College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.656904,41.55661 ]
+    },
+    "properties": {
+    "School":"Wesleyan University",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.917763,38.54754 ]
+    },
+    "properties": {
+    "School":"Western Colorado University",
+    "Light":"green",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.685397,40.472665 ]
+    },
+    "properties": {
+    "School":"Western Illinois University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.456138,36.985354 ]
+    },
+    "properties": {
+    "School":"Western Kentucky University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.610251,42.283734 ]
+    },
+    "properties": {
+    "School":"Western Michigan University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.24098,44.853607 ]
+    },
+    "properties": {
+    "School":"Western Oregon University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.486611,48.734288 ]
+    },
+    "properties": {
+    "School":"Western Washington University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.794153,42.131825 ]
+    },
+    "properties": {
+    "School":"Westfield State University ",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.330635,46.07058 ]
+    },
+    "properties": {
+    "School":"Whitman College",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.292869,37.719393 ]
+    },
+    "properties": {
+    "School":"Wichita State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.198138,40.946006 ]
+    },
+    "properties": {
+    "School":"William Paterson University",
+    "Light":"red",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.20364,42.712958 ]
+    },
+    "properties": {
+    "School":"Williams College",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.643284,44.0474 ]
+    },
+    "properties": {
+    "School":"Winona State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.225117,36.089874 ]
+    },
+    "properties": {
+    "School":"Winston-Salem State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.806272,42.274575 ]
+    },
+    "properties": {
+    "School":"Worcester Polytechnic Institute",
+    "Light":"red",
+    "Private":"TRUE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.844135,42.267972 ]
+    },
+    "properties": {
+    "School":"Worcester State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.058328,39.784616 ]
+    },
+    "properties": {
+    "School":"Wright State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.922343,41.316324 ]
+    },
+    "properties": {
+    "School":"Yale University",
+    "Light":"yellow",
+    "Private":"TRUE",
+    "Ivy":"TRUE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.6477,41.10626 ]
+    },
+    "properties": {
+    "School":"Youngstown State University",
+    "Light":"yellow",
+    "Private":"FALSE",
+    "Ivy":"FALSE"
+    }
+  }
+]
+}

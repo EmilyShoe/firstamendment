@@ -71,9 +71,7 @@ LineGraph.prototype.initVis = function(){
 
 LineGraph.prototype.wrangleData = function(){
     var vis = this;
-    //console.log(vis.data);
 
-    console.log(vis.speakerType);
 
     vis.displayData = this.data.filter(function(d) {
         return (d[vis.speakerType] < 2);
@@ -96,7 +94,6 @@ LineGraph.prototype.wrangleData = function(){
         d.key = parseDate(d.key);
     });
 
-    console.log(vis.displayData);
 
     // Update the visualization
     vis.updateVis();
@@ -112,7 +109,6 @@ var t = d3.transition().duration(700);
 
 LineGraph.prototype.updateVis = function(){
     var vis = this;
-    d3.select("#speaker-select").on("change", console.log("yo"));
     // Set domains
     var minMaxY= [0, 100];
     vis.y.domain(minMaxY);
@@ -155,7 +151,6 @@ LineGraph.prototype.updateVis = function(){
 };
 
 LineGraph.prototype.speakerChanged = function(speaker){
-    console.log("here");
     var vis = this;
     vis.speakerType = speaker;
 

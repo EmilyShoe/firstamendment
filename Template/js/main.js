@@ -1,10 +1,11 @@
 queue()
 	.defer(d3.csv,"data/gssSpeech.csv")
+    .defer(d3.json,"data/collegesData.geojson")
 	.await(createVis);
 
 var lineGraph;
 
-function createVis(error, gssSpeech) {
+function createVis(error, gssSpeech, colleges) {
     if (error) {
         console.log(error);
     }
@@ -29,6 +30,7 @@ function createVis(error, gssSpeech) {
 
 
     lineGraph = new LineGraph("line-graphs", cleanGssData);
+    collegeMap = new CollegeMap("map-of-schools", colleges);
 
 }
 
