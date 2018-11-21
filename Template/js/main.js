@@ -1,12 +1,12 @@
 queue()
 	.defer(d3.csv,"data/gssSpeech.csv")
     .defer(d3.json,"data/collegesData.geojson")
-    .defer(d3.json,"data/us-10m.json")
 	.await(createVis);
 
 var lineGraph;
+var collegeMap;
 
-function createVis(error, gssSpeech, colleges, usmap) {
+function createVis(error, gssSpeech, colleges) {
     if (error) {
         console.log(error);
     }
@@ -32,15 +32,30 @@ function createVis(error, gssSpeech, colleges, usmap) {
 
     lineGraph = new LineGraph("line-graphs", cleanGssData);
 
-    //prepare and draw colleges on map
-    var usa = topojson.feature(usmap, usmap.objects.states).features;
-
-    collegeMap = new CollegeMap("map", colleges, usa);
+    collegeMap = new CollegeMap("map", colleges.features);
 
 }
 
 $("#speaker-select").on("change", function(){
     lineGraph.speakerChanged(this.value);
+});
+
+
+//Button hovers for text in map description to filter schools
+$(".ivy-league").on('mouseover', function() {
+    collegeMap.wrangleData("ivy-leagues");
+});
+
+$(".overall").on('mouseover', function() {
+    collegeMap.wrangleData("overall");
+});
+
+$(".public").on('mouseover', function() {
+    collegeMap.wrangleData("public");
+});
+
+$(".private").on('mouseover', function() {
+    collegeMap.wrangleData("private");
 });
 
 function allowedEncode(s) {
