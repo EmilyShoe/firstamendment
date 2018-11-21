@@ -1,15 +1,51 @@
 
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Abril Fatface';
+}
+
+.header {
+    height: 620px;
+    background-color: #868e96;
 }
 
 h1 {
   font-weight: 100;
-  font-size: 30px;
+  font-size: 80px;
   margin-top: 50px;
   margin-bottom: 20px;
-    text-align: center;
+}
+
+.collage {
+    background-color: #3679A9;
+};
+
+#flagdiv {
+    height: 150px;
+
+}
+
+#flag {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    width: 100%;
+    height: 150px;
+    padding: none;
+}
+
+#comfortable {
+    background-color: #AF000E;
+    height: 150px;
+}
+
+#first-amendment {
+    height: 200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#noPlatform {
+    height: 150px;
 }
 
 #saviosound {
@@ -23,6 +59,62 @@ h1 {
     height: 100px;
 }
 
+#noPlatform {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#berkeley {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 1px;
+    width: 100%;
+    height: 300px;
+}
+
+#savioHeader {
+    background-color: #AF000E;
+    height: 150px;
+    padding-top:14px;
+    padding-bottom: 14px;
+    padding-right: 5px;
+}
+
+#benShap {
+    height: 150px;
+    padding-top:14px;
+    padding-bottom: 14px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.finalRow {
+    height: 150px;
+    padding-bottom: 14px;
+}
+
+#protest{
+    height: 150px;
+    padding:none;
+}
+
+#mario {
+    height: 150px;
+    padding-top:14px;
+    padding-bottom: 14px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+#marioSav {
+    background-color: #AF000E;
+    height: 150px;
+    padding-top:14px;
+    padding-bottom: 14px;
+    padding-right: 5px;
+}
 #bostonVideo {
     position: absolute;
     left: 186.21737194064195px;
@@ -35,34 +127,6 @@ h1 {
 #line-graphs {
     width: 100%;
     height: 500px;
-}
-
-#first-amendment {
-    width: 100%;
-    height: 300px;
-    background-image: url("../img/constitution.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-anchor: middle;
-}
-
-#text-first-amendment {
-    color: white;
-    background-color: #654C33;
-    opacity: 0.7;
-    text-align: center;
-    width: 30%;
-
-}
-
-#founding-fathers{
-    width: 100%;
-    height: 150px;
-    background-color: #6c757d;
-}
-.founding-fathers{
-    width: 33%;
-    background-color: white;
 }
 
 #linegraph-description, #map-description {
@@ -96,4 +160,10 @@ h1 {
 #data-links{
     height: 100px;
     background-color: #80bdff;
+}
+
+p {
+    font-family: 'Actor', sans-serif;
+    padding-left: 50px;
+    padding-right: 50px;
 }
