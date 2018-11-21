@@ -1,16 +1,21 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Free Speech</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Free Speech</title>
 
-  <!-- Load Google Font -->
-  <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,400italic,700' rel='stylesheet' type='text/css'>
+    <!-- Load Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,400italic,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/leaflet.awesome-markers.css">
+    <link rel="stylesheet" href="css/leaflet.css">
+
+
 </head>
 <body>
 
@@ -33,7 +38,7 @@
                 <img class="founding-fathers" src="img/foundingFathers/foundingFathersGroup3.png">
             </div>
 
-            <!-- Visualization placeholders -->
+            <!-- Timeline -->
             <div id="visual-timeline">
               <audio id="saviosound" controls>
                 <source src="data/timeline/savio.mp3" type="audio/mp3">
@@ -65,13 +70,23 @@
               <div id="line-graphs"></div>
             </div>
         </div>
+
+      <!-- College Map -->
         <div class="row" id="mapViz">
             <div class="col-6" id="map"></div>
             <div class="col-6" id="map-description">
+                <button class="btn overall">Overall</button>
+                <button class="btn ivy-league">Ivy Leagues</button>
+                <button class="btn private">Private</button>
+                <button class="btn public">Public</button>
                 Explanation of FIRE data. Particular trends noted (i.e. between public/private colleges, Ivy leagues
             </div>
         </div>
+
+      <!-- Disinvitation Requests -->
       <div class="col-12" id="disinvitation-visualization">Grouping visualization for the disinvitation requests.</div>
+
+      <!-- Conclusion -->
       <div class="row">
           <div class="col-6" id="conclusion-info">Conclusion paragraph. General trends noted, links to further
           reading.</div>
@@ -88,10 +103,13 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/topojson.min.js"></script>
   <script src="js/d3.min.js"></script>
-  <script src="js/lineGraph.js"></script>
-  <script src="js/collegesMap.js"></script>
+  <script src="js/leaflet.js"></script>
+  <script src="js/leaflet.awesome-markers.js"></script>
+
 
   <!-- Visualization objects -->
+  <script src="js/lineGraph.js"></script>
+  <script src="js/collegesMap.js"></script>
 
   <!-- Load data, create visualizations -->
   <script src="js/main.js"></script>

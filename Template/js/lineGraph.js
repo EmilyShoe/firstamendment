@@ -73,26 +73,28 @@ LineGraph.prototype.wrangleData = function(){
     var vis = this;
 
 
-    vis.displayData = this.data.filter(function(d) {
+    vis.totalGraphData = vis.data.filter(function(d) {
         return (d[vis.speakerType] < 2);
     });
 
     vis.dataTotals = d3.nest()
         .key(function(d) { return d.year; })
         .rollup(function(leaves) { return leaves.length; })
-        .entries(vis.displayData);
+        .entries(vis.totalGraphData);
 
-    vis.displayData = d3.nest()
+    vis.totalGraphData = d3.nest()
         .key(function (d) { return d.year; })
         .rollup((function(values) {
             return d3.sum(values, function(v) { return v[vis.speakerType]; });
         }))
-        .entries(vis.displayData);
+        .entries(vis.totalGraphData);
 
-    vis.displayData.map(function(d, index) {
+    vis.totalGraphData.map(function(d, index) {
         d.value = 100 * (d.value / vis.dataTotals[index].value);
         d.key = parseDate(d.key);
     });
+
+    //vis.femaleData =
 
 
     // Update the visualization
@@ -113,7 +115,7 @@ LineGraph.prototype.updateVis = function(){
     var minMaxY= [0, 100];
     vis.y.domain(minMaxY);
 
-    var minMaxX = d3.extent(vis.displayData.map(function(d){ return d.key; }));
+    var minMaxX = d3.extent(vis.totalGraphData.map(function(d){ return d.key; }));
     vis.x.domain(minMaxX);
 
 
@@ -130,16 +132,17 @@ LineGraph.prototype.updateVis = function(){
         .y(function(d) { return vis.y(d.value)});
 
     vis.totalLineGraph = vis.svg.selectAll("path.totalLine")
-        .data(vis.displayData);
+        .data(vis.totalGraphData);
 
     vis.totalLineGraph.enter().append("path")
         .attr("class", "totalLine")
-        .merge(vis.totalLineGraph)
+        .merge(vis.totalGraphData)
         .transition(t)
         .attr("fill", "none")
         .attr("stroke", "steelblue")
         .attr("stroke-width", 3)
-        .attr("d", line(vis.displayData));
+        .attr("d", line(vis.totalGraphData));
+
 
     // Call axis functions with the new domain
     vis.svg.select(".x-axis").call(vis.xAxis).transition(t);

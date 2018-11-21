@@ -5,10 +5,9 @@
  * @param _data				-- the actual data: gssSpeech
  */
 
-CollegeMap = function(_parentElement, _data, _mapdata){
+CollegeMap = function(_parentElement, _data){
     this.parentElement = _parentElement;
     this.data = _data;
-    this.mapdata = _mapdata;
     this.initVis();
 };
 
@@ -16,55 +15,58 @@ CollegeMap = function(_parentElement, _data, _mapdata){
 /*
  * Initialize visualization (static content, e.g. SVG area or axes)
  */
-
-
+L.Icon.Default.imagePath = 'img/map/';
+L.AwesomeMarkers.Icon.prototype.options.prefix = 'fa';
 
 CollegeMap.prototype.initVis = function(){
     var vis = this;
 
-    vis.margin = { top: 40, right: 0, bottom: 60, left: 60 };
+    //Set up map of US map, zoomed in on north east
+    vis.map = L.map(vis.parentElement).setView([42.1015, -72.589], 6);
 
-    var parentElementSelector = ("#" + vis.parentElement);
-    vis.width = $(parentElementSelector).width() - vis.margin.left - vis.margin.right;
-    vis.height = $(parentElementSelector).height() - vis.margin.top - vis.margin.bottom;
+    //Add tile layer for map
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(vis.map);
 
-    // SVG drawing area
-    vis.svg = d3.select(parentElementSelector).append("svg")
-        .attr("width", vis.width + vis.margin.left + vis.margin.right)
-        .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
-        .append("g")
-        .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
+    vis.usmap = L.layerGroup().addTo(vis.map);
 
+    //Initialize custom markers
+    vis.redMarker = L.AwesomeMarkers.icon({
+        icon: 'university',
+        markerColor: 'red'
+    });
 
-    vis.projection = d3.geoAlbersUsa()
-        .scale(750)
-        .translate([width / 3.5, height / 2]);
+    vis.blueMarker = L.AwesomeMarkers.icon({
+        icon: 'university',
+        markerColor: 'darkblue'
+    });
 
-   vis.path = d3.geoPath()
-        .projection(vis.projection);
-
-
-    // Render the map by using the path generator
-    vis.svg.selectAll("path")
-        .data(vis.mapdata)
-        .enter().append("path")
-        .attr("class", "usmap")
-        .attr("d", vis.path);
+    vis.whiteMarker = L.AwesomeMarkers.icon({
+        icon: 'university',
+        markerColor: 'white',
+        iconColor: '#3679A9'
+    });
 
     // (Filter, aggregate, modify data)
-    vis.wrangleData();
+    vis.wrangleData("total");
 };
-
 
 
 /*
  * Data wrangling
  */
 
-CollegeMap.prototype.wrangleData = function(){
+CollegeMap.prototype.wrangleData = function(whichColleges){
     var vis = this;
-    //console.log(vis.data);
 
+    switch(whichColleges) {
+        case "ivy-leagues": vis.displayData = vis.data.filter(function(d) { return d.properties.Ivy === "TRUE";}); break;
+        case "public": vis.displayData = vis.data.filter(function(d) { return d.properties.Private === "FALSE";}); break;
+        case "private": vis.displayData = vis.data.filter(function(d) {return d.properties.Private === "TRUE";}); break;
+        default: vis.displayData = vis.data;
+    }
+    //console.log(vis.displayData);
 
     // Update the visualization
     vis.updateVis();
@@ -80,18 +82,21 @@ CollegeMap.prototype.wrangleData = function(){
 CollegeMap.prototype.updateVis = function(){
     var vis = this;
 
-    vis.circles = vis.svg.selectAll(".point")
-        .data(vis.data.features);
+    vis.usmap.clearLayers();
 
-    vis.circles.enter().append("circle")
-        .attr("class", "point")
-        .merge(vis.circles)
-        .attr("r", 3)
-        .attr("cx", function(d) {return vis.projection(d.geometry.coordinates)[0];})
-        .attr("cy", function(d) {return vis.projection(d.geometry.coordinates)[1];})
-        .attr("fill", function(d) {return d.properties.Light;});
+    //add markers for the schools
+    vis.displayData.forEach(function(d) {
+        var popupContent =  "<strong>" + d.properties.School + "</strong><br/>";
+        vis.usmap.addLayer(L.marker([d.geometry.coordinates[1], d.geometry.coordinates[0]], chooseIcon(d.properties.Light)).bindPopup(popupContent));
+    });
 
-    vis.circles.exit().remove();
+    function chooseIcon(color) {
+        if(color === "red") return { icon: vis.redMarker};
+        else if(color === "green") return {icon: vis.blueMarker};
+        else return {icon: vis.whiteMarker};
+    }
 
 };
+
+
 
