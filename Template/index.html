@@ -7,7 +7,7 @@
     <title>Free Speech</title>
 
     <!-- Load Google Font -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,400italic,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Actor|Niconne" rel="stylesheet">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -15,28 +15,44 @@
     <link rel="stylesheet" href="css/leaflet.awesome-markers.css">
     <link rel="stylesheet" href="css/leaflet.css">
 
-
 </head>
 <body>
 
   <div class="container-fluid">
 
     <div class="row">
-      <div class="col-md-12">
-        
-        <!-- Headline -->
-        <h1>Is the First Amendment really coming first?</h1>
-        <!-- Intro page -->
-            <div id="first-amendment">
-                <div id="text-first-amendment">
-                    "Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances."
-                </div>
-            </div>
-            <div id="founding-fathers">
-                <img class="founding-fathers" src="img/foundingFathers/foundingFathersGroup1.png">
-                <img class="founding-fathers" src="img/foundingFathers/foundingFathersGroup2.png">
-                <img class="founding-fathers" src="img/foundingFathers/foundingFathersGroup3.png">
-            </div>
+      <div class="col-lg-12">
+          <div class="row">
+              <!-- header with images, do not touch -->
+              <div class="col-6 header">
+                  <h1 id="title">Is the First Amendment really coming first?</h1>
+                  <p>Watching the news, it would be easy to imagine that college campuses have become synonymous with
+                  protest, violence, and the oppression of free speech. But is their evidence to show that support for
+                  free speech is dwindling on America's college campuses?</p>
+              </div>
+              <div class="col-6 header collage">
+                  <div class="row">
+                      <div id="flagdiv" class="col-lg-4">
+                          <img id="flag" src="img/flag.gif">
+                      </div>
+                      <div id="comfortable" class="col-8">
+                          <img id="noPlatform" src="img/comfortable.png">
+                      </div>
+                  </div>
+                      <img id="berkeley" src="img/berkeley.jpg">
+                  <div class="row finalRow">
+                      <div class="col-4" id="savioHeader">
+                          <img id="benShap" src="img/ben.png">
+                      </div>
+                      <div class="col-5">
+                          <img id="protest" src="img/protest.gif">
+                      </div>
+                      <div class="col-3" id="marioSav">
+                          <img id="mario" src="img/savio.png">
+                      </div>
+                  </div>
+              </div>
+          </div>
 
             <!-- Timeline -->
             <div id="visual-timeline">
@@ -79,11 +95,27 @@
         <div class="row" id="mapViz">
             <div class="col-6" id="map"></div>
             <div class="col-6" id="map-description">
-                <button class="btn overall">Overall</button>
-                <button class="btn ivy-league">Ivy Leagues</button>
-                <button class="btn private">Private</button>
-                <button class="btn public">Public</button>
-                Explanation of FIRE data. Particular trends noted (i.e. between public/private colleges, Ivy leagues
+                <h1>Are college administrators protecting free speech?</h1>
+                <p><a href="https://www.thefire.org/spotlight/">The Foundation for Individual Rights in Education</a>,
+                    rank colleges according to how the college's
+                administrators allow free speech on campus. A college ranked<span id="red"> red </span>  has one or more
+                    policies that
+                substantially and clearly restricting free speech. An example of this would be having a blanket ban on
+                    'verbal abuse'. A white college has one or more policies that inhibit free speech, but
+                on a much smaller scope. For example, banning posters that mention drink or drugs. <span id="blue">
+                        Blue</span> colleges have a hands off approach to free speech. This does not meant that they
+                    necessarily encourage free speech and the student population could still be opposed to free
+                    speech.</p>
+                <ul>
+                    <li><span class="btn overall">Overall,</span>only 10% of colleges have a blue ranking with
+                    58% ranking as white and 32% as red.</li>
+                    <li>Only one <span class="btn ivy-league">Ivy League</span>college, the University of
+                    Pennsylvania, was ranked blue. Harvard was ranked red.</li>
+                    <li><span class="btn private">Private colleges</span>were more likely to be ranked red than
+                    <span class="btn public">public colleges</span>- 50.5% versus 24.7%. This may be because
+                    private colleges have a right to shutdown speech but as public colleges receive federal funding,
+                        they are held to a higher standard when protecting the Constitution.</li>
+                </ul>
             </div>
         </div>
 
@@ -118,5 +150,6 @@
   <!-- Load data, create visualizations -->
   <script src="js/main.js"></script>
   <script src="js/timeline.js"></script>
+
 </body>
 </html>

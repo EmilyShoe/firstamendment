@@ -214,7 +214,7 @@ LineGraph.prototype.updateVis = function(lineType){
     var line = d3.line()
         .x(function(d) { return vis.x(d.key)})
         .y(function(d) { return vis.y(d.value)});
-
+    
 
     vis.femaleLineGraph = vis.svg.selectAll("path.femaleLine");
     vis.maleLineGraph = vis.svg.selectAll("path.maleLine");
