@@ -40,7 +40,6 @@ $("#speaker-select").on("change", function(){
     lineGraph.speakerChanged(this.value);
 });
 
-
 //Button hovers for text in map description to filter schools
 $(".ivy-league").on('mouseover', function() {
     collegeMap.wrangleData("ivy-leagues");
@@ -56,6 +55,22 @@ $(".public").on('mouseover', function() {
 
 $(".private").on('mouseover', function() {
     collegeMap.wrangleData("private");
+});
+
+$(".gender").on('mouseover', function() {
+    lineGraph.wrangleData("sex");
+});
+
+$(".political-party").on('mouseover', function() {
+    lineGraph.wrangleData("political-party");
+});
+
+$(".degree").on('mouseover', function() {
+    lineGraph.wrangleData("degree");
+});
+
+$(".line-overall").on('mouseover', function() {
+    lineGraph.wrangleData("overall");
 });
 
 function allowedEncode(s) {
