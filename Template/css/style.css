@@ -9,7 +9,7 @@ body {
     background-color: #868e96;
 }
 
-h1 {
+#title {
   font-weight: 100;
   font-size: 80px;
   margin-top: 50px;
@@ -129,12 +129,13 @@ h1 {
     height: 500px;
 }
 
-#linegraph-description, #map-description {
+#linegraph-description{
     background-color: #727b84;
 }
 
+
 #mapViz {
-    height: 500px;
+    height: 550px;
 }
 
 #map .usmap{
@@ -162,17 +163,29 @@ h1 {
     background-color: #80bdff;
 }
 
-p {
+p, li {
     font-family: 'Actor', sans-serif;
     padding-left: 50px;
     padding-right: 50px;
+    font-size: 14px;
 }
 
 .btn {
-    border: none;
-    background-color: inherit;
-    /*padding: 14px 28px;*/
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;
+    font-size: 14px;
+    font-family: 'Actor', sans-serif;
+    background-color: #3679A9;
+
 }
+
+#red {
+    color: #AF000E;
+}
+
+#blue {
+    color: #3679A9;
+}
+
+a {
+    color: #3679A9;
+}
+

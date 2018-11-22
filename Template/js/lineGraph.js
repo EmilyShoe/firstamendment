@@ -136,7 +136,7 @@ LineGraph.prototype.updateVis = function(){
 
     vis.totalLineGraph.enter().append("path")
         .attr("class", "totalLine")
-        .merge(vis.totalGraphData)
+        .merge(vis.totalLineGraph)
         .transition(t)
         .attr("fill", "none")
         .attr("stroke", "steelblue")
