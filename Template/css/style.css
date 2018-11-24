@@ -117,10 +117,32 @@ body {
 }
 #bostonVideo {
     position: absolute;
-    left: 186.21737194064195px;
-    top: 700px;
-    width: 200px;
+    left: 125px;
+    top: 805px;
+    width: 250px;
     height: 200px;
+    padding-left: 50px;
+}
+
+#bostonVideo:hover, #kentVideo:hover, #yaleVideo:hover{
+    transform: scale(1.75, 1.75);
+}
+
+#kentVideo {
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    left: 400px;
+    top: 805px;
+    padding-left: 50px;
+}
+
+#yaleVideo {
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    top: 1080px;
+    left: 800px;
     padding-left: 50px;
 }
 
@@ -189,3 +211,11 @@ a {
     color: #3679A9;
 }
 
+.x-axis{
+    font-family: 'Abril Fatface';
+    font-size: 18px;
+}
+
+#milosound {
+    visibility: hidden;
+}
