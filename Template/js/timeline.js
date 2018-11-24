@@ -8,7 +8,7 @@ var years = [1964, 1965, 1968, 1970, 1985, 2003, 2015, 2017];
 var data =[
     {
         "year": 1964,
-        "title": "The Free Speech Movement, UC Berkeley, 1964",
+        "title": "The Free Speech Movement",
         "text": "The Free Speech Movement, was a large-scale student protest " +
             "on the campus of University of California, Berkeley. Lead by Mario " +
             "Savio, it was started in response to an administrative decision " +
@@ -18,7 +18,7 @@ var data =[
     },
     {
         "year": 1965,
-        "title": "Anti-Vietnam War Protest in Boston, 1965",
+        "title": "Anti-Vietnam War Protest, Boston",
         "text": "One thousand students, mostly from Harvard, MIT and Northeastern, " +
             "marched from Cambridge Common to Boston Common in October 1965 to protest " +
             "the Vietnam war. Speakers at the event included MIT Professor Noam M." +
@@ -51,41 +51,148 @@ var svg = d3.select("#visual-timeline").append("svg")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-var x = d3.scaleTime()
-    .range([0, width])
-    .domain([new Date(1960,0,1), new Date(2018,0,1)]);
+// var x = d3.scaleTime()
+//     .range([0, width])
+//     .domain([new Date(1960,0,1), new Date(2018,0,1)]);
 
-var xAxis = d3.axisBottom().scale(x);
+var x = d3.scaleBand()
+    .domain(years)
+    .range([0, width]);
 
+var scaledif = x(1965) - x(1964);
+
+
+var xAxis = d3.axisBottom().scale(x).tickValues(years);
+
+
+
+var lines = svg.selectAll("lines").data(years);
+lines.enter().append("line")
+    .attr("class", "lines")
+    .attr("x1", function(d){ return x(d) + scaledif/2})
+    .attr("x2", function(d){ return x(d) + scaledif/2})
+    .attr("y1", height/2)
+    .attr("y2", function(d,i){
+        if (i%2 == 0) {
+            return height/2 + 75
+        } else { return height/2 - 75}
+    })
+    .attr("stroke-width", 5)
+    .attr("stroke", "#b30000");
+
+//Berkeley free speech items
+svg.append("text")
+    .attr("x", x(1964))
+    .attr("y", 390)
+    .attr("font-size", 14)
+    .text("Free Speech Movement, Berkeley");
+
+svg.append("image")
+    .attr("id", "savioSound")
+    .attr("class", "media")
+    .attr("xlink:href", "data/timeline/savio.png")
+    .attr('width', 170)
+    .attr('height', 140)
+    .attr("x", "0")
+    .attr("y", height/2 + 45);
+
+//Boston anti-Vietnam war items
+svg.append("text")
+    .attr("x", x(1965)- 55)
+    .attr("y", 15)
+    .attr("font-size", 14)
+    .text("Anti-Vietnam War Protests, Boston");
+
+//Columbia
+svg.append("image")
+    .attr("id", "columbia")
+    .attr("class", "media")
+    .attr("xlink:href", "data/timeline/columbia.jpg")
+    .attr('width', 170)
+    .attr('height', 140)
+    .attr("x", x(1968))
+    .attr("y", height/2 + 100);
+
+svg.append("text")
+    .attr("x", x(1968) - 100)
+    .attr("font-size", 14)
+    .attr("y", 295)
+    .text("Anti-Vietnam and Anti-Segregation Protests, New York");
+
+// Kent State shooting
+svg.append("text")
+    .attr("x", x(1970) - 45)
+    .attr("y", 15)
+    .attr("font-size", 14)
+    .text("Kent State Protest Shootings, Ohio");
+
+// Berkeley anti-Apartheid
+svg.append("image")
+    .attr("id", "columbia")
+    .attr("class", "media")
+    .attr("xlink:href", "data/timeline/berkeleyApartheid.jpg")
+    .attr('width', 170)
+    .attr('height', 140)
+    .attr("x", x(1985))
+    .attr("y", height/2 + 50);
+
+svg.append("text")
+    .attr("x", x(1985) - 30)
+    .attr("y", height/2 + 200)
+    .attr("font-size", 14)
+    .text("Anti-Apartheid Protests, Berkeley");
+
+// NYU Iraq war
+svg.append("image")
+    .attr("xlink:href", "data/timeline/NYUIraq.jpg")
+    .attr('width', 170)
+    .attr('height', 100)
+    .attr("x", x(2003) - 20)
+
+svg.append("text")
+    .attr("x", x(2003) - 40)
+    .attr("y", height/2 - 80)
+    .attr("font-size", 14)
+    .text("NYU Students Protest Iraq War, NY");
+
+// yale
+svg.append("text")
+    .attr("x", x(2015) - 10)
+    .attr("y", height/2 + 95)
+    .attr("font-size", 14)
+    .text("March of Resilience, Yale");
+
+// uc berkeley free speech week items
+svg.append("image")
+    .attr("id", "miloSound")
+    .attr("xlink:href", "data/timeline/milo.png")
+    .attr('width', 170)
+    .attr('height', 150)
+    .attr("x", x(2017) - 20)
+    .attr("y", 0);
+
+svg.append("text")
+    .attr("x", x(2017) - 80)
+    .attr("y", 15)
+    .attr("font-size", 14)
+    .text("UC Berkeley Free Speech Week, Berkeley");
+
+
+
+
+
+// var points = svg.selectAll("circle").data(years);
+// points.enter().append("circle")
+//     .attr("id", function(d){ return d})
+//     .attr("r", 10)
+//     .attr("cx", function(d){ return x(d)})
+//     .attr("cy", height/2)
+//     .attr("fill", "#b30000");
 
 var xAxisG = svg.append("g")
     .attr("class", "axis x-axis")
     .attr("transform", "translate(0 ," + height/2 + ")")
     .call(xAxis);
-
-svg.append("image")
-    .attr("id", "savio")
-    .attr("xlink:href", "data/timeline/savio.png")
-    .attr('width', 100)
-    .attr('height', 80)
-    .attr("x", "0")
-    .attr("y", height/2 - 2*(margin.top));
-
-
-svg.append("foreignObject")
-    .attr("id", "boston")
-    .attr('width', 200)
-    .attr('height', height/2 + 70)
-    .attr("x", "0")
-    .attr("h", 200);
-
-var points = svg.selectAll("circle").data(years);
-points.enter().append("circle")
-    .attr("id", function(d){ return d})
-    .attr("r", 10)
-    .attr("cx", function(d){ return x(new Date(d, 0 ,1))})
-    .attr("cy", height/2)
-    .attr("fill", "#b30000");
 
 
 
@@ -107,7 +214,7 @@ var information = svg.selectAll("info").data(data);
 
 
 var savioSpeech = $("#saviosound")[0];
-$("#savio")
+$("#savioSound")
     .mouseenter(function() {
         savioSpeech.play();
     })
@@ -115,11 +222,31 @@ $("#savio")
         savioSpeech.pause();
     });
 
-var bostonVid = $("#bostonVideo")[0];
-$("#boston")
+var miloSpeech = $("#milosound")[0];
+$("#miloSound")
     .mouseenter(function() {
-        bostonVid.play();
+        miloSpeech.play();
     })
     .mouseout(function() {
-        bostonVid.pause();
+        miloSpeech.pause();
     });
+
+$("#kentVideo").prop('muted', true);
+
+$("#kentVideo").hover( function (){
+    if( $("#kentVideo").prop('muted') ) {
+        $("#kentVideo").prop('muted', false);
+    } else {
+        $("#kentVideo").prop('muted', true);
+    }
+});
+
+$("#yaleVideo").prop('muted', true);
+
+$("#yaleVideo").hover( function (){
+    if( $("#yaleVideo").prop('muted') ) {
+        $("#yaleVideo").prop('muted', false);
+    } else {
+        $("#yaleVideo").prop('muted', true);
+    }
+});
