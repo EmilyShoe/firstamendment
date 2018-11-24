@@ -84,6 +84,10 @@ $(".degree").on('mouseover', function() {
     lineGraph.wrangleData("degree");
 });
 
+$(".age").on('mouseover', function() {
+    lineGraph.wrangleData("age");
+});
+
 $(".line-overall").on('mouseover', function() {
     lineGraph.wrangleData("all");
 });
