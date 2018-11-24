@@ -70,7 +70,7 @@ $(".degree").on('mouseover', function() {
 });
 
 $(".line-overall").on('mouseover', function() {
-    lineGraph.wrangleData("overall");
+    lineGraph.wrangleData("all");
 });
 
 function allowedEncode(s) {

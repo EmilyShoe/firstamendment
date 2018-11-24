@@ -58,9 +58,56 @@ LineGraph.prototype.initVis = function(){
         .attr("y", -8)
         .text("Yes");
 
+    //Initialize line
+    vis.line = d3.line()
+        .x(function(d) { return vis.x(d.key)})
+        .y(function(d) { return vis.y(d.value)});
+
+    //Initialize legend
+    vis.legendBoxSize = 15;
+    vis.svg.append("rect")
+        .attr("class", "line-legend-first")
+        .attr("x", vis.width - 2*vis.margin.left)
+        .attr("y", vis.height - 2*vis.margin.bottom)
+        .attr("height", vis.legendBoxSize + "px")
+        .attr("width", vis.legendBoxSize + "px")
+        .attr("fill", "white");
+
+    vis.svg.append("rect")
+        .attr("class", "line-legend-second")
+        .attr("x", vis.width - 2*vis.margin.left)
+        .attr("y", vis.height - 2*vis.margin.bottom + 1.5*vis.legendBoxSize)
+        .attr("height", vis.legendBoxSize + "px")
+        .attr("width", vis.legendBoxSize + "px")
+        .attr("fill", "white");
+
+    vis.svg.append("rect")
+        .attr("class", "line-legend-third")
+        .attr("x", vis.width - 2*vis.margin.left)
+        .attr("y", vis.height - 2*vis.margin.bottom + 3*vis.legendBoxSize)
+        .attr("height", vis.legendBoxSize + "px")
+        .attr("width", vis.legendBoxSize + "px")
+        .attr("fill", "white");
+
+    vis.svg.append("text")
+        .attr("class", "line-legend-first")
+        .attr("x", vis.width - 2*vis.margin.left + 1.3*vis.legendBoxSize)
+        .attr("y", vis.height - 2*vis.margin.bottom + .9*vis.legendBoxSize);
+
+    vis.svg.append("text")
+        .attr("class", "line-legend-second")
+        .attr("x", vis.width - 2*vis.margin.left + 1.3*vis.legendBoxSize)
+        .attr("y", vis.height - 2*vis.margin.bottom + 2.4*vis.legendBoxSize);
+
+    vis.svg.append("text")
+        .attr("class", "line-legend-third")
+        .attr("x", vis.width - 2*vis.margin.left + 1.3*vis.legendBoxSize)
+        .attr("y", vis.height - 2*vis.margin.bottom + 3.9*vis.legendBoxSize);
+
+
     // (Filter, aggregate, modify data)
     vis.wrangleData("all");
-}
+};
 
 
 
@@ -211,46 +258,87 @@ LineGraph.prototype.updateVis = function(lineType){
         .tickValues([10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
         .tickFormat(d => d + "%");
 
-    var line = d3.line()
-        .x(function(d) { return vis.x(d.key)})
-        .y(function(d) { return vis.y(d.value)});
-    
 
-    vis.femaleLineGraph = vis.svg.selectAll("path.femaleLine");
-    vis.maleLineGraph = vis.svg.selectAll("path.maleLine");
-    vis.totalLineGraph = vis.svg.selectAll("path.totalLine");
-    vis.republicanLineGraph = vis.svg.selectAll("path.republicanLine");
-    vis.independentLineGraph = vis.svg.selectAll("path.independentLine");
-    vis.democratLineGraph = vis.svg.selectAll("path.democratLine");
-    vis.collegeLineGraph = vis.svg.selectAll("path.collegeLine");
-    vis.hsLineGraph = vis.svg.selectAll("path.hsLine");
-    vis.lthsLineGraph = vis.svg.selectAll("path.lthsLine");
+    //Initialize paths
+    vis.svg.append("path")
+        .attr("class", "path totalLine")
+        .attr("fill", "none")
+        .attr("stroke", "#3679A9")
+        .attr("stroke-width", 3);
 
+    vis.svg.append("path")
+        .attr("class", "path femaleLine")
+        .attr("fill", "none")
+        .attr("stroke", "#AF000E")
+        .attr("stroke-width", 3);
+
+    vis.svg.append("path")
+        .attr("class", "path maleLine")
+        .attr("fill", "none")
+        .attr("stroke", "#3679A9")
+        .attr("stroke-width", 3);
+
+    vis.svg.append("path")
+        .attr("class", "path republicanLine")
+        .attr("fill", "none")
+        .attr("stroke", "#AF000E")
+        .attr("stroke-width", 3);
+
+    vis.svg.append("path")
+        .attr("class", "path independentLine")
+        .attr("fill", "none")
+        .attr("stroke", "#868e96")
+        .attr("stroke-width", 3);
+
+    vis.svg.append("path")
+        .attr("class", "path democratLine")
+        .attr("fill", "none")
+        .attr("stroke", "#3679A9")
+        .attr("stroke-width", 3);
+
+    vis.svg.append("path")
+        .attr("class", "path collegeLine")
+        .attr("fill", "none")
+        .attr("stroke", "#3679A9")
+        .attr("stroke-width", 3);
+
+    vis.svg.append("path")
+        .attr("class", "path lthsLine")
+        .attr("fill", "none")
+        .attr("stroke", "#AF000E")
+        .attr("stroke-width", 3);
+
+    vis.svg.append("path")
+        .attr("class", "path hsLine")
+        .attr("fill", "none")
+        .attr("stroke", "#868e96")
+        .attr("stroke-width", 3);
+
+
+    //Select paths by class and assign data
+    vis.femaleLineGraph = vis.svg.select("path.femaleLine").datum(vis.nestedFemale);
+    vis.maleLineGraph = vis.svg.select("path.maleLine").datum(vis.nestedMale);
+    vis.totalLineGraph = vis.svg.select("path.totalLine").datum(vis.nestedTotal);
+    vis.republicanLineGraph = vis.svg.select("path.republicanLine").datum(vis.nestedRepublican);
+    vis.independentLineGraph = vis.svg.select("path.independentLine").datum(vis.nestedIndependent);
+    vis.democratLineGraph = vis.svg.select("path.democratLine").datum(vis.nestedDemocrat);
+    vis.collegeLineGraph = vis.svg.select("path.collegeLine").datum(vis.nestedCollege);
+    vis.hsLineGraph = vis.svg.select("path.hsLine").datum(vis.nestedHs);
+    vis.lthsLineGraph = vis.svg.select("path.lthsLine").datum(vis.nestedLths);
+
+
+    //Transition to correct graph type and remove all other paths
     if(lineType==="sex") {
         vis.lineType = "sex";
 
         //Add in selected line graphs
         vis.femaleLineGraph
-            .data(vis.nestedFemale)
-            .enter().append("path")
-            .attr("class", "path femaleLine")
-            .merge(vis.femaleLineGraph)
             .transition(t)
-            .attr("fill", "none")
-            .attr("stroke", "pink")
-            .attr("stroke-width", 3)
-            .attr("d", line(vis.nestedFemale));
+            .attr("d", vis.line);
 
         vis.maleLineGraph
-            .data(vis.nestedMale)
-            .enter().append("path")
-            .attr("class", "path maleLine")
-            .merge(vis.maleLineGraph)
             .transition(t)
-            .attr("fill", "none")
-            .attr("stroke", "steelblue")
-            .attr("stroke-width", 3)
-            .attr("d", line(vis.nestedMale));
+            .attr("d", vis.line);
 
         //Remove all other line graphs
         vis.totalLineGraph.remove();
@@ -260,43 +348,39 @@ LineGraph.prototype.updateVis = function(lineType){
         vis.collegeLineGraph.remove();
         vis.hsLineGraph.remove();
         vis.lthsLineGraph.remove();
+
+        //Edit legend
+        vis.svg.select("rect.line-legend-first")
+            .attr("fill", "#AF000E");
+        vis.svg.select("rect.line-legend-second")
+            .attr("fill", "#3679A9");
+        vis.svg.select("rect.line-legend-third")
+            .attr("fill", "white");
+
+        vis.svg.select("text.line-legend-first")
+            .text("Female");
+        vis.svg.select("text.line-legend-second")
+            .text("Male");
+        vis.svg.select("text.line-legend-third")
+            .text("");
+
     }
     else if(lineType==="political-party"){
         vis.lineType = "political-party";
 
         //Add selected line graphs
         vis.republicanLineGraph
-            .data(vis.nestedRepublican)
-            .enter().append("path")
-            .attr("class", "path republicanLine")
-            .merge(vis.republicanLineGraph)
             .transition(t)
-            .attr("fill", "none")
-            .attr("stroke", "red")
-            .attr("stroke-width", 3)
-            .attr("d", line(vis.nestedRepublican));
+            .attr("d", vis.line);
 
         vis.independentLineGraph
-            .data(vis.nestedIndependent)
-            .enter().append("path")
-            .attr("class", "path independentLine")
-            .merge(vis.independentLineGraph)
             .transition(t)
             .attr("fill", "none")
-            .attr("stroke", "black")
-            .attr("stroke-width", 3)
-            .attr("d", line(vis.nestedIndependent));
+            .attr("d", vis.line);
 
         vis.democratLineGraph
-            .data(vis.nestedDemocrat)
-            .enter().append("path")
-            .attr("class", "path democratLine")
-            .merge(vis.democratLineGraph)
             .transition(t)
-            .attr("fill", "none")
-            .attr("stroke", "blue")
-            .attr("stroke-width", 3)
-            .attr("d", line(vis.nestedDemocrat));
+            .attr("d", vis.line);
 
         //Remove all other line graphs
         vis.totalLineGraph.remove();
@@ -306,43 +390,36 @@ LineGraph.prototype.updateVis = function(lineType){
         vis.hsLineGraph.remove();
         vis.lthsLineGraph.remove();
 
+        //Edit legend
+        vis.svg.select("rect.line-legend-first")
+            .attr("fill", "#AF000E");
+        vis.svg.select("rect.line-legend-second")
+            .attr("fill", "#3679A9");
+        vis.svg.select("rect.line-legend-third")
+            .attr("fill", "#868e96");
+
+        vis.svg.select("text.line-legend-first")
+            .text("Republican");
+        vis.svg.select("text.line-legend-second")
+            .text("Democrat");
+        vis.svg.select("text.line-legend-third")
+            .text("Independent");
     }
     else if(lineType==="degree") {
         vis.lineType = "degree";
 
         //Add selected line graphs
         vis.collegeLineGraph
-            .data(vis.nestedCollege)
-            .enter().append("path")
-            .attr("class", "path collegeLine")
-            .merge(vis.collegeLineGraph)
             .transition(t)
-            .attr("fill", "none")
-            .attr("stroke", "red")
-            .attr("stroke-width", 3)
-            .attr("d", line(vis.nestedCollege));
+            .attr("d", vis.line);
 
         vis.hsLineGraph
-            .data(vis.nestedHs)
-            .enter().append("path")
-            .attr("class", "path hsLine")
-            .merge(vis.hsLineGraph)
             .transition(t)
-            .attr("fill", "none")
-            .attr("stroke", "red")
-            .attr("stroke-width", 3)
-            .attr("d", line(vis.nestedHs));
+            .attr("d", vis.line);
 
         vis.lthsLineGraph
-            .data(vis.nestedLths)
-            .enter().append("path")
-            .attr("class", "path lthsLine")
-            .merge(vis.lthsLineGraph)
             .transition(t)
-            .attr("fill", "none")
-            .attr("stroke", "blue")
-            .attr("stroke-width", 3)
-            .attr("d", line(vis.nestedLths));
+            .attr("d", vis.line);
 
         //Remove all other line graphs
         vis.femaleLineGraph.remove();
@@ -351,6 +428,24 @@ LineGraph.prototype.updateVis = function(lineType){
         vis.independentLineGraph.remove();
         vis.democratLineGraph.remove();
         vis.totalLineGraph.remove();
+
+        //Edit legend
+        vis.svg.select("rect.line-legend-third")
+            .attr("fill", "#3679A9");
+        vis.svg.select("rect.line-legend-second")
+            .attr("fill", "#868e96");
+        vis.svg.select("rect.line-legend-first")
+            .attr("fill", "#AF000E");
+
+        vis.svg.select("text.line-legend-third")
+            .text("College")
+            .attr("color", "#3679A9");
+        vis.svg.select("text.line-legend-second")
+            .text("High School")
+            .attr("color", "#868e96");
+        vis.svg.select("text.line-legend-first")
+            .text("Less than High School")
+            .attr("color", "#AF000E");
 
     }
     else {
@@ -358,16 +453,8 @@ LineGraph.prototype.updateVis = function(lineType){
 
         //Add in overall line graph
         vis.totalLineGraph
-            .data(vis.nestedTotal)
-            .enter()
-            .append("path")
-            .attr("class", "path totalLine")
-            .merge(vis.totalLineGraph)
             .transition(t)
-            .attr("fill", "none")
-            .attr("stroke", "steelblue")
-            .attr("stroke-width", 3)
-            .attr("d", line(vis.nestedTotal));
+            .attr("d", vis.line);
 
         //Remove all other line graphs
         vis.femaleLineGraph.remove();
@@ -378,28 +465,34 @@ LineGraph.prototype.updateVis = function(lineType){
         vis.collegeLineGraph.remove();
         vis.hsLineGraph.remove();
         vis.lthsLineGraph.remove();
+
+        //Edit legend
+        vis.svg.select("rect.line-legend-first")
+            .attr("fill", "white");
+        vis.svg.select("rect.line-legend-second")
+            .attr("fill", "#3679A9");
+        vis.svg.select("rect.line-legend-third")
+            .attr("fill", "white");
+
+        vis.svg.select("text.line-legend-first")
+            .text("");
+        vis.svg.select("text.line-legend-second")
+            .text("Total");
+        vis.svg.select("text.line-legend-third")
+            .text("");
     }
 
     // Call axis functions with the new domain
     vis.svg.select(".x-axis").call(vis.xAxis).transition(t);
     vis.svg.select(".y-axis").call(vis.yAxis).transition(t);
 
-    //vis.svg.selectAll(".path").exit().remove();
     vis.svg.selectAll(".axis").exit().remove();
-    vis.femaleLineGraph.exit().remove();
-    vis.maleLineGraph.exit().remove();
-    vis.republicanLineGraph.exit().remove();
-    vis.independentLineGraph.exit().remove();
-    vis.democratLineGraph.exit().remove();
-    vis.collegeLineGraph.exit().remove();
-    vis.hsLineGraph.exit().remove();
-    vis.lthsLineGraph.exit().remove();
-    vis.totalLineGraph.exit().remove();
 
 };
 
 LineGraph.prototype.speakerChanged = function(speaker){
     var vis = this;
+
     vis.speakerType = speaker;
 
     vis.wrangleData(vis.lineType);
