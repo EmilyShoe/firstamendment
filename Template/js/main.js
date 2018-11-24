@@ -1,12 +1,13 @@
 queue()
 	.defer(d3.csv,"data/gssSpeech.csv")
     .defer(d3.json,"data/collegesData.geojson")
+    .defer(d3.csv, "data/disinvitationattempts.csv")
 	.await(createVis);
 
 var lineGraph;
 var collegeMap;
 
-function createVis(error, gssSpeech, colleges) {
+function createVis(error, gssSpeech, colleges, disinvitations) {
     if (error) {
         console.log(error);
     }
@@ -29,10 +30,24 @@ function createVis(error, gssSpeech, colleges) {
         return result;
     });
 
+    Disinvitations = disinvitations.map(function(d) {
+        return {
+            id : +d.id,
+            DisinvitationYN : d.DisinvitationYN,
+            ControversyTopic : d.ControversyTopic,
+            sideFrom : d.FromRightorLeftofSpeaker,
+            Speaker : d.Speaker,
+            Year : d.Year,
+            School : d.School
+        };
+    });
+
 
     lineGraph = new LineGraph("line-graphs", cleanGssData);
 
     collegeMap = new CollegeMap("map", colleges.features);
+
+    disinvitationAttempts = new DisinvitationAttempts("disinvitation-visualization", Disinvitations);
 
 }
 
@@ -72,6 +87,11 @@ $(".degree").on('mouseover', function() {
 $(".line-overall").on('mouseover', function() {
     lineGraph.wrangleData("all");
 });
+
+$(".yes-no-split").on('click', function() {
+    disinvitationAttempts.splitYesNo();
+});
+
 
 function allowedEncode(s) {
     if(s==="Not allowed") return 0;

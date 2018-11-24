@@ -110,7 +110,6 @@ LineGraph.prototype.initVis = function(){
 };
 
 
-
 /*
  * Data wrangling
  */
