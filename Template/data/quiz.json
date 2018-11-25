@@ -1,0 +1,20 @@
+[{
+  "question": "You are banned from a social media platform",
+  "answer": "false",
+  "explanation": "Social media companies are private companies. Whilst it would be morally favourable for them to encourage free speech, the First Amendment protects from government censorship.",
+},
+  {
+    "question": "You are fired from your job for something you said in public or online",
+    "answer": "false",
+    "explanation": "If you work for a private company, you are not protected by the First Amendment. It is a private company's right to choose their code of conduct and fire/hire people at their will. If you work for the government, it could be a first amendment issue if the speech does not prevent you from doing your job. For example, if you work with children and say something dangerous, they have can fire you. "
+  },
+  {
+    "question": "A private university cancels a visit from a controversial speaker",
+    "answer": "false",
+    "explanation": "Again, private organizations have the right to do what they want. However, most private universities know that free speech is essential for academics.",
+  },
+  {
+    "question": "A public university cancels a visit from a controversial speaker",
+    "answer": "false",
+    "explanation": "Public universities are not allowed to cancel speeches based on who the speaker is. They are naturally allowed to place restrictions, such as dictating the time, venue, or make suggestions for subject matter, but they cannot do so that discriminates against a certain point of view."
+  }]
