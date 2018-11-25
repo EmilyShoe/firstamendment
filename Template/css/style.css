@@ -10,6 +10,10 @@ body {
     background-color: #868e96;
 }
 
+h3 {
+    font-family: 'Abril Fatface', sans-serif;
+}
+
 #title {
   font-weight: 100;
   font-size: 80px;
@@ -39,10 +43,12 @@ body {
 #quiz{
     font-size: 14px;
     font-family: 'Actor', sans-serif;
-    padding-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
+}
 
+#quiz-title {
+    text-align: center;
 }
 
 #answer {
@@ -167,7 +173,7 @@ body {
     width: 250px;
     height: 200px;
     top: 1780px;
-    left: 790px;
+    left: 845px;
     padding-left: 50px;
 }
 
