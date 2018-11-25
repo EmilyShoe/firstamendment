@@ -89,22 +89,22 @@ DisinvitationAttempts.prototype.initVis = function(){
     vis.labelOne = vis.svg.append("text")
         .attr("class", "group-label")
         .attr("x", 80)
-        .attr("y", 380)
+        .attr("y", 330)
         .attr("dy", ".35em");
     vis.labelTwo = vis.svg.append("text")
         .attr("class", "group-label")
         .attr("x", 360)
-        .attr("y", 380)
+        .attr("y", 330)
         .attr("dy", ".35em");
     vis.labelThree = vis.svg.append("text")
         .attr("class", "group-label")
-        .attr("x", 80)
-        .attr("y", 620)
+        .attr("x", 600)
+        .attr("y", 330)
         .attr("dy", ".35em");
     vis.labelFour = vis.svg.append("text")
         .attr("class", "group-label")
-        .attr("x", 80)
-        .attr("y", 880)
+        .attr("x", 850)
+        .attr("y", 330)
         .attr("dy", ".35em");
 
 
@@ -203,7 +203,7 @@ DisinvitationAttempts.prototype.splitYesNo = function() {
                 return yFunction(index, 20);
             });
 
-        d3.select(".yes-no-split").text("Back");
+        d3.select(".yes-no-split").text("Total");
 
         vis.labelOne
             .transition()
@@ -216,6 +216,9 @@ DisinvitationAttempts.prototype.splitYesNo = function() {
             .duration(1500)
             .attr("x", 570)
             .text("No");
+
+        vis.labelThree.text("");
+        vis.labelFour.text("");
     }
     else {
         vis.svg.selectAll(".speaker")
@@ -224,7 +227,7 @@ DisinvitationAttempts.prototype.splitYesNo = function() {
             .attr("cx", function(d) { return xFunction(d.id - 1, 30); })
             .attr("cy", function(d) { return yFunction(d.id - 1, 30); });
 
-        d3.select(".yes-no-split").text("Yes/No");
+        d3.select(".yes-no-split").text("Successful Disinvitation");
 
         vis.labelOne
             .transition()
@@ -232,6 +235,8 @@ DisinvitationAttempts.prototype.splitYesNo = function() {
             .attr("x", 260)
             .text("Total");
         vis.labelTwo.text("");
+        vis.labelThree.text("");
+        vis.labelFour.text("");
     }
 
 };
@@ -256,7 +261,7 @@ DisinvitationAttempts.prototype.colorByLight = function() {
                 }
                 else return "#868e96";
             });
-        d3.select(".color-by-traffic-light").text("Color By Yes/No")
+        d3.select(".color-by-traffic-light").text("Successful Disinvitation")
 
     }
     else {
@@ -266,7 +271,7 @@ DisinvitationAttempts.prototype.colorByLight = function() {
                 else return "#AF000E";
             });
 
-        d3.select(".color-by-traffic-light").text("Color by FIRE Rating")
+        d3.select(".color-by-traffic-light").text("FIRE Rating")
 
     }
 
@@ -294,8 +299,27 @@ DisinvitationAttempts.prototype.splitByLight = function() {
                 else if(d.trafficLight === "none") return yFunction(d.trafficId - 25, 11);
                 return yFunction(d.trafficId - 1, 11);
             });
-        d3.select(".split-by-traffic-light").text("Back");
+        d3.select(".split-by-traffic-light").text("Total");
 
+
+        vis.labelOne
+            .transition()
+            .duration(1500)
+            .attr("x", 70)
+            .text("Blue (good)");
+        vis.labelTwo
+            .transition()
+            .duration(1500)
+            .attr("x", 300)
+            .text("White (neutral)");
+        vis.labelThree
+            .transition()
+            .duration(1500)
+            .text("Red (bad)");
+        vis.labelFour
+            .transition()
+            .duration(1500)
+            .text("Grey (no FIRE rating)");
 
     }
     else {
@@ -305,7 +329,16 @@ DisinvitationAttempts.prototype.splitByLight = function() {
             .attr("cx", function(d) { return xFunction(d.id - 1, 30); })
             .attr("cy", function(d) { return yFunction(d.id - 1, 30); });
 
-        d3.select(".split-by-traffic-light").text("Split by FIRE Rating")
+        d3.select(".split-by-traffic-light").text("FIRE Rating");
+        vis.labelOne
+            .transition()
+            .duration(1500)
+            .attr("x", 260)
+            .text("Total");
+        vis.labelTwo.text("");
+        vis.labelThree.text("");
+        vis.labelFour.text("");
+
     }
 
 };
@@ -320,19 +353,19 @@ function xFunction(ind, perRow) {
 }
 
 function yFunction(ind, perRow) {
-    if(ind < perRow) return 100;
-    else if(ind < perRow*2) return 100 + 10/3*radius;
-    else if(ind < perRow*3) return 100 + 20/3*radius;
-    else if(ind < perRow*4) return 100 + 10*radius;
-    else if(ind < perRow*5) return 100 + 40/3*radius;
-    else if(ind < perRow*6) return 100 + 50/3*radius;
-    else if(ind < perRow*7) return 100 + 20*radius;
-    else if(ind < perRow*8) return 100 + 70/3*radius;
-    else if(ind < perRow*9) return 100 + 80/3*radius;
-    else if(ind < perRow*10) return 100 + 30*radius;
-    else if(ind < perRow*11) return 100 + 100/3*radius;
-    else if(ind < perRow*12) return 100 + 110/3*radius;
-    else if(ind < perRow*13) return 100 + 40*radius;
-    else if(ind < perRow*14) return 100 + 130/3*radius;
+    if(ind < perRow) return 50;
+    else if(ind < perRow*2) return 50 + 10/3*radius;
+    else if(ind < perRow*3) return 50 + 20/3*radius;
+    else if(ind < perRow*4) return 50 + 10*radius;
+    else if(ind < perRow*5) return 50 + 40/3*radius;
+    else if(ind < perRow*6) return 50 + 50/3*radius;
+    else if(ind < perRow*7) return 50 + 20*radius;
+    else if(ind < perRow*8) return 50 + 70/3*radius;
+    else if(ind < perRow*9) return 50 + 80/3*radius;
+    else if(ind < perRow*10) return 50 + 30*radius;
+    else if(ind < perRow*11) return 50 + 100/3*radius;
+    else if(ind < perRow*12) return 50 + 110/3*radius;
+    else if(ind < perRow*13) return 50 + 40*radius;
+    else if(ind < perRow*14) return 50 + 130/3*radius;
 }
 

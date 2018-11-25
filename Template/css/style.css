@@ -314,6 +314,15 @@ a {
     position: relative;
 }
 
+#disinvited-speakers-text {
+    text-align: center;
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#disinvitation-group-by {
+    padding-bottom: 10px;
 #information {
     padding: 20px;
 }
