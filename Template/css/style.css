@@ -189,14 +189,6 @@ body {
     fill: #dddddd;
 }
 
-.speaker-title {
-    text-align: right;
-}
-
-.stooltip {
-    background-color: rgba(54, 121, 169, 0.73);
-}
-
 #disinvitation-visualization {
     background-color: #C0C0C0;
     height: 620px;
@@ -367,4 +359,12 @@ a {
 
 #aeiVideo{
     width: 100%;
+}
+
+#disinvited-explanation {
+    font-size: 16px;
+    font-family: "Actor", sans-serif;
+    background-color: rgba(134, 142, 150, 0.79);
+    text-align: center;
+    padding-top: 10px;
 }

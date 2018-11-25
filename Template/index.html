@@ -190,25 +190,29 @@
       <!-- Disinvitation Requests -->
 
       <div id="disinvitation-visualization">
-          <h1 style="text-align:center; padding-top:20px;">Are speaker disinvitations common?</h1>
-          <p>Each circle represents a speaker who was petitioned against by the student body at a college they were
-          invited to speak at. Click on the buttons to learn more about their invitations or disinvitations to speak. </p>
-          Split data by
-          <button class="btn yes-no-split">Yes/No</button>
-          <button class="btn split-by-traffic-light">Split by FIRE rating</button>
-      <div class="col-12" id="disinvitation-visualization">
           <h1 style="text-align:center">Are speaker disinvitations common?</h1>
           <p id="disinvited-speakers-text">
               Each circle represents a speaker who was petitioned against by the student body at a college they were
               invited to speak at. <span class="white">Click</span> on the buttons to learn more about their disinvitations to speak, or
               <span class="white">hover</span> on each circle to see which speaker, college, and year it represents. </p>
-          <div id="disinvitation-group-by">
-              Group by
-            <button class="btn yes-no-split">Successful Disinvitation</button>
-              <button class="btn split-by-traffic-light">FIRE rating</button> </br>
+          <div class="row">
+              <div class="col-md-6" style="padding-left: 80px">
+                  <div id="disinvitation-group-by">
+                      Group by
+                      <button class="btn disinvite-total" style="background-color:#AF000E">Total</button>
+                    <button class="btn yes-no-split">Successful Disinvitation</button>
+                      <button class="btn split-by-traffic-light">FIRE rating</button> </br>
+                  </div>
+                  Color data by
+                  <button class="btn color-by-yes-no" style="background-color:#AF000E">Successful Disinvitation</button>
+                  <button class="btn color-by-traffic-light">FIRE rating</button>
+              </div>
+              <div class="col-md-4" id="disinvited-explanation">
+                    Hundreds of speakers are invited to speak at US universities every year. Here are 378 who were disinvited to
+                    speak on a college campus.
+              </div>
+
           </div>
-          Color data by
-          <button class="btn color-by-traffic-light">FIRE rating</button>
       </div>
 
 
@@ -224,6 +228,7 @@
               and spend hundreds of thousands of dollars on security.</p>
               <p>The majority of students are pro-free speech than before, but a dangerous and sometimes
               violent minority may be controlling the discussion about the First Amendment on US campuses.</p>
+              <h1 style="text-align:center">No</h1>
           </div>
           <div class="col-6" id="conclusion-img">
               <video id="aeiVideo" controls>
