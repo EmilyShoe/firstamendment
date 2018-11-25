@@ -99,11 +99,19 @@ $(".yes-no-split").on('click', function() {
 });
 
 $(".color-by-traffic-light").on('click', function() {
-    disinvitationAttempts.colorByLight();
+    disinvitationAttempts.colorByLight("1");
+});
+
+$(".color-by-yes-no").on('click', function() {
+    disinvitationAttempts.colorByLight("-1");
 });
 
 $(".split-by-traffic-light").on('click', function() {
-    disinvitationAttempts.splitByLight();
+    disinvitationAttempts.splitByLight("1");
+});
+
+$(".disinvite-total").on('click', function() {
+    disinvitationAttempts.splitByLight("-1");
 });
 
 

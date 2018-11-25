@@ -53,22 +53,29 @@ DisinvitationAttempts.prototype.initVis = function(){
     vis.labelOne = vis.svg.append("text")
         .attr("class", "group-label")
         .attr("x", 80)
-        .attr("y", 330)
+        .attr("y", 300)
         .attr("dy", ".35em");
     vis.labelTwo = vis.svg.append("text")
         .attr("class", "group-label")
         .attr("x", 360)
-        .attr("y", 330)
+        .attr("y", 300)
         .attr("dy", ".35em");
     vis.labelThree = vis.svg.append("text")
         .attr("class", "group-label")
         .attr("x", 600)
-        .attr("y", 330)
+        .attr("y", 300)
         .attr("dy", ".35em");
     vis.labelFour = vis.svg.append("text")
         .attr("class", "group-label")
         .attr("x", 850)
-        .attr("y", 330)
+        .attr("y", 300)
+        .attr("dy", ".35em");
+
+    vis.title = vis.svg.append("text")
+        .attr("class", "disinvitation-title")
+        .attr("x", 0)
+        .attr("y", 0)
+        .style("font-size", "20px")
         .attr("dy", ".35em");
 
 
@@ -129,79 +136,89 @@ DisinvitationAttempts.prototype.updateVis = function(){
         .attr("x", 260)
         .text("Total");
 
+    vis.title.text("Speakers invited to Campuses");
+
 
 };
-
-var clickNumber = -1;
 
 DisinvitationAttempts.prototype.splitYesNo = function() {
     var vis = this;
 
-    clickNumber *= -1;
+    numberYes = 172; //Number of speakers with value of disinvitation successful as Yes
+    vis.svg.selectAll(".speaker")
+        .transition()
+        .duration(1500)
+        .attr("cx", function (d, index) {
+            if(d.DisinvitationYN === 1){
+                return ((20 + 1) * 10/3 * vis.radius + xFunction(index - numberYes, 20));
+            }
+            return xFunction(index, 20);
+        })
+        .attr("cy", function (d, index) {
+            if(d.DisinvitationYN === 1){
+                return yFunction(index - numberYes, 20);
+            }
+            return yFunction(index, 20);
+        });
 
-    if(clickNumber > 0) {
-        numberYes = 172; //Number of speakers with value of disinvitation successful as Yes
-        vis.svg.selectAll(".speaker")
-            .transition()
-            .duration(1500)
-            .attr("cx", function (d, index) {
-                if(d.DisinvitationYN === 1){
-                    return ((20 + 1) * 10/3 * vis.radius + xFunction(index - numberYes, 20));
-                }
-                return xFunction(index, 20);
-            })
-            .attr("cy", function (d, index) {
-                if(d.DisinvitationYN === 1){
-                    return yFunction(index - numberYes, 20);
-                }
-                return yFunction(index, 20);
-            });
 
-        d3.select(".yes-no-split").text("Total");
+    d3.select(".split-by-traffic-light").style("background-color", "#3679A9");
+    d3.select(".disinvite-total").style("background-color", "#3679A9");
+    d3.select(".yes-no-split").style("background-color", "#AF000E");
 
-        vis.labelOne
-            .transition()
-            .duration(1500)
-            .attr("x", 135)
-            .text("Yes");
 
-        vis.labelTwo
-            .transition()
-            .duration(1500)
-            .attr("x", 570)
-            .text("No");
+    vis.labelOne
+        .transition()
+        .duration(1500)
+        .attr("x", 135)
+        .text("Yes");
 
-        vis.labelThree.text("");
-        vis.labelFour.text("");
-    }
-    else {
-        vis.svg.selectAll(".speaker")
-            .transition()
-            .duration(1500)
-            .attr("cx", function(d) { return xFunction(d.id - 1, 30); })
-            .attr("cy", function(d) { return yFunction(d.id - 1, 30); });
+    vis.labelTwo
+        .transition()
+        .duration(1500)
+        .attr("x", 570)
+        .text("No");
 
-        d3.select(".yes-no-split").text("Successful Disinvitation");
+    vis.labelThree.text("");
+    vis.labelFour.text("");
 
-        vis.labelOne
-            .transition()
-            .duration(1500)
-            .attr("x", 260)
-            .text("Total");
-        vis.labelTwo.text("");
-        vis.labelThree.text("");
-        vis.labelFour.text("");
-    }
+    d3.select("#disinvited-explanation").text("About 16% more speakers were unsuccessfully protested against, " +
+        "which is a good start to good free speech policy on college campuses.");
+
+    vis.title.text("Was the Disinvitation Attempt Successful?");
+
+    // }
+    // else {
+    //     vis.svg.selectAll(".speaker")
+    //         .transition()
+    //         .duration(1500)
+    //         .attr("cx", function(d) { return xFunction(d.id - 1, 30); })
+    //         .attr("cy", function(d) { return yFunction(d.id - 1, 30); });
+    //
+    //     d3.select(".yes-no-split").text("Successful Disinvitation");
+    //
+    //     vis.labelOne
+    //         .transition()
+    //         .duration(1500)
+    //         .attr("x", 260)
+    //         .text("Total");
+    //     vis.labelTwo.text("");
+    //     vis.labelThree.text("");
+    //     vis.labelFour.text("");
+    //
+    //     d3.select("#disinvited-explanation").text("Hundreds of speakers are invited to speak at US universities every " +
+    //         "year. Here are 378 who were disinvited to speak on a college campus.");
+    //
+    //     vis.title.text("Speakers invited to Campuses");
+    //
+    // }
 
 };
 
-var colorByLight = -1;
-DisinvitationAttempts.prototype.colorByLight = function() {
+DisinvitationAttempts.prototype.colorByLight = function(colorByLight) {
     var vis = this;
-
-    colorByLight *= -1;
-
-    if(colorByLight > 0) {
+    console.log(colorByLight);
+    if(+colorByLight > 0) {
         vis.svg.selectAll(".speaker")
             .attr("fill", function(d) {
                 if(d.trafficLight === "red") {
@@ -215,7 +232,8 @@ DisinvitationAttempts.prototype.colorByLight = function() {
                 }
                 else return "#868e96";
             });
-        d3.select(".color-by-traffic-light").text("Successful Disinvitation")
+        d3.select(".color-by-traffic-light").style("background-color", "#AF000E");
+        d3.select(".color-by-yes-no").style("background-color", "#3679A9");
 
     }
     else {
@@ -225,19 +243,17 @@ DisinvitationAttempts.prototype.colorByLight = function() {
                 else return "#AF000E";
             });
 
-        d3.select(".color-by-traffic-light").text("FIRE Rating")
+        d3.select(".color-by-traffic-light").style("background-color", "#3679A9");
+        d3.select(".color-by-yes-no").style("background-color", "#AF000E");
 
     }
 
 };
 
-var splitByLight = -1;
-DisinvitationAttempts.prototype.splitByLight = function() {
+DisinvitationAttempts.prototype.splitByLight = function(splitByLight) {
     var vis = this;
 
-    splitByLight *= -1;
-
-    if(splitByLight > 0) {
+    if(+splitByLight > 0) {
         vis.svg.selectAll(".speaker")
             .transition()
             .duration(1500)
@@ -253,7 +269,9 @@ DisinvitationAttempts.prototype.splitByLight = function() {
                 else if(d.trafficLight === "none") return yFunction(d.trafficId - 25, 11);
                 return yFunction(d.trafficId - 1, 11);
             });
-        d3.select(".split-by-traffic-light").text("Total");
+        d3.select(".split-by-traffic-light").style("background-color", "#AF000E");
+        d3.select(".disinvite-total").style("background-color", "#3679A9");
+        d3.select(".yes-no-split").style("background-color", "#3679A9");
 
 
         vis.labelOne
@@ -275,6 +293,11 @@ DisinvitationAttempts.prototype.splitByLight = function() {
             .duration(1500)
             .text("Grey (no FIRE rating)");
 
+        d3.select("#disinvited-explanation").text("Schools with a bad free speech rating see disinvitations occur 3x as " +
+            "often as at schools with a good free speech rating.");
+
+        vis.title.text("Grouped by FIRE Rating");
+
     }
     else {
         vis.svg.selectAll(".speaker")
@@ -283,7 +306,9 @@ DisinvitationAttempts.prototype.splitByLight = function() {
             .attr("cx", function(d) { return xFunction(d.id - 1, 30); })
             .attr("cy", function(d) { return yFunction(d.id - 1, 30); });
 
-        d3.select(".split-by-traffic-light").text("FIRE Rating");
+        d3.select(".split-by-traffic-light").style("background-color", "#3679A9");
+        d3.select(".disinvite-total").style("background-color", "#AF000E");
+        d3.select(".yes-no-split").style("background-color", "#3679A9");
         vis.labelOne
             .transition()
             .duration(1500)
@@ -293,11 +318,14 @@ DisinvitationAttempts.prototype.splitByLight = function() {
         vis.labelThree.text("");
         vis.labelFour.text("");
 
+        d3.select("#disinvited-explanation").text("Hundreds of speakers are invited to speak at US universities every " +
+            "year. Here are 378 who were disinvited to speak on a college campus.");
+
+        vis.title.text("Speakers invited to Campuses");
+
     }
 
 };
-
-
 
 
 //var perRow = 30;
@@ -307,19 +335,19 @@ function xFunction(ind, perRow) {
 }
 
 function yFunction(ind, perRow) {
-    if(ind < perRow) return 50;
-    else if(ind < perRow*2) return 50 + 10/3*radius;
-    else if(ind < perRow*3) return 50 + 20/3*radius;
-    else if(ind < perRow*4) return 50 + 10*radius;
-    else if(ind < perRow*5) return 50 + 40/3*radius;
-    else if(ind < perRow*6) return 50 + 50/3*radius;
-    else if(ind < perRow*7) return 50 + 20*radius;
-    else if(ind < perRow*8) return 50 + 70/3*radius;
-    else if(ind < perRow*9) return 50 + 80/3*radius;
-    else if(ind < perRow*10) return 50 + 30*radius;
-    else if(ind < perRow*11) return 50 + 100/3*radius;
-    else if(ind < perRow*12) return 50 + 110/3*radius;
-    else if(ind < perRow*13) return 50 + 40*radius;
-    else if(ind < perRow*14) return 50 + 130/3*radius;
+    if(ind < perRow) return 20;
+    else if(ind < perRow*2) return 20 + 10/3*radius;
+    else if(ind < perRow*3) return 20 + 20/3*radius;
+    else if(ind < perRow*4) return 20 + 10*radius;
+    else if(ind < perRow*5) return 20 + 40/3*radius;
+    else if(ind < perRow*6) return 20 + 50/3*radius;
+    else if(ind < perRow*7) return 20 + 20*radius;
+    else if(ind < perRow*8) return 20 + 70/3*radius;
+    else if(ind < perRow*9) return 20 + 80/3*radius;
+    else if(ind < perRow*10) return 20 + 30*radius;
+    else if(ind < perRow*11) return 20 + 100/3*radius;
+    else if(ind < perRow*12) return 20 + 110/3*radius;
+    else if(ind < perRow*13) return 20 + 40*radius;
+    else if(ind < perRow*14) return 20 + 130/3*radius;
 }
 
