@@ -1,6 +1,6 @@
 
 body {
-  font-family: 'Abril Fatface';
+  font-family: 'Abril Fatface', sans-serif;
 
 }
 
@@ -52,7 +52,7 @@ body {
     filter: grayscale(100%);
     width: 100%;
     height: 150px;
-    padding: none;
+    padding: 0;
 }
 
 #comfortable {
@@ -122,7 +122,7 @@ body {
 
 #protest{
     height: 150px;
-    padding:none;
+    padding:0;
 }
 
 #mario {
@@ -177,7 +177,7 @@ body {
 }
 
 #linegraph-description{
-    background-color: #727b84;
+    background-color: rgba(114, 123, 132, 0.67);
 }
 
 
@@ -199,7 +199,7 @@ body {
 
 #disinvitation-visualization {
     background-color: #dddddd;
-    height: 500px;
+    height: 620px;
     width: 100%
 }
 
@@ -264,7 +264,7 @@ a {
 }
 
 .x-axis{
-    font-family: 'Abril Fatface';
+    font-family: 'Abril Fatface', sans-serif;
     font-size: 18px;
 }
 
@@ -289,6 +289,7 @@ a {
     border-top-color: #ffffff;
     border-width: 30px;
     margin-left: -30px;
+}
 
 #correct {
     color: #4A9F39;

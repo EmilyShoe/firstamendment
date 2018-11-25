@@ -21,60 +21,60 @@ var data =[
         "title": "Anti-Vietnam War Protest, Boston",
         "text": "One thousand students, mostly from Harvard, MIT and Northeastern, " +
             "marched from Cambridge Common to Boston Common in October 1965 to protest " +
-            "the Vietnam war. Speakers at the event included MIT Professor Noam M." +
+            "the Vietnam war. Speakers at the event included MIT Professor Noam M. " +
             " Chomsky and Judy White of the Cambridge Committee to End the War in Vietnam."
 
     },
     {
         "year": 1968,
         "title": "Columbia Student Protests of 1968",
-        "text": "A series of protests broke out across the campus of the University of Columbia," +
-            " New York, in 1968. The students were simultaneously protesting the discover that" +
+        "text": "A series of protests broke out across the campus of the University of Columbia, " +
+            " New York, in 1968. The students were simultaneously protesting the discover that " +
             " the university institutionally supported the United States' involvement in the " +
-            "Vietnam War and plans to build a segregated gymnasium in nearby Morningside Park. Protesting" +
-            " persisted after police arrested 177 students and had beaten 51 during the second round of protests" +
+            "Vietnam War and plans to build a segregated gymnasium in nearby Morningside Park. Protesting " +
+            " persisted after police arrested 177 students and had beaten 51 during the second round of protests " +
             " between May 17th and May 22nd, 1968."
     },
     {
         "year": 1970,
         "title": "Kent State Protest Shootings",
-        "text": "Over 4 million students were involved in anti-Vietnam war protests in the 1960s. A large student" +
+        "text": "Over 4 million students were involved in anti-Vietnam war protests in the 1960s. A large student " +
             "protest broke out on Kent State University in Ohio after Nixon announced a bombing campaign in " +
-            "Cambodia. After several days of unrest in May, National Guardsmen opened fire on the unarmed students, firing" +
-            "67 rounds in 13 seconds, killing 4 students and wounding 9 others, one of whom suffered with" +
+            "Cambodia. After several days of unrest in May, National Guardsmen opened fire on the unarmed students, firing " +
+            "67 rounds in 13 seconds, killing 4 students and wounding 9 others, one of whom suffered with " +
             "permanent paralysis."
     },
     {
         "year": 1985,
         "title": "UC Berkeley Anti-Apartheid",
-        "text": "In April 1985, demonstrations broke out on the UC Berkeley campus aimed to stop financial investments" +
-            "in the apartheid regime in South Africa. Many demonstrators were arrested, which lead to further protest." +
-            "When 20 of the demonstrators were charged, anti-apartheid demonstrators marched to the courthouse and police" +
+        "text": "In April 1985, demonstrations broke out on the UC Berkeley campus aimed to stop financial investments " +
+            "in the apartheid regime in South Africa. Many demonstrators were arrested, which lead to further protest. " +
+            "When 20 of the demonstrators were charged, anti-apartheid demonstrators marched to the courthouse and police " +
             "trapped them in the alley beside the courthouse to contain them."
     },
     {
         "year": 2003,
         "title": "NYU Anti-Iraq War Protests",
-        "text": "In 2003, over 36 million people protested the US and British invasion of Iraq. Whilst most of these" +
-            "protests were in the UK, one artistic and memorable protests was performed by New York University students," +
+        "text": "In 2003, over 36 million people protested the US and British invasion of Iraq. Whilst most of these " +
+            "protests were in the UK, one artistic and memorable protests was performed by New York University students, " +
             "who created a peace sign on the floor of their library."
 
     },
     {
         "year": 2015,
         "title": "Yale University March of Resilience",
-        "text": "After a black female student was allegedly prevented from attending a fraternity party because she" +
-            "was not white, 1000 Yale students gathered for a 'March of Resilience', a march from the Afro-American" +
-            "Cultural Center to the Cross Campus. The parade consisted of students, faculty and administrators," +
+        "text": "After a black female student was allegedly prevented from attending a fraternity party because she " +
+            "was not white, 1000 Yale students gathered for a 'March of Resilience', a march from the Afro-American " +
+            "Cultural Center to the Cross Campus. The parade consisted of students, faculty and administrators, " +
             "who gave speeches about student unity."
     },
     {
         "year": 2017,
         "title": "UC Berkeley Free Speech Week",
         "text": "In response to a no-platforming in 2016, right-wing provocateur Milo Yiannopoulos worked with a " +
-            "conservative group on the UC Berkeley campus to organize a 'Free Speech Week', a 4 day event aiming" +
-            "at promoting free speech and tolerance of conservative ideas on campus. It was estimated that" +
-            "security for the event would have cost over $100,000 for the four days but as the counter-protests" +
+            "conservative group on the UC Berkeley campus to organize a 'Free Speech Week', a 4 day event aiming " +
+            "at promoting free speech and tolerance of conservative ideas on campus. It was estimated that " +
+            "security for the event would have cost over $100,000 for the four days but as the counter-protests " +
             "were so violent, the event was cancelled less than 24 hours before the event."
     }
     ];
