@@ -81,12 +81,35 @@
         <!-- Line Graph -->
         <div class="row">
             <div class="col-6" id="linegraph-description">
-              Text here explaining the line graph data and general trends to look for.
-                <button class="btn line-overall">Overall</button>
-                <button class="btn gender">Gender</button>
-                <button class="btn degree">Degree</button>
-                <button class="btn age">Age</button>
-                <button class="btn political-party">Political Affiliation</button>
+              <h1>Who gets to speak?</h1>
+                <p>You've probably heard about speakers being protested or shut down, especially on college
+                campuses, for their controversial views. Over time, attitudes about allowing people with
+                different opinions to speak has changed. <a href="https://gssdataexplorer.norc.org/pages/show?page=gss%2Fabout">The General Social Survey</a> asks people
+                    from different backgrounds and age ranges from around the United States questions about social issues. Some questions are
+                    about attitudes towards free speech, and more specifically, whether people with different views should
+                    be allowed to speak.</p>
+                    <ul>
+                        <li>
+                            <button class="btn line-overall">Overall,</button> attitudes towards different speakers has <span class="white">improved</span> over time.
+                        For every kind of speaker, by the most recent survey, more than <span class="white">60%</span> of respondents would allow them to speak.
+                        </li>
+                        <li>
+                            When you split by <button class="btn gender">gender,</button> females are <span class="white">less likely</span>
+                            to allow someone controversial to speak.
+                        </li>
+                        <li>
+                            Surprisingly, those with a college <button class="btn degree">degree</button> tend to allow
+                            controversial speakers <span class="white">more often</span> than those with no degree.
+                        </li>
+                        <li>
+                            People who are <span class="white">older</span> in <button class="btn age">age</button> tend <span class="white">not to allow speakers</span> as much as young people.
+                            This means that as people age they tend to allow different views to be shared less often.
+                        </li>
+                        <li>
+                            The difference between opinions of people with different <button class="btn political-party">political affiliations</button>
+                            is <span class="white">small</span>, but the most tolerant of these speakers tends to be <span class="white">republicans.</span>
+                        </li>
+                    </ul>
             </div>
             <div class="col-lg-6" id= "linegraph"> Should a(n)
               <select id="speaker-select">
@@ -106,34 +129,36 @@
             <div class="col-6" id="map"></div>
             <div class="col-6" id="map-description">
                 <h1>Are college administrators protecting free speech?</h1>
-                <p><a href="https://www.thefire.org/spotlight/">The Foundation for Individual Rights in Education</a>,
-                    rank colleges according to how the college's
-                administrators allow free speech on campus. A college ranked<span id="red"> red </span>  has one or more
+                <p><a href="https://www.thefire.org/spotlight/">The Foundation for Individual Rights in Education</a>
+                    ranks colleges according to how the college's
+                administrators allow free speech on campus. A college ranked <span class="red">red</span>  has one or more
                     policies that
-                substantially and clearly restricting free speech. An example of this would be having a blanket ban on
-                    'verbal abuse'. A white college has one or more policies that inhibit free speech, but
-                on a much smaller scope. For example, banning posters that mention drink or drugs. <span id="blue">
-                        Blue</span> colleges have a hands off approach to free speech. This does not meant that they
-                    necessarily encourage free speech and the student population could still be opposed to free
-                    speech.</p>
+                substantially and clearly restrict free speech. An example of this would be having a blanket ban on
+                    'verbal abuse'. A college colored <span class="white">white</span> college has one or more policies that inhibit free speech, but
+                on a much smaller scope, like banning posters that mention drink or drugs. <span class="blue">
+                        Blue</span> colleges have a hands off approach to free speech. However, this does not mean
+                    the college encourages free speech or that its students support free speech.</p>
                 <ul>
-                    <li><span class="btn overall">Overall,</span>only 10% of colleges have a blue ranking with
-                    58% ranking as white and 32% as red.</li>
-                    <li>Only one <span class="btn ivy-league">Ivy League</span>college, the University of
-                    Pennsylvania, was ranked blue. Harvard was ranked red.</li>
-                    <li><span class="btn private">Private colleges</span>were more likely to be ranked red than
-                    <span class="btn public">public colleges</span>- 50.5% versus 24.7%. This may be because
-                    private colleges have a right to shutdown speech but as public colleges receive federal funding,
+                    <li><span class="btn overall">Overall,</span> only <span class="white">10%</span> of colleges have a blue ranking (with
+                    58% ranking as white and 32% as red).</li>
+                    <li>Only one <span class="btn ivy-league">Ivy League</span> college, the University of
+                        Pennsylvania, was ranked <span class="blue">blue</span>. Harvard was ranked <span class="red">red</span>.</li>
+                    <li><span class="btn private">Private colleges</span> were <span class="white">twice</span> as likely to be ranked red than
+                    <span class="btn public">public colleges</span> - 50.5% versus 24.7%. This may be because
+                    private colleges have a right to restrict speech but since public colleges receive federal funding,
                         they are held to a higher standard when protecting the Constitution.</li>
                 </ul>
+
             </div>
         </div>
 
       <!-- Disinvitation Requests -->
       <div class="col-12" id="disinvitation-visualization">
-          Split
+          Speakers at Colleges
+          Split data by
           <button class="btn yes-no-split">Yes/No</button>
           <button class="btn split-by-traffic-light">Split by FIRE rating</button>
+          Color data by
           Color By buttons
           <button class="btn color-by-traffic-light">Color by FIRE rating</button>
       </div>
