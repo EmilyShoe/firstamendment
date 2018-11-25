@@ -34,56 +34,20 @@ DisinvitationAttempts.prototype.initVis = function(){
         .append("g")
         .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
+    vis.tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function(d) {
+            return "<strong>Speaker: </strong>" + d.Speaker + "</br>" +
+                    "<strong>Year: </strong>" + d.Year + "</br>" +
+                    "<strong>University: </strong>" + d.School + "</br>" +
+                    "<strong>Controversial Issues: </strong>" + d.ControversyTopic;
+        });
+
+    vis.svg.call(vis.tip);
+
     vis.radius = radius;
 
-    vis.svg.append("text")
-        .attr("class", "stooltip speaker-title")
-        .attr("x", 0)
-        .attr("y", 20)
-        .attr("dy", ".35em")
-        .text("Speaker:");
-    vis.tooltipSpeaker = vis.svg.append("text")
-        .attr("class", "stooltip speaker-info")
-        .attr("x", 160)
-        .attr("y", 20)
-        .attr("dy", ".35em");
-
-
-    vis.svg.append("text")
-        .attr("class", "stooltip speaker-title")
-        .attr("x", 0)
-        .attr("y", 35)
-        .attr("dy", ".35em")
-        .text("Year:");
-    vis.tooltipYear = vis.svg.append("text")
-        .attr("class", "stooltip speaker-info")
-        .attr("x", 160)
-        .attr("y", 35)
-        .attr("dy", ".35em");
-
-    vis.svg.append("text")
-        .attr("class", "stooltip speaker-title")
-        .attr("x", 0)
-        .attr("y", 50)
-        .attr("dy", ".35em")
-        .text("University:");
-    vis.tooltipSchool = vis.svg.append("text")
-        .attr("class", "stooltip speaker-info")
-        .attr("x", 160)
-        .attr("y", 50)
-        .attr("dy", ".35em");
-
-    vis.svg.append("text")
-        .attr("class", "stooltip speaker-info")
-        .attr("x", 0)
-        .attr("y", 65)
-        .attr("dy", ".35em")
-        .text("Controversial Views:");
-    vis.tooltipControversy = vis.svg.append("text")
-        .attr("class", "stooltip speaker-info")
-        .attr("x", 160)
-        .attr("y", 65)
-        .attr("dy", ".35em");
 
     //Initialize Grouping Labels
     vis.labelOne = vis.svg.append("text")
@@ -152,18 +116,8 @@ DisinvitationAttempts.prototype.updateVis = function(){
             if (d.DisinvitationYN === 0) return "#3679A9";
             else return "#AF000E";
         })
-        .on('mouseover', function(d) {
-            vis.tooltipSpeaker.text(d.Speaker);
-            vis.tooltipYear.text(d.Year);
-            vis.tooltipSchool.text(d.School);
-            vis.tooltipControversy.text(d.ControversyTopic);
-        })
-        .on('mouseout', function(d) {
-            vis.tooltipSpeaker.text("");
-            vis.tooltipYear.text("");
-            vis.tooltipSchool.text("");
-            vis.tooltipControversy.text("");
-        });
+        .on('mouseover', vis.tip.show)
+        .on('mouseout', vis.tip.hide);
 
     vis.speakers
         .transition()
