@@ -33,15 +33,17 @@ function createVis(error, gssSpeech, colleges, disinvitations) {
     Disinvitations = disinvitations.map(function(d) {
         return {
             id : +d.id,
-            DisinvitationYN : d.DisinvitationYN,
+            DisinvitationYN : +speakerYN(d.DisinvitationYN),
             ControversyTopic : d.ControversyTopic,
             sideFrom : d.FromRightorLeftofSpeaker,
             Speaker : d.Speaker,
             Year : d.Year,
-            School : d.School
+            School : d.School,
+            trafficLight : d.trafficLight,
+            trafficId : +d.trafficId
+
         };
     });
-
 
     lineGraph = new LineGraph("line-graphs", cleanGssData);
 
@@ -84,6 +86,10 @@ $(".degree").on('mouseover', function() {
     lineGraph.wrangleData("degree");
 });
 
+$(".age").on('mouseover', function() {
+    lineGraph.wrangleData("age");
+});
+
 $(".line-overall").on('mouseover', function() {
     lineGraph.wrangleData("all");
 });
@@ -92,9 +98,22 @@ $(".yes-no-split").on('click', function() {
     disinvitationAttempts.splitYesNo();
 });
 
+$(".color-by-traffic-light").on('click', function() {
+    disinvitationAttempts.colorByLight();
+});
+
+$(".split-by-traffic-light").on('click', function() {
+    disinvitationAttempts.splitByLight();
+});
+
 
 function allowedEncode(s) {
     if(s==="Not allowed") return 0;
     else if(s==="Allowed") return 1;
     else return 2;
+}
+
+function speakerYN(s) {
+    if(s === "Yes") return 0;
+    else return 1;
 }

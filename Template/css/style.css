@@ -189,6 +189,14 @@ body {
     fill: #dddddd;
 }
 
+.speaker-title {
+    text-align: right;
+}
+
+.stooltip {
+    background-color: rgba(54, 121, 169, 0.73);
+}
+
 #disinvitation-visualization {
     background-color: #dddddd;
     height: 500px;

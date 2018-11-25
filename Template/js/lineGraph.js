@@ -89,6 +89,14 @@ LineGraph.prototype.initVis = function(){
         .attr("width", vis.legendBoxSize + "px")
         .attr("fill", "white");
 
+    vis.svg.append("rect")
+        .attr("class", "line-legend-fourth")
+        .attr("x", vis.width - 2*vis.margin.left)
+        .attr("y", vis.height - 2*vis.margin.bottom + 4.5*vis.legendBoxSize)
+        .attr("height", vis.legendBoxSize + "px")
+        .attr("width", vis.legendBoxSize + "px")
+        .attr("fill", "white");
+
     vis.svg.append("text")
         .attr("class", "line-legend-first")
         .attr("x", vis.width - 2*vis.margin.left + 1.3*vis.legendBoxSize)
@@ -103,6 +111,11 @@ LineGraph.prototype.initVis = function(){
         .attr("class", "line-legend-third")
         .attr("x", vis.width - 2*vis.margin.left + 1.3*vis.legendBoxSize)
         .attr("y", vis.height - 2*vis.margin.bottom + 3.9*vis.legendBoxSize);
+
+    vis.svg.append("text")
+        .attr("class", "line-legend-fourth")
+        .attr("x", vis.width - 2*vis.margin.left + 1.3*vis.legendBoxSize)
+        .attr("y", vis.height - 2*vis.margin.bottom + 5.4*vis.legendBoxSize);
 
 
     // (Filter, aggregate, modify data)
@@ -215,6 +228,42 @@ LineGraph.prototype.wrangleData = function(lineType){
         vis.nestedHs.map(function(d,index) {return percentageCalculator(d, index, vis.hsTotals);});
         vis.nestedLths.map(function(d,index) {return percentageCalculator(d, index, vis.lthsTotals);});
     }
+    else if(lineType==="age") {
+        vis.youngestRangeData = vis.totalGraphData.filter(function (d) {
+            return (d.age >= 18 && d.age <= 34);
+        });
+
+        vis.youngestRangeTotals = vis.dataTotals.entries(vis.youngestRangeData);
+
+        vis.middleOneRangeData = vis.totalGraphData.filter(function (d) {
+            return (d.age >= 35 && d.age <= 49);
+        });
+
+        vis.middleOneRangeTotals = vis.dataTotals.entries(vis.middleOneRangeData);
+
+        vis.middleTwoRangeData = vis.totalGraphData.filter(function (d) {
+            return (d.age >= 50 && d.age <= 64);
+        });
+
+        vis.middleTwoRangeTotals = vis.dataTotals.entries(vis.middleTwoRangeData);
+
+        vis.oldestRangeData = vis.totalGraphData.filter(function (d) {
+            return (d.age >= 65);
+        });
+
+        vis.oldestRangeTotals = vis.dataTotals.entries(vis.oldestRangeData);
+
+        vis.nestedYoungestRange = vis.nestedTotal.entries(vis.youngestRangeData);
+        vis.nestedMiddleOneRange = vis.nestedTotal.entries(vis.middleOneRangeData);
+        vis.nestedMiddleTwoRange = vis.nestedTotal.entries(vis.middleTwoRangeData);
+        vis.nestedOldestRange = vis.nestedTotal.entries(vis.oldestRangeData);
+
+        vis.nestedYoungestRange.map(function(d, index) {return percentageCalculator(d, index, vis.youngestRangeTotals);});
+        vis.nestedMiddleOneRange.map(function(d, index) {return percentageCalculator(d, index, vis.middleOneRangeTotals);});
+        vis.nestedMiddleTwoRange.map(function(d, index) {return percentageCalculator(d, index, vis.middleTwoRangeTotals);});
+        vis.nestedOldestRange.map(function(d, index) {return percentageCalculator(d, index, vis.oldestRangeTotals);});
+
+    }
 
     //Get count for each year
     vis.dataTotals = vis.dataTotals.entries(vis.totalGraphData);
@@ -313,6 +362,30 @@ LineGraph.prototype.updateVis = function(lineType){
         .attr("stroke", "#868e96")
         .attr("stroke-width", 3);
 
+    vis.svg.append("path")
+        .attr("class", "path youngestLine")
+        .attr("fill", "none")
+        .attr("stroke", "#AF000E")
+        .attr("stroke-width", 3);
+
+    vis.svg.append("path")
+        .attr("class", "path middleOneLine")
+        .attr("fill", "none")
+        .attr("stroke", "#777e85")
+        .attr("stroke-width", 3);
+
+    vis.svg.append("path")
+        .attr("class", "path middleTwoLine")
+        .attr("fill", "none")
+        .attr("stroke", "#c4c4c4")
+        .attr("stroke-width", 3);
+
+    vis.svg.append("path")
+        .attr("class", "path oldestLine")
+        .attr("fill", "none")
+        .attr("stroke", "#3679A9")
+        .attr("stroke-width", 3);
+
 
     //Select paths by class and assign data
     vis.femaleLineGraph = vis.svg.select("path.femaleLine").datum(vis.nestedFemale);
@@ -324,6 +397,10 @@ LineGraph.prototype.updateVis = function(lineType){
     vis.collegeLineGraph = vis.svg.select("path.collegeLine").datum(vis.nestedCollege);
     vis.hsLineGraph = vis.svg.select("path.hsLine").datum(vis.nestedHs);
     vis.lthsLineGraph = vis.svg.select("path.lthsLine").datum(vis.nestedLths);
+    vis.youngestRangeLineGraph = vis.svg.select("path.youngestLine").datum(vis.nestedYoungestRange);
+    vis.middleOneRangeLineGraph = vis.svg.select("path.middleOneLine").datum(vis.nestedMiddleOneRange);
+    vis.middleTwoRangeLineGraph = vis.svg.select("path.middleTwoLine").datum(vis.nestedMiddleTwoRange);
+    vis.oldestRangeLineGraph = vis.svg.select("path.oldestLine").datum(vis.nestedOldestRange);
 
 
     //Transition to correct graph type and remove all other paths
@@ -347,6 +424,10 @@ LineGraph.prototype.updateVis = function(lineType){
         vis.collegeLineGraph.remove();
         vis.hsLineGraph.remove();
         vis.lthsLineGraph.remove();
+        vis.youngestRangeLineGraph.remove();
+        vis.middleOneRangeLineGraph.remove();
+        vis.middleTwoRangeLineGraph.remove();
+        vis.oldestRangeLineGraph.remove();
 
         //Edit legend
         vis.svg.select("rect.line-legend-first")
@@ -355,12 +436,16 @@ LineGraph.prototype.updateVis = function(lineType){
             .attr("fill", "#3679A9");
         vis.svg.select("rect.line-legend-third")
             .attr("fill", "white");
+        vis.svg.select("rect.line-legend-fourth")
+            .attr("fill", "white");
 
         vis.svg.select("text.line-legend-first")
             .text("Female");
         vis.svg.select("text.line-legend-second")
             .text("Male");
         vis.svg.select("text.line-legend-third")
+            .text("");
+        vis.svg.select("text.line-legend-fourth")
             .text("");
 
     }
@@ -388,6 +473,10 @@ LineGraph.prototype.updateVis = function(lineType){
         vis.collegeLineGraph.remove();
         vis.hsLineGraph.remove();
         vis.lthsLineGraph.remove();
+        vis.youngestRangeLineGraph.remove();
+        vis.middleOneRangeLineGraph.remove();
+        vis.middleTwoRangeLineGraph.remove();
+        vis.oldestRangeLineGraph.remove();
 
         //Edit legend
         vis.svg.select("rect.line-legend-first")
@@ -396,6 +485,8 @@ LineGraph.prototype.updateVis = function(lineType){
             .attr("fill", "#3679A9");
         vis.svg.select("rect.line-legend-third")
             .attr("fill", "#868e96");
+        vis.svg.select("rect.line-legend-fourth")
+            .attr("fill", "white");
 
         vis.svg.select("text.line-legend-first")
             .text("Republican");
@@ -403,6 +494,8 @@ LineGraph.prototype.updateVis = function(lineType){
             .text("Democrat");
         vis.svg.select("text.line-legend-third")
             .text("Independent");
+        vis.svg.select("text.line-legend-fourth")
+            .text("");
     }
     else if(lineType==="degree") {
         vis.lineType = "degree";
@@ -427,6 +520,10 @@ LineGraph.prototype.updateVis = function(lineType){
         vis.independentLineGraph.remove();
         vis.democratLineGraph.remove();
         vis.totalLineGraph.remove();
+        vis.youngestRangeLineGraph.remove();
+        vis.middleOneRangeLineGraph.remove();
+        vis.middleTwoRangeLineGraph.remove();
+        vis.oldestRangeLineGraph.remove();
 
         //Edit legend
         vis.svg.select("rect.line-legend-third")
@@ -435,17 +532,68 @@ LineGraph.prototype.updateVis = function(lineType){
             .attr("fill", "#868e96");
         vis.svg.select("rect.line-legend-first")
             .attr("fill", "#AF000E");
+        vis.svg.select("rect.line-legend-fourth")
+            .attr("fill", "white");
 
         vis.svg.select("text.line-legend-third")
-            .text("College")
-            .attr("color", "#3679A9");
+            .text("College");
         vis.svg.select("text.line-legend-second")
-            .text("High School")
-            .attr("color", "#868e96");
+            .text("High School");
         vis.svg.select("text.line-legend-first")
-            .text("Less than High School")
-            .attr("color", "#AF000E");
+            .text("Less than High School");
+        vis.svg.select("text.line-legend-fourth")
+            .text("");
 
+    }
+    else if(lineType === "age") {
+        vis.lineType = "age";
+
+        //Add selected line graphs
+        vis.youngestRangeLineGraph
+            .transition(t)
+            .attr("d", vis.line);
+
+        vis.middleOneRangeLineGraph
+            .transition(t)
+            .attr("d", vis.line);
+
+        vis.middleTwoRangeLineGraph
+            .transition(t)
+            .attr("d", vis.line);
+
+        vis.oldestRangeLineGraph
+            .transition(t)
+            .attr("d", vis.line);
+
+        //Remove all other line graphs
+        vis.femaleLineGraph.remove();
+        vis.maleLineGraph.remove();
+        vis.republicanLineGraph.remove();
+        vis.independentLineGraph.remove();
+        vis.democratLineGraph.remove();
+        vis.totalLineGraph.remove();
+        vis.collegeLineGraph.remove();
+        vis.hsLineGraph.remove();
+        vis.lthsLineGraph.remove();
+
+        //Edit legend
+        vis.svg.select("rect.line-legend-first")
+            .attr("fill", "#AF000E");
+        vis.svg.select("rect.line-legend-second")
+            .attr("fill", "#777e85");
+        vis.svg.select("rect.line-legend-third")
+            .attr("fill", "#c4c4c4");
+        vis.svg.select("rect.line-legend-fourth")
+            .attr("fill", "#3679A9");
+
+        vis.svg.select("text.line-legend-first")
+            .text("18-34");
+        vis.svg.select("text.line-legend-second")
+            .text("35-49");
+        vis.svg.select("text.line-legend-third")
+            .text("50-64");
+        vis.svg.select("text.line-legend-fourth")
+            .text("65+");
     }
     else {
         vis.lineType = "all";
@@ -464,6 +612,10 @@ LineGraph.prototype.updateVis = function(lineType){
         vis.collegeLineGraph.remove();
         vis.hsLineGraph.remove();
         vis.lthsLineGraph.remove();
+        vis.youngestRangeLineGraph.remove();
+        vis.middleOneRangeLineGraph.remove();
+        vis.middleTwoRangeLineGraph.remove();
+        vis.oldestRangeLineGraph.remove();
 
         //Edit legend
         vis.svg.select("rect.line-legend-first")
@@ -472,12 +624,16 @@ LineGraph.prototype.updateVis = function(lineType){
             .attr("fill", "#3679A9");
         vis.svg.select("rect.line-legend-third")
             .attr("fill", "white");
+        vis.svg.select("rect.line-legend-fourth")
+            .attr("fill", "white");
 
         vis.svg.select("text.line-legend-first")
             .text("");
         vis.svg.select("text.line-legend-second")
             .text("Total");
         vis.svg.select("text.line-legend-third")
+            .text("");
+        vis.svg.select("text.line-legend-fourth")
             .text("");
     }
 
