@@ -53,29 +53,29 @@ DisinvitationAttempts.prototype.initVis = function(){
     vis.labelOne = vis.svg.append("text")
         .attr("class", "group-label")
         .attr("x", 80)
-        .attr("y", 300)
+        .attr("y", 295)
         .attr("dy", ".35em");
     vis.labelTwo = vis.svg.append("text")
         .attr("class", "group-label")
         .attr("x", 360)
-        .attr("y", 300)
+        .attr("y", 295)
         .attr("dy", ".35em");
     vis.labelThree = vis.svg.append("text")
         .attr("class", "group-label")
         .attr("x", 600)
-        .attr("y", 300)
+        .attr("y", 295)
         .attr("dy", ".35em");
     vis.labelFour = vis.svg.append("text")
         .attr("class", "group-label")
         .attr("x", 850)
-        .attr("y", 300)
+        .attr("y", 295)
         .attr("dy", ".35em");
 
     vis.title = vis.svg.append("text")
         .attr("class", "disinvitation-title")
         .attr("x", 0)
         .attr("y", 0)
-        .style("font-size", "20px")
+        .style("font-size", "18px")
         .attr("dy", ".35em");
 
 
@@ -335,19 +335,20 @@ function xFunction(ind, perRow) {
 }
 
 function yFunction(ind, perRow) {
-    if(ind < perRow) return 20;
-    else if(ind < perRow*2) return 20 + 10/3*radius;
-    else if(ind < perRow*3) return 20 + 20/3*radius;
-    else if(ind < perRow*4) return 20 + 10*radius;
-    else if(ind < perRow*5) return 20 + 40/3*radius;
-    else if(ind < perRow*6) return 20 + 50/3*radius;
-    else if(ind < perRow*7) return 20 + 20*radius;
-    else if(ind < perRow*8) return 20 + 70/3*radius;
-    else if(ind < perRow*9) return 20 + 80/3*radius;
-    else if(ind < perRow*10) return 20 + 30*radius;
-    else if(ind < perRow*11) return 20 + 100/3*radius;
-    else if(ind < perRow*12) return 20 + 110/3*radius;
-    else if(ind < perRow*13) return 20 + 40*radius;
-    else if(ind < perRow*14) return 20 + 130/3*radius;
+    var yBuffer = 20;
+    if(ind < perRow) return yBuffer;
+    else if(ind < perRow*2) return yBuffer + 10/3*radius;
+    else if(ind < perRow*3) return yBuffer + 20/3*radius;
+    else if(ind < perRow*4) return yBuffer + 10*radius;
+    else if(ind < perRow*5) return yBuffer + 40/3*radius;
+    else if(ind < perRow*6) return yBuffer + 50/3*radius;
+    else if(ind < perRow*7) return yBuffer + 20*radius;
+    else if(ind < perRow*8) return yBuffer + 70/3*radius;
+    else if(ind < perRow*9) return yBuffer + 80/3*radius;
+    else if(ind < perRow*10) return yBuffer + 30*radius;
+    else if(ind < perRow*11) return yBuffer + 100/3*radius;
+    else if(ind < perRow*12) return yBuffer + 110/3*radius;
+    else if(ind < perRow*13) return yBuffer + 40*radius;
+    else if(ind < perRow*14) return yBuffer + 130/3*radius;
 }
 
