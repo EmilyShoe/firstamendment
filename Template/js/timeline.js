@@ -34,8 +34,49 @@ var data =[
             "Vietnam War and plans to build a segregated gymnasium in nearby Morningside Park. Protesting" +
             " persisted after police arrested 177 students and had beaten 51 during the second round of protests" +
             " between May 17th and May 22nd, 1968."
-    }
+    },
+    {
+        "year": 1970,
+        "title": "Kent State Protest Shootings",
+        "text": "Over 4 million students were involved in anti-Vietnam war protests in the 1960s. A large student" +
+            "protest broke out on Kent State University in Ohio after Nixon announced a bombing campaign in " +
+            "Cambodia. After several days of unrest in May, National Guardsmen opened fire on the unarmed students, firing" +
+            "67 rounds in 13 seconds, killing 4 students and wounding 9 others, one of whom suffered with" +
+            "permanent paralysis."
+    },
+    {
+        "year": 1985,
+        "title": "UC Berkeley Anti-Apartheid",
+        "text": "In April 1985, demonstrations broke out on the UC Berkeley campus aimed to stop financial investments" +
+            "in the apartheid regime in South Africa. Many demonstrators were arrested, which lead to further protest." +
+            "When 20 of the demonstrators were charged, anti-apartheid demonstrators marched to the courthouse and police" +
+            "trapped them in the alley beside the courthouse to contain them."
+    },
+    {
+        "year": 2003,
+        "title": "NYU Anti-Iraq War Protests",
+        "text": "In 2003, over 36 million people protested the US and British invasion of Iraq. Whilst most of these" +
+            "protests were in the UK, one artistic and memorable protests was performed by New York University students," +
+            "who created a peace sign on the floor of their library."
 
+    },
+    {
+        "year": 2015,
+        "title": "Yale University March of Resilience",
+        "text": "After a black female student was allegedly prevented from attending a fraternity party because she" +
+            "was not white, 1000 Yale students gathered for a 'March of Resilience', a march from the Afro-American" +
+            "Cultural Center to the Cross Campus. The parade consisted of students, faculty and administrators," +
+            "who gave speeches about student unity."
+    },
+    {
+        "year": 2017,
+        "title": "UC Berkeley Free Speech Week",
+        "text": "In response to a no-platforming in 2016, right-wing provocateur Milo Yiannopoulos worked with a " +
+            "conservative group on the UC Berkeley campus to organize a 'Free Speech Week', a 4 day event aiming" +
+            "at promoting free speech and tolerance of conservative ideas on campus. It was estimated that" +
+            "security for the event would have cost over $100,000 for the four days but as the counter-protests" +
+            "were so violent, the event was cancelled less than 24 hours before the event."
+    }
     ];
 
 
@@ -69,6 +110,7 @@ var xAxis = d3.axisBottom().scale(x).tickValues(years);
 var lines = svg.selectAll("lines").data(years);
 lines.enter().append("line")
     .attr("class", "lines")
+    .attr("class", function(d){d.year})
     .attr("x1", function(d){ return x(d) + scaledif/2})
     .attr("x2", function(d){ return x(d) + scaledif/2})
     .attr("y1", height/2)
@@ -82,6 +124,7 @@ lines.enter().append("line")
 
 //Berkeley free speech items
 svg.append("text")
+    .attr("id", "1964")
     .attr("x", x(1964))
     .attr("y", 390)
     .attr("font-size", 14)
@@ -89,7 +132,7 @@ svg.append("text")
 
 svg.append("image")
     .attr("id", "savioSound")
-    .attr("class", "media")
+    .attr("class", "1964")
     .attr("xlink:href", "data/timeline/savio.png")
     .attr('width', 170)
     .attr('height', 140)
@@ -98,6 +141,7 @@ svg.append("image")
 
 //Boston anti-Vietnam war items
 svg.append("text")
+    .attr("id", "1965")
     .attr("x", x(1965)- 55)
     .attr("y", 15)
     .attr("font-size", 14)
@@ -106,7 +150,7 @@ svg.append("text")
 //Columbia
 svg.append("image")
     .attr("id", "columbia")
-    .attr("class", "media")
+    .attr("class", "1968")
     .attr("xlink:href", "data/timeline/columbia.jpg")
     .attr('width', 170)
     .attr('height', 140)
@@ -114,6 +158,7 @@ svg.append("image")
     .attr("y", height/2 + 100);
 
 svg.append("text")
+    .attr("id", "1968")
     .attr("x", x(1968) - 100)
     .attr("font-size", 14)
     .attr("y", 295)
@@ -121,6 +166,7 @@ svg.append("text")
 
 // Kent State shooting
 svg.append("text")
+    .attr("id", "1970")
     .attr("x", x(1970) - 45)
     .attr("y", 15)
     .attr("font-size", 14)
@@ -128,8 +174,7 @@ svg.append("text")
 
 // Berkeley anti-Apartheid
 svg.append("image")
-    .attr("id", "columbia")
-    .attr("class", "media")
+    .attr("class", "1985")
     .attr("xlink:href", "data/timeline/berkeleyApartheid.jpg")
     .attr('width', 170)
     .attr('height', 140)
@@ -137,6 +182,7 @@ svg.append("image")
     .attr("y", height/2 + 50);
 
 svg.append("text")
+    .attr("id", "1985")
     .attr("x", x(1985) - 30)
     .attr("y", height/2 + 200)
     .attr("font-size", 14)
@@ -144,12 +190,14 @@ svg.append("text")
 
 // NYU Iraq war
 svg.append("image")
+    .attr("class", "2003")
     .attr("xlink:href", "data/timeline/NYUIraq.jpg")
     .attr('width', 170)
     .attr('height', 100)
-    .attr("x", x(2003) - 20)
+    .attr("x", x(2003) - 20);
 
 svg.append("text")
+    .attr("id", "2003")
     .attr("x", x(2003) - 40)
     .attr("y", height/2 - 80)
     .attr("font-size", 14)
@@ -157,6 +205,7 @@ svg.append("text")
 
 // yale
 svg.append("text")
+    .attr("id", "2015")
     .attr("x", x(2015) - 10)
     .attr("y", height/2 + 95)
     .attr("font-size", 14)
@@ -165,6 +214,7 @@ svg.append("text")
 // uc berkeley free speech week items
 svg.append("image")
     .attr("id", "miloSound")
+    .attr("class", "2017" )
     .attr("xlink:href", "data/timeline/milo.png")
     .attr('width', 170)
     .attr('height', 150)
@@ -172,6 +222,7 @@ svg.append("image")
     .attr("y", 0);
 
 svg.append("text")
+    .attr("id", "2017")
     .attr("x", x(2017) - 80)
     .attr("y", 15)
     .attr("font-size", 14)
@@ -197,13 +248,30 @@ var xAxisG = svg.append("g")
 
 
 var selection;
-$("circle").hover(function(){
+$("text").hover(function(){
    selection = Number(this.id);
    newdata = data.filter(function(d){
        return d.year === selection
    });
     $("#info").text(newdata[0].text);
 });
+
+$("image").hover(function(){
+    var myClass = Number($(this).attr("class"));
+    newdata = data.filter(function(d){
+        return d.year === myClass
+    });
+    $("#info").text(newdata[0].text);
+});
+
+$("video").hover(function(){
+    var myClass = Number($(this).attr("class"));
+    newdata = data.filter(function(d){
+        return d.year === myClass
+    });
+    $("#info").text(newdata[0].text);
+});
+
 
 
 
