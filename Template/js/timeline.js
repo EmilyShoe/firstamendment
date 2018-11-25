@@ -38,25 +38,25 @@ var data =[
     {
         "year": 1970,
         "title": "Kent State Protest Shootings",
-        "text": "Over 4 million students were involved in anti-Vietnam war protests in the 1960s. A large student" +
+        "text": "Over 4 million students were involved in anti-Vietnam war protests in the 1960s. A large student " +
             "protest broke out on Kent State University in Ohio after Nixon announced a bombing campaign in " +
-            "Cambodia. After several days of unrest in May, National Guardsmen opened fire on the unarmed students, firing" +
-            "67 rounds in 13 seconds, killing 4 students and wounding 9 others, one of whom suffered with" +
+            "Cambodia. After several days of unrest in May, National Guardsmen opened fire on the unarmed students, firing " +
+            "67 rounds in 13 seconds, killing 4 students and wounding 9 others, one of whom suffered with " +
             "permanent paralysis."
     },
     {
         "year": 1985,
         "title": "UC Berkeley Anti-Apartheid",
-        "text": "In April 1985, demonstrations broke out on the UC Berkeley campus aimed to stop financial investments" +
-            "in the apartheid regime in South Africa. Many demonstrators were arrested, which lead to further protest." +
-            "When 20 of the demonstrators were charged, anti-apartheid demonstrators marched to the courthouse and police" +
+        "text": "In April 1985, demonstrations broke out on the UC Berkeley campus aimed to stop financial investments " +
+            "in the apartheid regime in South Africa. Many demonstrators were arrested, which lead to further protest. " +
+            "When 20 of the demonstrators were charged, anti-apartheid demonstrators marched to the courthouse and police " +
             "trapped them in the alley beside the courthouse to contain them."
     },
     {
         "year": 2003,
         "title": "NYU Anti-Iraq War Protests",
-        "text": "In 2003, over 36 million people protested the US and British invasion of Iraq. Whilst most of these" +
-            "protests were in the UK, one artistic and memorable protests was performed by New York University students," +
+        "text": "In 2003, over 36 million people protested the US and British invasion of Iraq. Whilst most of these " +
+            "protests were in the UK, one artistic and memorable protests was performed by New York University students, " +
             "who created a peace sign on the floor of their library."
 
     },

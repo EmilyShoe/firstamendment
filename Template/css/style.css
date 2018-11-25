@@ -1,7 +1,6 @@
 
 body {
   font-family: 'Abril Fatface';
-
 }
 
 .header {
@@ -17,13 +16,16 @@ body {
     padding-left: 20px;
 }
 
-#first-title {
+.first-title {
     font-size: 36px;
     margin-top: 30px;
+    margin-left: 30px;
 }
 
 .collage {
     background-color: #3679A9;
+    padding-left: 20px;
+    padding-right:20px;
 };
 
 #flagdiv {
@@ -36,15 +38,17 @@ body {
     font-family: 'Actor', sans-serif;
     padding-top: 30px;
     padding-left: 30px;
+    padding-right: 30px;
 
 }
 
 #answer {
     padding-top: 30px;
+    padding-right: 30px;
     height: 120px;
 }
 #first-amendment-info{
-    height: 580px;
+    height: 500px;
 }
 
 #flag {
@@ -60,12 +64,6 @@ body {
     height: 150px;
 }
 
-/*#first-amendment {*/
-    /*height: 200px;*/
-    /*margin-right: auto;*/
-    /*margin-left: auto;*/
-/*}*/
-
 #noPlatform {
     height: 150px;
 }
@@ -78,7 +76,6 @@ body {
     margin: auto;
     width: 60%;
     font-size: 14px;
-
     height: 120px;
     padding-top: 20px;
     font-family: 'Actor', sans-serif;
@@ -104,7 +101,7 @@ body {
     height: 150px;
     padding-top:14px;
     padding-bottom: 14px;
-    padding-right: 5px;
+
 }
 
 #benShap {
@@ -122,13 +119,15 @@ body {
 
 #protest{
     height: 150px;
-    padding:none;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #mario {
     height: 150px;
     padding-top:14px;
     padding-bottom: 14px;
+    padding-right: 15px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
@@ -136,14 +135,13 @@ body {
 #marioSav {
     background-color: #AF000E;
     height: 150px;
-    padding-top:14px;
+    padding-top: 14px;
     padding-bottom: 14px;
-    padding-right: 5px;
 }
 #bostonVideo {
     position: absolute;
-    left: 125px;
-    top: 1435px;
+    left: 115px;
+    top: 1505px;
     width: 250px;
     height: 200px;
     padding-left: 50px;
@@ -157,8 +155,8 @@ body {
     position: absolute;
     width: 250px;
     height: 200px;
-    left: 400px;
-    top: 1435px;
+    left: 380px;
+    top: 1505px;
     padding-left: 50px;
 }
 
@@ -166,8 +164,8 @@ body {
     position: absolute;
     width: 250px;
     height: 200px;
-    top: 1720px;
-    left: 800px;
+    top: 1780px;
+    left: 790px;
     padding-left: 50px;
 }
 
@@ -261,16 +259,28 @@ a {
     color: #AF000E;
 }
 
-#protest-img{
+#protest-img, #hateful, #strike, #oil{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
 
-    height: 130px;
-    margin-top: 30px;
-    width: 100%;
+    height: 148px;
+    padding: 10px;
 }
 
+#protest-img{
+    padding-left: 22px;
+}
 #first-footer {
     height: 150px;
     background-color: #AF000E;
     width: 100%;
     position: relative;
+}
+
+#information {
+    padding: 20px;
+}
+
+#first-amendment {
+    font-style: italic;
 }
