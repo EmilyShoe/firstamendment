@@ -30,7 +30,7 @@
                   free speech is dwindling on America's college campuses?</p>
               </div>
               <div class="col-6 header collage">
-                  <div class="row">
+                  <div class="row" width="100%">
                       <div id="flagdiv" class="col-lg-4">
                           <img id="flag" src="img/flag.gif">
                       </div>
@@ -116,7 +116,7 @@
         <!-- Line Graph -->
         <div class="row">
             <div class="col-6" id="linegraph-description">
-              <h1>Who gets to speak?</h1>
+              <h1 class="first-title">Who gets to speak?</h1>
                 <p>You've probably heard about speakers being protested or shut down, especially on college
                 campuses, for their controversial views. Over time, attitudes about allowing people with
                 different opinions to speak has changed. <a href="https://gssdataexplorer.norc.org/pages/show?page=gss%2Fabout">The General Social Survey</a> asks people
@@ -163,7 +163,7 @@
         <div class="row" id="mapViz">
             <div class="col-6" id="map"></div>
             <div class="col-6" id="map-description">
-                <h1>Are college administrators protecting free speech?</h1>
+                <h1 class="first-title">Are college administrators protecting free speech?</h1>
                 <p><a href="https://www.thefire.org/spotlight/">The Foundation for Individual Rights in Education</a>
                     ranks colleges according to how the college's
                 administrators allow free speech on campus. A college ranked <span class="red">red</span>  has one or more
@@ -188,6 +188,14 @@
         </div>
 
       <!-- Disinvitation Requests -->
+
+      <div id="disinvitation-visualization">
+          <h1 style="text-align:center; padding-top:20px;">Are speaker disinvitations common?</h1>
+          <p>Each circle represents a speaker who was petitioned against by the student body at a college they were
+          invited to speak at. Click on the buttons to learn more about their invitations or disinvitations to speak. </p>
+          Split data by
+          <button class="btn yes-no-split">Yes/No</button>
+          <button class="btn split-by-traffic-light">Split by FIRE rating</button>
       <div class="col-12" id="disinvitation-visualization">
           <h1 style="text-align:center">Are speaker disinvitations common?</h1>
           <p id="disinvited-speakers-text">
@@ -207,11 +215,24 @@
       <!-- Conclusion -->
       <div class="row">
           <div class="col-6" id="conclusion-info">
-              <h1>Are today's college any more adverse to free speech?</h1>
+              <h1 class="first-title">Are today's colleges any more adverse to free speech?</h1>
+              <p>Whilst it may seem from constant news reports that college students today are more
+              adverse to free speech, overall attitudes to free speech have improved over time and those who
+              are old are less likely to permit controversial speakers. However, colleges are implementing
+              more and more free speech restricting policies. Those that are trying to shut down speakers
+              are doing so in more violent means than ever before, requiring colleges to cater to their needs
+              and spend hundreds of thousands of dollars on security.</p>
+              <p>The majority of students are pro-free speech than before, but a dangerous and sometimes
+              violent minority may be controlling the discussion about the First Amendment on US campuses.</p>
           </div>
-          <div class="col-6" id="conclusion-img">Gallery of free speech on campus.</div>
+          <div class="col-6" id="conclusion-img">
+              <video id="aeiVideo" controls>
+                  <source src="img/aei.mp4" type="video/mp4">
+              </video>
+
+          </div>
       </div>
-      <div id="data-links">Links to data, sources for images, link to process book.</div>
+      <div class="col-12" id="data-links"></div>
 
   </div>
 

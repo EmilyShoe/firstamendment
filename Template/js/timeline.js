@@ -1,9 +1,14 @@
 var margin = { top: 40, right: 60, bottom: 60, left: 60 };
 
 var duration = 800;
-var width = 1200 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+// var width = 1200 - margin.left - margin.right,
+//     height = 500 - margin.top - margin.bottom;
 
+
+var parentElementSelector = ("#timeline");
+var width = $("#visual-timeline").width() - margin.left - margin.right;
+
+var height = 500 - margin.top - margin.bottom;
 var years = [1964, 1965, 1968, 1970, 1985, 2003, 2015, 2017];
 var data =[
     {

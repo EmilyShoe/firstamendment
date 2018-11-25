@@ -1,4 +1,6 @@
-
+.container-fluid{
+    padding: none;
+}
 body {
   font-family: 'Abril Fatface', sans-serif;
 }
@@ -25,7 +27,8 @@ body {
 .collage {
     background-color: #3679A9;
     padding-left: 20px;
-    padding-right:20px;
+    padding-right: 20px;
+    width: 100%;
 }
 
 #flagdiv {
@@ -127,7 +130,6 @@ body {
     height: 150px;
     padding-top:14px;
     padding-bottom: 14px;
-    padding-right: 15px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
@@ -175,7 +177,7 @@ body {
 }
 
 #linegraph-description{
-    background-color: rgba(114, 123, 132, 0.67);
+    background-color: #C0C0C0;
 }
 
 
@@ -196,24 +198,21 @@ body {
 }
 
 #disinvitation-visualization {
-    background-color: #dddddd;
+    background-color: #C0C0C0;
     height: 620px;
-    width: 100%
 }
 
 #conclusion-img {
-    background-color: #9fcdff;
-    height: 380px;
+    height: 360px;
 }
 
 #conclusion-info {
-    background-color: #f1b0b7;
-    height: 380px;
+    height: 360px;
 }
 
 #data-links{
     height: 100px;
-    background-color: #80bdff;
+    background-color:  #3679A9;
 }
 
 p {
@@ -315,7 +314,6 @@ a {
     font-style: italic;
 }
 
-
 /*********************/
 /*  TOOLTIP OVERLAY  */
 /*********************/
@@ -362,4 +360,11 @@ a {
     left: 0;
 }
 
+#visual-timeline {
+    width: 100%;
+    height: 700px;
+}
 
+#aeiVideo{
+    width: 100%;
+}

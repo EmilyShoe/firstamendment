@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09f3d807-07ef-4362-b5bb-85e1e60db361" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Template/js/d3-tip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Template/img/aei.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Template/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Template/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Template/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Template/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template/js/disinvitationAttempts.js" beforeDir="false" afterPath="$PROJECT_DIR$/Template/js/disinvitationAttempts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/js/timeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/Template/js/timeline.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -83,15 +83,12 @@
         <entry file="file://$PROJECT_DIR$/Template/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="570">
-              <caret line="222" column="24" selection-start-line="222" selection-start-column="24" selection-end-line="222" selection-end-column="24" />
-              <folding>
-                <element signature="n#style#0;n#h1#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+              <caret line="243" column="24" selection-start-line="243" selection-start-column="24" selection-end-line="243" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Template/js/disinvitationAttempts.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="539">
@@ -103,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Template/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="341" column="37" selection-start-line="341" selection-start-column="37" selection-end-line="341" selection-end-column="37" />
+            <state relative-caret-position="840">
+              <caret line="370" lean-forward="true" selection-start-line="370" selection-end-line="370" />
             </state>
           </provider>
         </entry>
@@ -154,8 +151,8 @@
         <option value="$PROJECT_DIR$/Template/js/timeline.js" />
         <option value="$PROJECT_DIR$/Template/js/main.js" />
         <option value="$PROJECT_DIR$/Template/index.html" />
-        <option value="$PROJECT_DIR$/Template/css/style.css" />
         <option value="$PROJECT_DIR$/Template/js/disinvitationAttempts.js" />
+        <option value="$PROJECT_DIR$/Template/css/style.css" />
       </list>
     </option>
   </component>
@@ -265,12 +262,12 @@
       <workItem from="1542594914469" duration="5897000" />
       <workItem from="1542664602968" duration="214000" />
       <workItem from="1542826616844" duration="56297000" />
-      <workItem from="1543173910321" duration="1188000" />
+      <workItem from="1543173910321" duration="1260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82990000" />
+    <option name="totallyTimeSpent" value="83062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -413,17 +410,7 @@
     <entry file="file://$PROJECT_DIR$/Template/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
-          <caret line="222" column="24" selection-start-line="222" selection-start-column="24" selection-end-line="222" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Template/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="341" column="37" selection-start-line="341" selection-start-column="37" selection-end-line="341" selection-end-column="37" />
+          <caret line="243" column="24" selection-start-line="243" selection-start-column="24" selection-end-line="243" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -434,6 +421,13 @@
           <folding>
             <element signature="e#3411#3521#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Template/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="370" lean-forward="true" selection-start-line="370" selection-end-line="370" />
         </state>
       </provider>
     </entry>
