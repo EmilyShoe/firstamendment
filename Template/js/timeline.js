@@ -21,18 +21,18 @@ var data =[
         "title": "Anti-Vietnam War Protest, Boston",
         "text": "One thousand students, mostly from Harvard, MIT and Northeastern, " +
             "marched from Cambridge Common to Boston Common in October 1965 to protest " +
-            "the Vietnam war. Speakers at the event included MIT Professor Noam M." +
+            "the Vietnam war. Speakers at the event included MIT Professor Noam M. " +
             " Chomsky and Judy White of the Cambridge Committee to End the War in Vietnam."
 
     },
     {
         "year": 1968,
         "title": "Columbia Student Protests of 1968",
-        "text": "A series of protests broke out across the campus of the University of Columbia," +
-            " New York, in 1968. The students were simultaneously protesting the discover that" +
+        "text": "A series of protests broke out across the campus of the University of Columbia, " +
+            " New York, in 1968. The students were simultaneously protesting the discover that " +
             " the university institutionally supported the United States' involvement in the " +
-            "Vietnam War and plans to build a segregated gymnasium in nearby Morningside Park. Protesting" +
-            " persisted after police arrested 177 students and had beaten 51 during the second round of protests" +
+            "Vietnam War and plans to build a segregated gymnasium in nearby Morningside Park. Protesting " +
+            " persisted after police arrested 177 students and had beaten 51 during the second round of protests " +
             " between May 17th and May 22nd, 1968."
     },
     {
@@ -63,18 +63,18 @@ var data =[
     {
         "year": 2015,
         "title": "Yale University March of Resilience",
-        "text": "After a black female student was allegedly prevented from attending a fraternity party because she" +
-            "was not white, 1000 Yale students gathered for a 'March of Resilience', a march from the Afro-American" +
-            "Cultural Center to the Cross Campus. The parade consisted of students, faculty and administrators," +
+        "text": "After a black female student was allegedly prevented from attending a fraternity party because she " +
+            "was not white, 1000 Yale students gathered for a 'March of Resilience', a march from the Afro-American " +
+            "Cultural Center to the Cross Campus. The parade consisted of students, faculty and administrators, " +
             "who gave speeches about student unity."
     },
     {
         "year": 2017,
         "title": "UC Berkeley Free Speech Week",
         "text": "In response to a no-platforming in 2016, right-wing provocateur Milo Yiannopoulos worked with a " +
-            "conservative group on the UC Berkeley campus to organize a 'Free Speech Week', a 4 day event aiming" +
-            "at promoting free speech and tolerance of conservative ideas on campus. It was estimated that" +
-            "security for the event would have cost over $100,000 for the four days but as the counter-protests" +
+            "conservative group on the UC Berkeley campus to organize a 'Free Speech Week', a 4 day event aiming " +
+            "at promoting free speech and tolerance of conservative ideas on campus. It was estimated that " +
+            "security for the event would have cost over $100,000 for the four days but as the counter-protests " +
             "were so violent, the event was cancelled less than 24 hours before the event."
     }
     ];

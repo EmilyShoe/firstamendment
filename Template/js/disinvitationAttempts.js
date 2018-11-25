@@ -73,7 +73,6 @@ DisinvitationAttempts.prototype.initVis = function(){
         .attr("y", 50)
         .attr("dy", ".35em");
 
-
     vis.svg.append("text")
         .attr("class", "stooltip speaker-info")
         .attr("x", 0)
@@ -85,6 +84,30 @@ DisinvitationAttempts.prototype.initVis = function(){
         .attr("x", 160)
         .attr("y", 65)
         .attr("dy", ".35em");
+
+    //Initialize Grouping Labels
+    vis.labelOne = vis.svg.append("text")
+        .attr("class", "group-label")
+        .attr("x", 80)
+        .attr("y", 380)
+        .attr("dy", ".35em");
+    vis.labelTwo = vis.svg.append("text")
+        .attr("class", "group-label")
+        .attr("x", 360)
+        .attr("y", 380)
+        .attr("dy", ".35em");
+    vis.labelThree = vis.svg.append("text")
+        .attr("class", "group-label")
+        .attr("x", 80)
+        .attr("y", 620)
+        .attr("dy", ".35em");
+    vis.labelFour = vis.svg.append("text")
+        .attr("class", "group-label")
+        .attr("x", 80)
+        .attr("y", 880)
+        .attr("dy", ".35em");
+
+
 
     // (Filter, aggregate, modify data)
     vis.wrangleData();
@@ -115,12 +138,7 @@ DisinvitationAttempts.prototype.wrangleData = function() {
 DisinvitationAttempts.prototype.updateVis = function(){
     var vis = this;
 
-    vis.speakers = vis.svg.selectAll(".yesspeaker");
-
-    //vis.displayData[1].values + vis.display);
-    //vis.speakersNo = vis.svg.selectAll(".nospeaker").data(vis.displayData[0].values);
-
-    //console.log(vis.data.sort(function(x, y){ return x.DisinvitationYN - y.DisinvitationYN;}));
+    vis.speakers = vis.svg.selectAll(".speaker");
 
     vis.speakers
         .data(vis.data.sort(function(x, y){ return x.DisinvitationYN - y.DisinvitationYN;}))
@@ -151,6 +169,13 @@ DisinvitationAttempts.prototype.updateVis = function(){
         .transition()
         .duration(1500);
 
+    vis.labelOne
+        .transition()
+        .duration(1500)
+        .attr("x", 260)
+        .text("Total");
+
+
 };
 
 var clickNumber = -1;
@@ -180,7 +205,17 @@ DisinvitationAttempts.prototype.splitYesNo = function() {
 
         d3.select(".yes-no-split").text("Back");
 
-    //vis.svg.selectAll(".speaker").exit().remove();
+        vis.labelOne
+            .transition()
+            .duration(1500)
+            .attr("x", 135)
+            .text("Yes");
+
+        vis.labelTwo
+            .transition()
+            .duration(1500)
+            .attr("x", 570)
+            .text("No");
     }
     else {
         vis.svg.selectAll(".speaker")
@@ -190,6 +225,13 @@ DisinvitationAttempts.prototype.splitYesNo = function() {
             .attr("cy", function(d) { return yFunction(d.id - 1, 30); });
 
         d3.select(".yes-no-split").text("Yes/No");
+
+        vis.labelOne
+            .transition()
+            .duration(1500)
+            .attr("x", 260)
+            .text("Total");
+        vis.labelTwo.text("");
     }
 
 };
@@ -214,6 +256,7 @@ DisinvitationAttempts.prototype.colorByLight = function() {
                 }
                 else return "#868e96";
             });
+        d3.select(".color-by-traffic-light").text("Color By Yes/No")
 
     }
     else {
@@ -221,7 +264,10 @@ DisinvitationAttempts.prototype.colorByLight = function() {
             .attr("fill", function(d) {
                 if (d.DisinvitationYN === 0) return "#3679A9";
                 else return "#AF000E";
-            })
+            });
+
+        d3.select(".color-by-traffic-light").text("Color by FIRE Rating")
+
     }
 
 };
@@ -248,6 +294,7 @@ DisinvitationAttempts.prototype.splitByLight = function() {
                 else if(d.trafficLight === "none") return yFunction(d.trafficId - 25, 11);
                 return yFunction(d.trafficId - 1, 11);
             });
+        d3.select(".split-by-traffic-light").text("Back");
 
 
     }
@@ -257,7 +304,10 @@ DisinvitationAttempts.prototype.splitByLight = function() {
             .duration(1500)
             .attr("cx", function(d) { return xFunction(d.id - 1, 30); })
             .attr("cy", function(d) { return yFunction(d.id - 1, 30); });
+
+        d3.select(".split-by-traffic-light").text("Split by FIRE Rating")
     }
+
 };
 
 

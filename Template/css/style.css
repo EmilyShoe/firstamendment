@@ -1,6 +1,6 @@
 
 body {
-  font-family: 'Abril Fatface';
+  font-family: 'Abril Fatface', sans-serif;
 }
 
 .header {
@@ -26,7 +26,7 @@ body {
     background-color: #3679A9;
     padding-left: 20px;
     padding-right:20px;
-};
+}
 
 #flagdiv {
     height: 150px;
@@ -56,7 +56,7 @@ body {
     filter: grayscale(100%);
     width: 100%;
     height: 150px;
-    padding: none;
+    padding: 0;
 }
 
 #comfortable {
@@ -175,7 +175,7 @@ body {
 }
 
 #linegraph-description{
-    background-color: #727b84;
+    background-color: rgba(114, 123, 132, 0.67);
 }
 
 
@@ -197,7 +197,7 @@ body {
 
 #disinvitation-visualization {
     background-color: #dddddd;
-    height: 500px;
+    height: 620px;
     width: 100%
 }
 
@@ -216,26 +216,45 @@ body {
     background-color: #80bdff;
 }
 
-p, li {
+p {
     font-family: 'Actor', sans-serif;
     padding-left: 50px;
     padding-right: 50px;
     font-size: 14px;
 }
 
-.btn {
+li {
+    font-family: 'Actor', sans-serif;
+    padding-right: 50px;
     font-size: 14px;
+}
+
+.btn {
+    font-size: 16px;
     font-family: 'Actor', sans-serif;
     background-color: #3679A9;
 
 }
 
-#red {
-    color: #AF000E;
+.btn:hover {
+    background-color: rgba(54, 121, 169, 0.65);
 }
 
-#blue {
+.red {
+    color: #AF000E;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.blue {
     color: #3679A9;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.white {
+    font-size: 16px;
+    font-weight: bold;
 }
 
 a {
@@ -243,12 +262,31 @@ a {
 }
 
 .x-axis{
-    font-family: 'Abril Fatface';
+    font-family: 'Abril Fatface', sans-serif;
     font-size: 18px;
 }
 
 #milosound {
     visibility: hidden;
+}
+
+.arrow_box {
+    position: relative;
+    background: #ffffff;
+}
+.arrow_box:after {
+    top: 100%;
+    left: 50%;
+    /*border: solid transparent;
+    content: " ";*/
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #ffffff;
+    border-width: 30px;
+    margin-left: -30px;
 }
 
 #correct {
