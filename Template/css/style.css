@@ -148,7 +148,7 @@ h3 {
 }
 #bostonVideo {
     position: absolute;
-    left: 115px;
+    left: 11%;
     top: 1505px;
     width: 250px;
     height: 200px;
@@ -163,7 +163,7 @@ h3 {
     position: absolute;
     width: 250px;
     height: 200px;
-    left: 380px;
+    left: 34%;
     top: 1505px;
     padding-left: 50px;
 }
@@ -173,7 +173,7 @@ h3 {
     width: 250px;
     height: 200px;
     top: 1780px;
-    left: 845px;
+    left: 67%;
     padding-left: 50px;
 }
 
