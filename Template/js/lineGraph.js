@@ -292,7 +292,7 @@ var t = d3.transition().duration(200);
 LineGraph.prototype.updateVis = function(lineType){
     var vis = this;
     // Set domains
-    var minMaxY= [0, 100];
+    var minMaxY= [25, 100];
     vis.y.domain(minMaxY);
 
     var minMaxX = d3.extent(vis.nestedTotal.map(function(d){ return d.key; }));
@@ -303,7 +303,7 @@ LineGraph.prototype.updateVis = function(lineType){
 
     vis.yAxis = d3.axisLeft()
         .scale(vis.y)
-        .tickValues([10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
+        .tickValues([30, 40, 50, 60, 70, 80, 90, 100])
         .tickFormat(d => d + "%");
 
 
@@ -447,6 +447,7 @@ LineGraph.prototype.updateVis = function(lineType){
             .text("");
         vis.svg.select("text.line-legend-fourth")
             .text("");
+
 
     }
     else if(lineType==="political-party"){

@@ -25,8 +25,8 @@
               <!-- header with images, do not touch -->
               <div class="col-6 header">
                   <h1 id="title">Is the First Amendment really coming first?</h1>
-                  <p>Watching the news, it would be easy to imagine that college campuses have become synonymous with
-                  protest, violence, and the oppression of free speech. But is there evidence to show that support for
+                  <p>Watching the news, it is easy to imagine that college campuses have become synonymous with
+                  protest, violence, and the oppression of free speech. Is there actually evidence to show that support for
                   free speech is dwindling on America's college campuses?</p>
               </div>
               <div class="col-6 header collage">
@@ -59,10 +59,13 @@
             <h1 class="first-title">What is the First Amendment?</h1>
               <div class="row">
                   <div id="information" class="col-6">
-                      <p id="first-amendment">“Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.”</p>
+                      <blockquote id="first-amendment">
+                          Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.
+                      </blockquote>
+
                       <p>In the summer of 1787, politicians gathered in Philadelphia to draft a new Constitution. Part of this new
-                      Constitution would be the Bill of Rights, a bill that would safeguard basic civil rights. This Bill
-                      consisted of 10 rights and became the first ten amendments to the US Constitution. The Bill of Rights
+                      Constitution was the Bill of Rights, a bill that would safeguard basic civil rights. This Bill
+                      consisted of 10 rights and became the first ten amendments of the US Constitution. The Bill of Rights
                       was introduced to Congress in 1789 and adopted on December 15th, 1791.</p>
                       <p>The First Amendment protects the freedoms of speech, assembly, religion, petition, and the press.
                       This does not mean there are not reasonable restrictions. Speech provoking action that may directly harm
@@ -72,7 +75,11 @@
                       Petition can cover anything from signing a petition to filing a lawsuit against the government.</p>
                   </div>
                   <div class="col-6" id="quiz">
+
                       <p id="quiz-title"><strong>Which of these would violate your First Amendment right?</strong></p>
+
+                      <p id="quiz-title">Would the First Amendment Protect You From This?</p>
+
                       <table id="quiz-qs"></table>
                       <p id="quiz-result"></p>
                       <div id="answer"></div>
@@ -132,7 +139,7 @@
                             to allow someone controversial to speak.
                         </li>
                         <li>
-                            Surprisingly, those with a college <button class="btn degree">degree</button> tend to allow
+                            Contrary to the belief that college students are hate free speech, those with a <button class="btn degree">college degree</button> tend to allow
                             controversial speakers <span class="white">more often</span> than those with no degree.
                         </li>
                         <li>
@@ -173,8 +180,8 @@
                         Blue</span> colleges have a hands off approach to free speech. However, this does not mean
                     the college encourages free speech or that its students support free speech.</p>
                 <ul>
-                    <li><span class="btn overall">Overall,</span> only <span class="white">10%</span> of colleges have a blue ranking (with
-                    58% ranking as white and 32% as red).</li>
+                    <li>Only <span class="white">10%</span> of colleges have a blue ranking (with
+                    58% ranking as white and 32% as red) <span class="btn overall">overall.</span></li>
                     <li>Only one <span class="btn ivy-league">Ivy League</span> college, the University of
                         Pennsylvania, was ranked <span class="blue">blue</span>. Harvard was ranked <span class="red">red</span>.</li>
                     <li><span class="btn private">Private colleges</span> were <span class="white">twice</span> as likely to be ranked red than
@@ -182,6 +189,7 @@
                     private colleges have a right to restrict speech but since public colleges receive federal funding,
                         they are held to a higher standard when protecting the Constitution.</li>
                 </ul>
+                <div id="college-map-legend"></div>
 
             </div>
         </div>
@@ -195,7 +203,7 @@
               invited to speak at. <span class="white">Click</span> on the buttons to learn more about their disinvitations to speak, or
               <span class="white">hover</span> on each circle to see which speaker, college, and year it represents. </p>
           <div class="row">
-              <div class="col-md-6" style="padding-left: 80px">
+              <div class="col-6" style="padding-left: 80px">
                   <div id="disinvitation-group-by">
                       Group by
                       <button class="btn disinvite-total" style="background-color:#AF000E">Total</button>
@@ -206,7 +214,7 @@
                   <button class="btn color-by-yes-no" style="background-color:#AF000E">Successful Disinvitation</button>
                   <button class="btn color-by-traffic-light">FIRE rating</button>
               </div>
-              <div class="col-md-4" id="disinvited-explanation">
+              <div class="col-4" id="disinvited-explanation">
                     Hundreds of speakers are invited to speak at US universities every year. Here are 378 who were disinvited to
                     speak on a college campus.
               </div>
