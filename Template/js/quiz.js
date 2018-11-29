@@ -2,40 +2,40 @@
 // d3.json("data/quiz.json", function(questions) {
 
 var questions = [{
-    "question": "You are banned from a social media platform",
+    "question": "A social media platform banning you",
     "answer": "false",
-    "explanation": "Social media companies are private companies. Whilst it would be morally favourable for them to encourage free speech, the First Amendment protects from government censorship.",
+    "explanation": "Social media companies are private companies. Whilst it would be morally favourable for them to encourage free speech, the First Amendment protects companies from government censorship or de-censorship.",
 },
     {
-        "question": "You are fired from your job for something you said in public or online",
+        "question": "Being fired from your job for something you said in public or online",
         "answer": "false",
-        "explanation": "If you work for a private company, you are not protected by the First Amendment. It is a private company's right to choose their code of conduct and fire/hire people at their will. If you work for the government, it could be a first amendment issue if the speech does not prevent you from doing your job. For example, if you work with children and say something dangerous, they have can fire you. "
+        "explanation": "It is a private company's right to choose their own code of conduct and fire/hire people at their will. If you work for the government, your speech is protected so long as it does not impede your work. "
     },
     {
-        "question": "A private university cancels a visit from a controversial speaker",
+        "question": "A private university cancelling a visit from a controversial speaker",
         "answer": "false",
-        "explanation": "Again, private organizations have the right to do what they want. However, most private universities know that free speech is essential for academics.",
+        "explanation": "Private organizations have the right to choose their own code of conduct. Even if not protected by the First Amendment, most private universities know that free speech is essential for academics.",
     },
     {
-        "question": "A public university cancels a visit from a controversial speaker",
+        "question": "A public university cancelling a visit from a controversial speaker",
         "answer": "true",
-        "explanation": "Public universities are not allowed to cancel speeches based on who the speaker is. They are naturally allowed to place restrictions, such as dictating the time, venue, or make suggestions for subject matter, but they cannot do so that discriminates against a certain point of view."
+        "explanation": "Public universities are not allowed to cancel speeches based on the speaker. They are allowed to place restrictions on events, such as dictating the time or venue, or make suggestions for subject matter, but they cannot do so in a way that discriminates against a certain point of view."
     },
     {
-        "question": "You are arrested for saying something critical of the government",
+        "question": "Being arrested for saying something critical of the government",
         "answer": "true",
-        "explanation": "It would be unconstitutional to be arrested for being critical of the government unless it was a direct call to violence."
+        "explanation": "It would be unconstitutional to be arrested for being critical of the government, unless your speech was a direct call to violence."
 
     },
     {
-        "question" : "Your post online is deleted",
+        "question" : "Your post online getting deleted",
         "answer": "false",
-        "explanation": "Private companies can essentially do whatever they want, including deleting your posts if they so wish. That being said, these private companies are not held to account for what is said on them and therefore, a lot of them take a back seat when it comes to censorship."
+        "explanation": "Private companies can choose their own code of conduct, so a private social media company could delete your post if they so wish. That being said, these private companies are not held accountable for what is said on them most do not engage in active censorship."
     },
     {
-        "question": "You are fined by your company for not standing for the national anthem",
+        "question": "Being fined by your company for not standing for the national anthem",
         "answer": "true",
-        "explanation": "Whilst private companies can do what they want essentially, symbolic speech, such as the national anthem and political speech, are protected specifically by the constitution. Not standing for the national anthem is not threatening nor disruptive."
+        "explanation": "Whilst private companies can choose their own code of conduct, symbolic speech like the national anthem is protected specifically by the constitution. Not standing for the national anthem would be an excercise of free speech, so firing you in this instance would be unconstitutional."
     }];
 
     $('#quiz-result')
@@ -47,7 +47,7 @@ var questions = [{
             `
             <tr>
                 <td class="quiz-reason">
-                    ${question.question}.
+                    ${question.question}
                 </td>
                 <td>
                   <button class="btn btn-yes" id="true">Yes</button>

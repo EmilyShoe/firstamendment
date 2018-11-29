@@ -187,31 +187,6 @@ DisinvitationAttempts.prototype.splitYesNo = function() {
 
     vis.title.text("Was the Disinvitation Attempt Successful?");
 
-    // }
-    // else {
-    //     vis.svg.selectAll(".speaker")
-    //         .transition()
-    //         .duration(1500)
-    //         .attr("cx", function(d) { return xFunction(d.id - 1, 30); })
-    //         .attr("cy", function(d) { return yFunction(d.id - 1, 30); });
-    //
-    //     d3.select(".yes-no-split").text("Successful Disinvitation");
-    //
-    //     vis.labelOne
-    //         .transition()
-    //         .duration(1500)
-    //         .attr("x", 260)
-    //         .text("Total");
-    //     vis.labelTwo.text("");
-    //     vis.labelThree.text("");
-    //     vis.labelFour.text("");
-    //
-    //     d3.select("#disinvited-explanation").text("Hundreds of speakers are invited to speak at US universities every " +
-    //         "year. Here are 378 who were disinvited to speak on a college campus.");
-    //
-    //     vis.title.text("Speakers invited to Campuses");
-    //
-    // }
 
 };
 
