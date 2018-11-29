@@ -31,14 +31,16 @@
               </div>
               <div class="col-6 header collage">
                   <div class="row" width="100%">
-                      <div id="flagdiv" class="col-lg-4">
+                      <div id="flagdiv" class="col-4">
                           <img id="flag" src="img/flag.gif">
                       </div>
                       <div id="comfortable" class="col-8">
                           <img id="noPlatform" src="img/comfortable.png">
                       </div>
                   </div>
+                  <div class="row">
                       <img id="berkeley" src="img/berkeley.jpg">
+                  </div>
                   <div class="row finalRow">
                       <div class="col-4" id="savioHeader">
                           <img id="benShap" src="img/ben.png">
@@ -70,7 +72,7 @@
                       Petition can cover anything from signing a petition to filing a lawsuit against the government.</p>
                   </div>
                   <div class="col-6" id="quiz">
-                      <p id="quiz-title"><strong>Which of these are covered by the First Amendment?</strong></p>
+                      <p id="quiz-title"><strong>Which of these would violate your First Amendment right?</strong></p>
                       <table id="quiz-qs"></table>
                       <p id="quiz-result"></p>
                       <div id="answer"></div>
@@ -94,23 +96,18 @@
                 <audio id="milosound" controls>
                     <source src="data/timeline/milo.mp3" type="audio/mp3">
                 </audio>
-              <div id="info">College campuses are good indicators of the state of free speech given their rich history
-              of protest and progressive attitudes, from the Free Speech Movement at University of California,
-              Berkeley, to now. Whilst some protests now seem to be focused on shutting down free speech instead
-              of promoting it, as was seen at UC Berkeley in 2017, students are often the most open to exercising
-              their First Amendment rights to protest.
+                <div id="FSM">
 
-                  Explore the free speech on US college campuses. <strong> Hover </strong> on videos to hear available audio, over speakers
-              to hear their speeches, or over any media to read the information about that movement.</div>
+                </div>
                 <video id="bostonVideo" class="1965" autoplay loop>
                     <source src="data/timeline/boston.mp4" type="video/mp4">
                 </video>
-                <video id="kentVideo" class="1970" autoplay loop muted>
-                    <source src="data/timeline/kentstate.mp4" type="video/mp4">
-                </video>
-                <video id="yaleVideo" class="2015" autoplay loop muted>
-                    <source src="data/timeline/yale.mp4" type="video/mp4">
-                </video>
+                <!--<video id="kentVideo" class="1970" autoplay loop muted>-->
+                    <!--<source src="data/timeline/kentstate.mp4" type="video/mp4">-->
+                <!--</video>-->
+                <!--<video id="yaleVideo" class="2015" autoplay loop muted>-->
+                    <!--<source src="data/timeline/yale.mp4" type="video/mp4">-->
+                <!--</video>-->
             </div>
         </div>
     </div>
@@ -255,6 +252,7 @@
 
 
   <!-- Visualization objects -->
+  <script src="js/timeline.js"></script>
   <script src="js/lineGraph.js"></script>
   <script src="js/collegesMap.js"></script>
   <script src="js/disinvitationAttempts.js"></script>
@@ -263,7 +261,6 @@
 
   <!-- Load data, create visualizations -->
   <script src="js/main.js"></script>
-  <script src="js/timeline.js"></script>
 
 </body>
 </html>
