@@ -1,4 +1,4 @@
-var margin = { top: 20, right: 100, bottom: 30, left: 100 };
+var margin = { top: 20, right: 100, bottom: 30, left: 110 };
 
 var duration = 800;
 // var width = 1200 - margin.left - margin.right,
@@ -14,14 +14,18 @@ var data =[
         "year": 1964,
         "start": "1964-9-10",
         "end" : "1965-01-04",
-        "title": "The Free Speech Movement",
+        "title": "The Free Speech Movement, Berkeley",
         "text": "The Free Speech Movement, was a large-scale student protest " +
             "on the campus of University of California, Berkeley. Lead by Mario " +
             "Savio, it was started in response to an administrative " +
             "decision to ban political activism on campus. On " +
             "December 2nd 1964, around 4000 students sat in" +
             "Sproul Hall as a last resort to negotiate with "  +
-            "administrators.",
+            "administrators. Over 800 students were arrested and it took police officers over 12 hours" +
+            " to clear the hallways. The Free Speech Movement is seen as the birthplace of student activism " +
+            "on campuses. It has been critiqued for the methodology, however, as it prevented other students who" +
+            "did not want to participate in the sit-ins and protests  " +
+            "from receiving an education."  ,
         "content" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/28aPyBrP0Yc\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
     },
     {
@@ -36,7 +40,13 @@ var data =[
             "the Vietnam war. Speakers at the event" +
             " included MIT Professor Noam M. " +
             " Chomsky and Judy White of the Cambridge"+
-            " Committee to End the War in Vietnam.",
+            " Committee to End the War in Vietnam."+
+            "Harvard went on to have large scale anti-Vietnam war activism on campus. In 1966, when Defense Secretary " +
+            "Robert S. McNamara was invited to Harvard to become the Honorary Associate of the Kennedy Institute. Leaders " +
+            "of the student organization 'Students for a Democratic Society' demanded that he took part in a debate " +
+            "with the anti-war journalist Robert Scheer. He refused and was mobbed by hundreds of angry college students " +
+            "who prevented him from leaving the Kennedy School. Freedom of speech not only protects someone's right to " +
+            "speak, but also their right not to speak, should they wish.",
         "content": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5QqovCh0wFU\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
 
     },
@@ -50,7 +60,9 @@ var data =[
             " the university institutionally supported the United States' involvement in the " +
             "Vietnam War and plans to build a segregated gymnasium in nearby Morningside Park." +
             " Protesting persisted after police arrested 177 students and had beaten 51 during" +
-            "the second round of protests between May 17th and May 22nd, 1968.",
+            "the second round of protests between May 17th and May 22nd, 1968. "+
+            "'Our young people, in disturbing numbers, appear to reject all forms of authority, from whatever source derived, and they have taken refuge in a turbulent and inchoate nihilism whose sole objectives are destruction. I know of no time in our history when the gap between the generations has been wider or more potentially dangerous.\n" +
+            "—Columbia University president Grayson Kirk, April 12, 1968",
         "content": "<div id=\"carouselExampleIndicators\" class=\"carousel slide\" data-ride=\"carousel\">\n" +
             "                            <ol class=\"carousel-indicators\">\n" +
             "                                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li>\n" +
@@ -87,7 +99,12 @@ var data =[
             "protest broke out on Kent State University in Ohio after Nixon announced a bombing campaign in " +
             "Cambodia. After several days of unrest in May, National Guardsmen opened fire on the unarmed students, firing "+
             "67 rounds in 13 seconds, killing 4 students and wounding 9 others, one of whom suffered with " +
-            "permanent paralysis.",
+            "permanent paralysis. These protests were were peaceful until later at night on May 3rd when students " +
+            "started pushing over trash cans, burning building and smashing windows. The Governor declared a state " +
+            "of civil emergency when the students burnt the ROTC building down the ground. The protests continued to " +
+            "become violent. The Governor banned all protests but the crowd continued, despite being attacked with " +
+            "tear gas. Most of the Guardsmen retreated, but 28 on the hill, who were unclear of instructions, started " +
+            "shooting. The Guardsmen claimed that the students has shot first, but the students claimed this was a lie. ",
         "content" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Lmd6CHah7Wg\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
     },
     {
@@ -157,7 +174,8 @@ var data =[
             "conservative group on the UC Berkeley campus to organize a 'Free Speech Week', a 4 day event aiming " +
             "at promoting free speech and tolerance of conservative ideas on campus. It was estimated that " +
             "security for the event would have cost over $100,000 for the four days but as the counter-protests " +
-            "were so violent, the event was cancelled less than 24 hours before the event."
+            "were so violent, the event was cancelled less than 24 hours before the event.",
+        "content" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/_JVJCCxMxJg\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
     }
 ];
 var dateParser = d3.timeParse("%Y-%m-%d");
@@ -204,20 +222,18 @@ points.enter().append("circle")
     .attr("cy", margin.top)
     .attr("fill", "#b30000");
 
-
-
-
-///media playing
-
-// var savioSpeech = $("#saviosound")[0];
-// $("#1964")
-//     .mouseenter(function() {
-//         savioSpeech.play();
-//     })
-//     .mouseout(function() {
-//         savioSpeech.pause();
-
-//     });
+// svg.append("rect")
+//     .attr("x", width + 20)
+//     .attr("id", "narrate2")
+//     .attr("y", 0)
+//     .attr("width", 80)
+//     .attr("height", 30)
+//     .attr("fill", "#3679A9");
+//
+// svg.append("text")
+//     .attr("x", width + 30)
+//     .attr("y", 22)
+//     .text("Narrate");
 
 
 $("circle").hover(function(){
@@ -230,5 +246,4 @@ $("circle").hover(function(){
     $("#event-content").html(newdata[0].content);
 
 });
-
 
