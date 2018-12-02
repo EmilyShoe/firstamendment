@@ -319,6 +319,12 @@ a {
     padding-bottom: 10px;
 }
 
+#mapLegend {
+    width: 80%;
+    height: auto;
+    padding-left: 15%;
+}
+
 #information {
     padding: 20px;
 }
@@ -414,6 +420,7 @@ blockquote {
     background-color: rgba(134, 142, 150, 0.79);
     text-align: center;
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #speaker-title {

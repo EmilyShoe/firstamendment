@@ -133,7 +133,7 @@ DisinvitationAttempts.prototype.updateVis = function(){
         .text("Total");
 
     //Initialize graph title text
-    vis.title.text("Speakers invited to Campuses");
+    vis.title.text("Speakers Invited to Campuses");
 
     vis.speakers.exit().remove();
 
@@ -214,17 +214,7 @@ DisinvitationAttempts.prototype.colorByLight = function(colorByLight) {
                 else return "#868e96";
             });
 
-        if(vis.splitByVar === "all") {
-            vis.svg.selectAll(".speaker")
-                .transition()
-                .duration(1500)
-                .attr("cx", function (d, index) {
-                    return xFunction(d.trafficId, 30);
-                })
-                .attr("cy", function (d, index) {
-                    return yFunction(d.trafficId, 30);
-                });
-        }
+        callSplitFunction(vis);
 
         d3.select(".color-by-traffic-light").style("background-color", "#AF000E");
         d3.select(".color-by-yes-no").style("background-color", "#3679A9");
@@ -236,15 +226,8 @@ DisinvitationAttempts.prototype.colorByLight = function(colorByLight) {
             .attr("fill", function(d) {
                 if (d.DisinvitationYN === 0) return "#3679A9";
                 else return "#AF000E";
-            })
-            .transition()
-            .duration(1500)
-            .attr("cx", function(d, index) {
-                return xFunction(index, 30);
-            })
-            .attr("cy", function(d, index) {
-                return yFunction(index, 30);
             });
+        callSplitFunction(vis);
 
         d3.select(".color-by-traffic-light").style("background-color", "#3679A9");
         d3.select(".color-by-yes-no").style("background-color", "#AF000E");
@@ -324,8 +307,8 @@ DisinvitationAttempts.prototype.splitByLight = function(splitByLight) {
             .duration(1500)
             .text("Grey (no FIRE rating)");
 
-        d3.select("#disinvited-explanation").text("Schools with a bad free speech rating see disinvitations occur 3x as " +
-            "often as at schools with a good free speech rating.");
+        d3.select("#disinvited-explanation").text("Successful disinvitations occur with approximately the same frequency at schools with each type of FIRE rating" +
+            " when you take into account the percentage of schools with each rating.");
 
         vis.title.text("Grouped by FIRE Rating");
 
@@ -370,7 +353,7 @@ DisinvitationAttempts.prototype.splitByLight = function(splitByLight) {
         d3.select("#disinvited-explanation").text("Hundreds of speakers are invited to speak at US universities every " +
             "year. Here are 378 who were disinvited to speak on a college campus.");
 
-        vis.title.text("Speakers invited to Campuses");
+        vis.title.text("Speakers Invited to Campuses");
 
     }
 
@@ -400,5 +383,16 @@ function yFunction(ind, perRow) {
     else if(ind < perRow*12) return yBuffer + 110/3*radius;
     else if(ind < perRow*13) return yBuffer + 40*radius;
     else if(ind < perRow*14) return yBuffer + 130/3*radius;
+}
+
+function callSplitFunction(vis) {
+    if(vis.splitByVar === "all") {
+        vis.splitByLight(-1);
+    }
+    else if(vis.splitByVar === "YesNo") {
+        vis.splitYesNo();
+
+    }
+    else vis.splitByLight(1);
 }
 
