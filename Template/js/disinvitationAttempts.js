@@ -15,9 +15,7 @@ DisinvitationAttempts = function(_parentElement, _data){
 /*
  * Initialize visualization (static content, e.g. SVG area or axes)
  */
-
 var radius = 6;
-
 DisinvitationAttempts.prototype.initVis = function(){
     var vis = this;
 
@@ -34,6 +32,7 @@ DisinvitationAttempts.prototype.initVis = function(){
         .append("g")
         .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
+    //Initialize tooltips
     vis.tip = d3.tip()
         .attr('class', 'd3-tip')
         .offset([-10, 0])
@@ -48,6 +47,9 @@ DisinvitationAttempts.prototype.initVis = function(){
 
     vis.radius = radius;
 
+    //variables to keep track of how the data is split and colored
+    vis.splitByVar = "all";
+    vis.colorByVar = "YesNo";
 
     //Initialize Grouping Labels
     vis.labelOne = vis.svg.append("text")
@@ -78,47 +80,40 @@ DisinvitationAttempts.prototype.initVis = function(){
         .style("font-size", "18px")
         .attr("dy", ".35em");
 
-
-
-    // (Filter, aggregate, modify data)
+    // (Used for filtering data)
     vis.wrangleData();
 };
-
 
 /*
  * Data wrangling
  */
-
 DisinvitationAttempts.prototype.wrangleData = function() {
     var vis = this;
 
+    //Filtering done in data with separate ids for each data point
     vis.displayData = vis.data;
 
     // Update the visualization
     vis.updateVis();
 };
 
-
-
 /*
  * The drawing function - should use the D3 update sequence (enter, update, exit)
- * Function parameters only needed if different kinds of updates are needed
  */
-
-
 DisinvitationAttempts.prototype.updateVis = function(){
     var vis = this;
 
     vis.speakers = vis.svg.selectAll(".speaker");
 
+    //Initialize speaker circles colored by disinvitation value
     vis.speakers
         .data(vis.data.sort(function(x, y){ return x.DisinvitationYN - y.DisinvitationYN;}))
         .enter().append("circle")
         .attr("class", "speaker")
         .merge(vis.speakers)
         .attr("r", vis.radius)
-        .attr("cx", function(d) { return xFunction(d.id - 1, 30); })
-        .attr("cy", function(d) { return yFunction(d.id - 1, 30); })
+        .attr("cx", function(d) { return xFunction(d.disinvitationId, 30); })
+        .attr("cy", function(d) { return yFunction(d.disinvitationId, 30); })
         .attr("fill", function (d) {
             if (d.DisinvitationYN === 0) return "#3679A9";
             else return "#AF000E";
@@ -130,19 +125,26 @@ DisinvitationAttempts.prototype.updateVis = function(){
         .transition()
         .duration(1500);
 
+    //Initialize label for grouping as total
     vis.labelOne
         .transition()
         .duration(1500)
         .attr("x", 260)
         .text("Total");
 
-    vis.title.text("Speakers invited to Campuses");
+    //Initialize graph title text
+    vis.title.text("Speakers Invited to Campuses");
 
+    vis.speakers.exit().remove();
 
 };
 
+/*
+* This function groups speakers by whether the disinvitation attempt against them was successful
+*/
 DisinvitationAttempts.prototype.splitYesNo = function() {
     var vis = this;
+    vis.splitByVar = "YesNo";
 
     numberYes = 172; //Number of speakers with value of disinvitation successful as Yes
     vis.svg.selectAll(".speaker")
@@ -190,10 +192,14 @@ DisinvitationAttempts.prototype.splitYesNo = function() {
 
 };
 
+/*
+* This function colors speaker circles by what rating FIRE gave the school they were speaking at
+*/
 DisinvitationAttempts.prototype.colorByLight = function(colorByLight) {
     var vis = this;
     console.log(colorByLight);
     if(+colorByLight > 0) {
+        vis.colorByVar = "trafficLight";
         vis.svg.selectAll(".speaker")
             .attr("fill", function(d) {
                 if(d.trafficLight === "red") {
@@ -207,16 +213,21 @@ DisinvitationAttempts.prototype.colorByLight = function(colorByLight) {
                 }
                 else return "#868e96";
             });
+
+        callSplitFunction(vis);
+
         d3.select(".color-by-traffic-light").style("background-color", "#AF000E");
         d3.select(".color-by-yes-no").style("background-color", "#3679A9");
 
     }
     else {
+        vis.colorByVar = "YesNo";
         vis.svg.selectAll(".speaker")
             .attr("fill", function(d) {
                 if (d.DisinvitationYN === 0) return "#3679A9";
                 else return "#AF000E";
             });
+        callSplitFunction(vis);
 
         d3.select(".color-by-traffic-light").style("background-color", "#3679A9");
         d3.select(".color-by-yes-no").style("background-color", "#AF000E");
@@ -225,25 +236,53 @@ DisinvitationAttempts.prototype.colorByLight = function(colorByLight) {
 
 };
 
+/*
+* This function splits speakers by what rating FIRE gave the school they were speaking at
+*/
 DisinvitationAttempts.prototype.splitByLight = function(splitByLight) {
     var vis = this;
 
     if(+splitByLight > 0) {
-        vis.svg.selectAll(".speaker")
-            .transition()
-            .duration(1500)
-            .attr("cx", function(d) {
-                if(d.trafficLight === "yellow") return ((13 + 1) * 10/3 * vis.radius + xFunction(d.trafficId - 256, 11));
-                else if(d.trafficLight === "red") return ((26 + 1) * 10/3 * vis.radius + xFunction(d.trafficId - 169, 11));
-                else if(d.trafficLight === "none") return ((39 + 1) * 10/3 * vis.radius + xFunction(d.trafficId - 25, 11));
-                return xFunction(d.trafficId - 1, 11);
-            })
-            .attr("cy", function(d) {
-                if(d.trafficLight === "yellow") return yFunction(d.trafficId - 256, 11);
-                else if(d.trafficLight === "red") return yFunction(d.trafficId - 169, 11);
-                else if(d.trafficLight === "none") return yFunction(d.trafficId - 25, 11);
-                return yFunction(d.trafficId - 1, 11);
-            });
+        vis.splitByVar = "trafficLight";
+
+        if(vis.colorByVar === "YesNo") {
+            vis.svg.selectAll(".speaker")
+                .transition()
+                .duration(1500)
+                .attr("cx", function(d) {
+                    if(d.trafficLight === "yellow") {
+                        return ((13 + 1) * 10/3 * vis.radius + xFunction(d.trafficDisinviteId - 255, 11));
+                    }
+                    else if(d.trafficLight === "red") return ((26 + 1) * 10/3 * vis.radius + xFunction(d.trafficDisinviteId - 168, 11));
+                    else if(d.trafficLight === "none") {
+                        return ((39 + 1) * 10/3 * vis.radius + xFunction(d.trafficDisinviteId - 24, 11));
+                    }
+                    return xFunction(d.trafficDisinviteId, 11);
+                })
+                .attr("cy", function(d) {
+                    if(d.trafficLight === "yellow") return yFunction(d.trafficDisinviteId - 255, 11);
+                    else if(d.trafficLight === "red") return yFunction(d.trafficDisinviteId - 168, 11);
+                    else if(d.trafficLight === "none") return yFunction(d.trafficDisinviteId - 24, 11);
+                    return yFunction(d.trafficDisinviteId, 11);
+                });
+        }
+        else {
+            vis.svg.selectAll(".speaker")
+                .transition()
+                .duration(1500)
+                .attr("cx", function(d) {
+                    if(d.trafficLight === "yellow") return ((13 + 1) * 10/3 * vis.radius + xFunction(d.trafficId - 255, 11));
+                    else if(d.trafficLight === "red") return ((26 + 1) * 10/3 * vis.radius + xFunction(d.trafficId - 168, 11));
+                    else if(d.trafficLight === "none") return ((39 + 1) * 10/3 * vis.radius + xFunction(d.trafficId - 24, 11));
+                    return xFunction(d.trafficId, 11);
+                })
+                .attr("cy", function(d) {
+                    if(d.trafficLight === "yellow") return yFunction(d.trafficId - 255, 11);
+                    else if(d.trafficLight === "red") return yFunction(d.trafficId - 168, 11);
+                    else if(d.trafficLight === "none") return yFunction(d.trafficId - 24, 11);
+                    return yFunction(d.trafficId, 11);
+                });
+        }
         d3.select(".split-by-traffic-light").style("background-color", "#AF000E");
         d3.select(".disinvite-total").style("background-color", "#3679A9");
         d3.select(".yes-no-split").style("background-color", "#3679A9");
@@ -268,18 +307,36 @@ DisinvitationAttempts.prototype.splitByLight = function(splitByLight) {
             .duration(1500)
             .text("Grey (no FIRE rating)");
 
-        d3.select("#disinvited-explanation").text("Schools with a bad free speech rating see disinvitations occur 3x as " +
-            "often as at schools with a good free speech rating.");
+        d3.select("#disinvited-explanation").text("Successful disinvitations occur with approximately the same frequency at schools with each type of FIRE rating" +
+            " when you take into account the percentage of schools with each rating.");
 
         vis.title.text("Grouped by FIRE Rating");
 
     }
     else {
-        vis.svg.selectAll(".speaker")
-            .transition()
-            .duration(1500)
-            .attr("cx", function(d) { return xFunction(d.id - 1, 30); })
-            .attr("cy", function(d) { return yFunction(d.id - 1, 30); });
+        vis.splitByVar = "all";
+
+        if(vis.colorByVar === "trafficLight") {
+            vis.svg.selectAll(".speaker")
+                .transition()
+                .duration(1500).attr("cx", function (d, index) {
+                return xFunction(d.trafficId, 30);
+                })
+                .attr("cy", function (d, index) {
+                    return yFunction(d.trafficId, 30);
+                });
+        }
+        else {
+            vis.svg.selectAll(".speaker")
+                .transition()
+                .duration(1500)
+                .attr("cx", function (d, index) {
+                    return xFunction(index, 30);
+                })
+                .attr("cy", function (d, index) {
+                    return yFunction(index, 30);
+                });
+        }
 
         d3.select(".split-by-traffic-light").style("background-color", "#3679A9");
         d3.select(".disinvite-total").style("background-color", "#AF000E");
@@ -296,15 +353,16 @@ DisinvitationAttempts.prototype.splitByLight = function(splitByLight) {
         d3.select("#disinvited-explanation").text("Hundreds of speakers are invited to speak at US universities every " +
             "year. Here are 378 who were disinvited to speak on a college campus.");
 
-        vis.title.text("Speakers invited to Campuses");
+        vis.title.text("Speakers Invited to Campuses");
 
     }
 
 };
 
 
-//var perRow = 30;
-
+/*
+*These functions determine x and y indices for circles based on an index and number of circles per row desired
+*/
 function xFunction(ind, perRow) {
     return 10/3*radius*(ind % perRow);
 }
@@ -325,5 +383,16 @@ function yFunction(ind, perRow) {
     else if(ind < perRow*12) return yBuffer + 110/3*radius;
     else if(ind < perRow*13) return yBuffer + 40*radius;
     else if(ind < perRow*14) return yBuffer + 130/3*radius;
+}
+
+function callSplitFunction(vis) {
+    if(vis.splitByVar === "all") {
+        vis.splitByLight(-1);
+    }
+    else if(vis.splitByVar === "YesNo") {
+        vis.splitYesNo();
+
+    }
+    else vis.splitByLight(1);
 }
 
