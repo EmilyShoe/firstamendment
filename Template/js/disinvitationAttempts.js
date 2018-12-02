@@ -198,7 +198,6 @@ DisinvitationAttempts.prototype.splitYesNo = function() {
 */
 DisinvitationAttempts.prototype.colorByLight = function(colorByLight) {
     var vis = this;
-    console.log(colorByLight);
     if(+colorByLight > 0) {
         vis.colorByVar = "trafficLight";
         vis.svg.selectAll(".speaker")
