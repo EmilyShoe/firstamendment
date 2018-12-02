@@ -21,7 +21,8 @@ var data =[
             "decision to ban political activism on campus. On " +
             "December 2nd 1964, around 4000 students sat in" +
             "Sproul Hall as a last resort to negotiate with "  +
-            "administrators."
+            "administrators.",
+        "content" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/28aPyBrP0Yc\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
     },
     {
         "year": 1965,
@@ -35,7 +36,8 @@ var data =[
             "the Vietnam war. Speakers at the event" +
             " included MIT Professor Noam M. " +
             " Chomsky and Judy White of the Cambridge"+
-            " Committee to End the War in Vietnam."
+            " Committee to End the War in Vietnam.",
+        "content": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5QqovCh0wFU\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
 
     },
     {
@@ -48,7 +50,33 @@ var data =[
             " the university institutionally supported the United States' involvement in the " +
             "Vietnam War and plans to build a segregated gymnasium in nearby Morningside Park." +
             " Protesting persisted after police arrested 177 students and had beaten 51 during" +
-            "the second round of protests between May 17th and May 22nd, 1968."
+            "the second round of protests between May 17th and May 22nd, 1968.",
+        "content": "<div id=\"carouselExampleIndicators\" class=\"carousel slide\" data-ride=\"carousel\">\n" +
+            "                            <ol class=\"carousel-indicators\">\n" +
+            "                                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li>\n" +
+            "                                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"1\"></li>\n" +
+            "                                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"2\"></li>\n" +
+            "                            </ol>\n" +
+            "                            <div class=\"carousel-inner\">\n" +
+            "                                <div class=\"carousel-item active\">\n" +
+            "                                    <img class=\"d-block w-100\" src=\"img/1.jpg\">\n" +
+            "                                </div>\n" +
+            "                                <div class=\"carousel-item\">\n" +
+            "                                    <img class=\"d-block w-100\" height=\"380\" src=\"img/2.jpg\">\n" +
+            "                                </div>\n" +
+            "                                <div class=\"carousel-item\">\n" +
+            "                                    <img class=\"d-block w-100\" height=\"380\" src=\"img/3.jpg\"\">\n" +
+            "                                </div>\n" +
+            "                            </div>\n" +
+            "                            <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">\n" +
+            "                                <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n" +
+            "                                <span class=\"sr-only\">Previous</span>\n" +
+            "                            </a>\n" +
+            "                            <a class=\"carousel-control-next\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"next\">\n" +
+            "                                <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n" +
+            "                                <span class=\"sr-only\">Next</span>\n" +
+            "                            </a>\n" +
+            "                        </div>"
     },
     {
         "year": 1970,
@@ -59,7 +87,8 @@ var data =[
             "protest broke out on Kent State University in Ohio after Nixon announced a bombing campaign in " +
             "Cambodia. After several days of unrest in May, National Guardsmen opened fire on the unarmed students, firing "+
             "67 rounds in 13 seconds, killing 4 students and wounding 9 others, one of whom suffered with " +
-            "permanent paralysis."
+            "permanent paralysis.",
+        "content" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Lmd6CHah7Wg\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
     },
     {
         "year": 1985,
@@ -69,7 +98,33 @@ var data =[
         "text": "In April 1985, demonstrations broke out on the UC Berkeley campus aimed to stop financial investments " +
             "in the apartheid regime in South Africa. Many demonstrators were arrested, which lead to further protest. " +
             "When 20 of the demonstrators were charged, anti-apartheid demonstrators marched to the courthouse and police " +
-            "trapped them in the alley beside the courthouse to contain them."
+            "trapped them in the alley beside the courthouse to contain them.",
+        "content" : "<div id=\"carouselExampleIndicators\" class=\"carousel slide\" data-ride=\"carousel\">\n" +
+            "                            <ol class=\"carousel-indicators\">\n" +
+            "                                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li>\n" +
+            "                                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"1\"></li>\n" +
+            "                                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"2\"></li>\n" +
+            "                            </ol>\n" +
+            "                            <div class=\"carousel-inner\">\n" +
+            "                                <div class=\"carousel-item active\">\n" +
+            "                                    <img class=\"d-block w-100\" height=\"380\"  src=\"img/1a.jpg\">\n" +
+            "                                </div>\n" +
+            "                                <div class=\"carousel-item\">\n" +
+            "                                    <img class=\"d-block w-100\" height=\"380\" src=\"img/2a.jpg\">\n" +
+            "                                </div>\n" +
+            "                                <div class=\"carousel-item\">\n" +
+            "                                    <img class=\"d-block w-100\" height=\"380\" src=\"img/3a.jpg\"\">\n" +
+            "                                </div>\n" +
+            "                            </div>\n" +
+            "                            <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">\n" +
+            "                                <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n" +
+            "                                <span class=\"sr-only\">Previous</span>\n" +
+            "                            </a>\n" +
+            "                            <a class=\"carousel-control-next\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"next\">\n" +
+            "                                <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n" +
+            "                                <span class=\"sr-only\">Next</span>\n" +
+            "                            </a>\n" +
+            "                        </div>"
     },
     {
         "year": 2003,
@@ -78,7 +133,8 @@ var data =[
         "title": "NYU Anti-Iraq War Protests",
         "text": "In 2003, over 36 million people protested the US and British invasion of Iraq. Whilst most of these " +
             "protests were in the UK, one artistic and memorable protests was performed by New York University students, " +
-            "who created a peace sign on the floor of their library."
+            "who created a peace sign on the floor of their library.",
+        "content" : "    <img src=\"img/1b.jpg\" height=\"380\" width=\"100%\">"
 
     },
     {
@@ -89,7 +145,8 @@ var data =[
         "text": "After a black female student was allegedly prevented from attending a fraternity party because she " +
             "was not white, 1000 Yale students gathered for a 'March of Resilience', a march from the Afro-American " +
             "Cultural Center to the Cross Campus. The parade consisted of students, faculty and administrators, " +
-            "who gave speeches about student unity."
+            "who gave speeches about student unity.",
+        "content" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/qdySFze5evk\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
     },
     {
         "year": 2017,
@@ -141,7 +198,7 @@ var years = [1964, 1965, 1968, 1970, 1985, 2003, 2015, 2017];
 var points = svg.selectAll("circle").data(data);
 points.enter().append("circle")
     .attr("class", "circle")
-    .attr("id", function(d, i){ console.log(years[i]);return years[i]})
+    .attr("id", function(d, i){ return years[i]})
     .attr("r", 10)
     .attr("cx", function(d){ return x(d.start)})
     .attr("cy", margin.top)
@@ -162,24 +219,16 @@ points.enter().append("circle")
 
 //     });
 
-var html = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5QqovCh0wFU\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>" ;
 
 $("circle").hover(function(){
     var myClass = Number($(this).attr("id"));
-    console.log(myClass);
     newdata = data.filter(function(d){
         return d.year === myClass
     });
-    console.log(newdata);
     $("#event-title").text(newdata[0].title);
     $("#event-info").text(newdata[0].text);
+    $("#event-content").html(newdata[0].content);
 
-    if (myClass == 1965){
-        $("#event-content").html(html);
-    }
-    if (myClass !== 1965){
-        $("#event-content").html("Hello world");
-    }
 });
 
 
