@@ -415,11 +415,11 @@ blockquote {
     text-align: center;
 }
 
-/* Style northward tooltips differently */
-.d3-tip.n:after {
-    margin: -1px 0 0 0;
-    top: 100%;
-    left: 0;
+.d3-tip.e:after {
+    content: "\25C0";
+    margin: -4px 0 0 0;
+    top: 50%;
+    left: -8px;
 }
 
 #timeline {

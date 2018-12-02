@@ -9,7 +9,7 @@ LineGraph = function(_parentElement, _data, _speakerType){
     this.parentElement = _parentElement;
     this.data = _data;
     this.initVis();
-}
+};
 
 
 /*
@@ -36,7 +36,7 @@ LineGraph.prototype.initVis = function(){
         .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
     //Initialize Speaker choice
-    vis.speakerType = "spkcom";
+    vis.speakerType = "spkmil";
 
     // Scales and axes
     vis.x = d3.scaleTime()
@@ -67,55 +67,55 @@ LineGraph.prototype.initVis = function(){
     vis.legendBoxSize = 15;
     vis.svg.append("rect")
         .attr("class", "line-legend-first")
-        .attr("x", vis.width - 2*vis.margin.left)
-        .attr("y", vis.height - 2*vis.margin.bottom)
+        .attr("x", vis.margin.left)
+        .attr("y", vis.margin.bottom / 2 - 10)
         .attr("height", vis.legendBoxSize + "px")
         .attr("width", vis.legendBoxSize + "px")
         .attr("fill", "white");
 
     vis.svg.append("rect")
         .attr("class", "line-legend-second")
-        .attr("x", vis.width - 2*vis.margin.left)
-        .attr("y", vis.height - 2*vis.margin.bottom + 1.5*vis.legendBoxSize)
+        .attr("x", vis.margin.left)
+        .attr("y", vis.margin.bottom / 2 + 1.5*vis.legendBoxSize - 10)
         .attr("height", vis.legendBoxSize + "px")
         .attr("width", vis.legendBoxSize + "px")
         .attr("fill", "white");
 
     vis.svg.append("rect")
         .attr("class", "line-legend-third")
-        .attr("x", vis.width - 2*vis.margin.left)
-        .attr("y", vis.height - 2*vis.margin.bottom + 3*vis.legendBoxSize)
+        .attr("x", vis.margin.left)
+        .attr("y", vis.margin.bottom / 2 + 3*vis.legendBoxSize - 10)
         .attr("height", vis.legendBoxSize + "px")
         .attr("width", vis.legendBoxSize + "px")
         .attr("fill", "white");
 
     vis.svg.append("rect")
         .attr("class", "line-legend-fourth")
-        .attr("x", vis.width - 2*vis.margin.left)
-        .attr("y", vis.height - 2*vis.margin.bottom + 4.5*vis.legendBoxSize)
+        .attr("x", vis.margin.left)
+        .attr("y", vis.margin.bottom / 2 + 4.5*vis.legendBoxSize - 10)
         .attr("height", vis.legendBoxSize + "px")
         .attr("width", vis.legendBoxSize + "px")
         .attr("fill", "white");
 
     vis.svg.append("text")
         .attr("class", "line-legend-first")
-        .attr("x", vis.width - 2*vis.margin.left + 1.3*vis.legendBoxSize)
-        .attr("y", vis.height - 2*vis.margin.bottom + .9*vis.legendBoxSize);
+        .attr("x", vis.margin.left + 1.3*vis.legendBoxSize)
+        .attr("y", vis.margin.bottom / 2 + .9*vis.legendBoxSize - 10);
 
     vis.svg.append("text")
         .attr("class", "line-legend-second")
-        .attr("x", vis.width - 2*vis.margin.left + 1.3*vis.legendBoxSize)
-        .attr("y", vis.height - 2*vis.margin.bottom + 2.4*vis.legendBoxSize);
+        .attr("x", vis.margin.left + 1.3*vis.legendBoxSize)
+        .attr("y", vis.margin.bottom / 2 + 2.4*vis.legendBoxSize - 10);
 
     vis.svg.append("text")
         .attr("class", "line-legend-third")
-        .attr("x", vis.width - 2*vis.margin.left + 1.3*vis.legendBoxSize)
-        .attr("y", vis.height - 2*vis.margin.bottom + 3.9*vis.legendBoxSize);
+        .attr("x", vis.margin.left + 1.3*vis.legendBoxSize)
+        .attr("y", vis.margin.bottom / 2 + 3.9*vis.legendBoxSize - 10);
 
     vis.svg.append("text")
         .attr("class", "line-legend-fourth")
-        .attr("x", vis.width - 2*vis.margin.left + 1.3*vis.legendBoxSize)
-        .attr("y", vis.height - 2*vis.margin.bottom + 5.4*vis.legendBoxSize);
+        .attr("x", vis.margin.left + 1.3*vis.legendBoxSize)
+        .attr("y", vis.margin.bottom / 2 + 5.4*vis.legendBoxSize - 10);
 
 
     // (Filter, aggregate, modify data)
@@ -291,9 +291,42 @@ var t = d3.transition().duration(200);
 
 LineGraph.prototype.updateVis = function(lineType){
     var vis = this;
-    // Set domains
-    var minMaxY= [25, 100];
-    vis.y.domain(minMaxY);
+
+
+
+    // SET UP AXES
+
+    //Set y domain based on filter type
+    if(lineType==="sex") {
+        var minMale = d3.min(vis.nestedMale, function(d) {return d.value;});
+        var minFemale = d3.min(vis.nestedFemale, function(d) {return d.value;});
+        vis.minMaxY = [Math.floor(d3.min([minMale, minFemale]) / 10) * 10, 100];
+    }
+    else if(lineType==="political-party"){
+        var minRepublican = d3.min(vis.nestedRepublican, d => d.value);
+        var minDemocrat = d3.min(vis.nestedDemocrat, d => d.value);
+        var minIndependent = d3.min(vis.nestedIndependent, d => d.value);
+        vis.minMaxY = [Math.floor(d3.min([minRepublican, minDemocrat, minIndependent]) / 10) * 10, 100];
+    }
+    else if(lineType==="degree"){
+        var minCollege = d3.min(vis.nestedCollege, d => d.value);
+        var minHs = d3.min(vis.nestedHs, d => d.value);
+        var minLths = d3.min(vis.nestedLths, d => d.value);
+        vis.minMaxY = [Math.floor(d3.min([minCollege, minHs, minLths]) / 10) * 10, 100];
+    }
+    else if(lineType==="age"){
+        var minYoungest = d3.min(vis.nestedYoungestRange, d => d.value);
+        var minMidOne = d3.min(vis.nestedMiddleOneRange, d => d.value);
+        var minMidTwo = d3.min(vis.nestedMiddleTwoRange, d => d.value);
+        var minOldest = d3.min(vis.nestedOldestRange, d => d.value);
+        vis.minMaxY = [Math.floor(d3.min([minYoungest, minMidOne, minMidTwo, minOldest]) / 10) * 10, 100];
+    }
+    else {
+        var minY = Math.floor(d3.min(vis.nestedTotal, function(a) {return a.value;}));
+        vis.minMaxY = [Math.floor(minY / 10) * 10, 100];
+    }
+
+    vis.y.domain(vis.minMaxY);
 
     var minMaxX = d3.extent(vis.nestedTotal.map(function(d){ return d.key; }));
     vis.x.domain(minMaxX);
@@ -303,7 +336,7 @@ LineGraph.prototype.updateVis = function(lineType){
 
     vis.yAxis = d3.axisLeft()
         .scale(vis.y)
-        .tickValues([30, 40, 50, 60, 70, 80, 90, 100])
+        .tickValues([20, 30, 40, 50, 60, 70, 80, 90, 100])
         .tickFormat(d => d + "%");
 
 
@@ -447,8 +480,6 @@ LineGraph.prototype.updateVis = function(lineType){
             .text("");
         vis.svg.select("text.line-legend-fourth")
             .text("");
-
-
     }
     else if(lineType==="political-party"){
         vis.lineType = "political-party";
@@ -636,6 +667,7 @@ LineGraph.prototype.updateVis = function(lineType){
             .text("");
         vis.svg.select("text.line-legend-fourth")
             .text("");
+
     }
 
     // Call axis functions with the new domain
@@ -652,5 +684,5 @@ LineGraph.prototype.speakerChanged = function(speaker){
     vis.speakerType = speaker;
 
     vis.wrangleData(vis.lineType);
-}
+};
 
