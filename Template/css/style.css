@@ -63,7 +63,7 @@ h3 {
     height: 120px;
 }
 #first-amendment-info{
-    height: 500px;
+    height: 600px;
 }
 
 #flag {
@@ -199,7 +199,7 @@ h3 {
 
 
 #mapViz {
-    height: 600px;
+    height: 640px;
 }
 
 #map .usmap{
@@ -335,8 +335,8 @@ a {
 
 }
 #first-amendment:before, #first-amendment:after {
-    font-size: 4em;
-    position: absolute;
+    font-size: 3.5em;
+    position: absolute
 }
 #first-amendment:before {
     content: open-quote;
@@ -347,6 +347,10 @@ a {
     content: close-quote;
     right: 1.09em;
     bottom: -0.8em;
+}
+
+blockquote {
+    padding-right: 65px;
 }
 
 /*********************/
