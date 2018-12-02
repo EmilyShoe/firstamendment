@@ -166,6 +166,10 @@ h3 {
     transform: scale(1.75, 1.75);
 }
 
+#bostonVideo, #kentVideo, #yaleVideo {
+    visibility: hidden;
+}
+
 /*#kentVideo {*/
     /*position: absolute;*/
     /*width: 250px;*/
@@ -186,7 +190,7 @@ h3 {
 
 #line-graphs {
     width: 100%;
-    height: 500px;
+    height: 600px;
 }
 
 #linegraph-description{
@@ -195,7 +199,7 @@ h3 {
 
 
 #mapViz {
-    height: 550px;
+    height: 600px;
 }
 
 #map .usmap{
@@ -391,9 +395,9 @@ a {
     left: 0;
 }
 
-#visual-timeline {
+#timeline {
     width: 100%;
-    height: 700px;
+    height: 600px;
 }
 
 #aeiVideo{
@@ -419,6 +423,17 @@ a {
 
 .infoText {
     font-family: "Actor", sans-serif;
+}
+
+#event-info {
+    font-family: "Actor", sans-serif;
+    height: 500px;
+    padding-left: 100px;
+}
+
+#event-title{
+    text-align: center;
+    padding-top: 10px;
 }
 
 

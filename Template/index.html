@@ -76,8 +76,6 @@
                   </div>
                   <div class="col-6" id="quiz">
 
-                      <p id="quiz-title"><strong>Which of these would violate your First Amendment right?</strong></p>
-
                       <p id="quiz-title">Would the First Amendment Protect You From This?</p>
 
                       <table id="quiz-qs"></table>
@@ -96,25 +94,26 @@
 
 
             <!-- Timeline -->
-            <div id="visual-timeline">
+            <div id="timeline">
               <audio id="saviosound" controls>
                 <source src="data/timeline/savio.mp3" type="audio/mp3">
               </audio>
                 <audio id="milosound" controls>
                     <source src="data/timeline/milo.mp3" type="audio/mp3">
                 </audio>
-                <div id="FSM">
-
+                <div id="visual-timeline"></div>
+                <h1 id="event-title" style=""></h1>
+                <div class="row">
+                    <div class="col-6" id="event-info"></div>
+                    <div class="col-6" height="600" id="event-content">
+                        <div height =100px" class="col-12" >
+                            <img height="100" src="img/bostonvietnam.jpg">
+                            <img height ="100" src="img/antiwar.jpeg">
+                        </div>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5QqovCh0wFU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 </div>
-                <video id="bostonVideo" class="1965" autoplay loop>
-                    <source src="data/timeline/boston.mp4" type="video/mp4">
-                </video>
-                <!--<video id="kentVideo" class="1970" autoplay loop muted>-->
-                    <!--<source src="data/timeline/kentstate.mp4" type="video/mp4">-->
-                <!--</video>-->
-                <!--<video id="yaleVideo" class="2015" autoplay loop muted>-->
-                    <!--<source src="data/timeline/yale.mp4" type="video/mp4">-->
-                <!--</video>-->
+
             </div>
         </div>
     </div>
@@ -260,7 +259,7 @@
 
 
   <!-- Visualization objects -->
-  <script src="js/timeline.js"></script>
+  <script src="js/timeline_new.js"></script>
   <script src="js/lineGraph.js"></script>
   <script src="js/collegesMap.js"></script>
   <script src="js/disinvitationAttempts.js"></script>
