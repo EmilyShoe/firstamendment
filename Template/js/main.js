@@ -40,7 +40,9 @@ function createVis(error, gssSpeech, colleges, disinvitations) {
             Year : d.Year,
             School : d.School,
             trafficLight : d.trafficLight,
-            trafficId : +d.trafficId
+            trafficId : +d.trafficId - 1,
+            disinvitationId : +d.disinvitationId - 1,
+            trafficDisinviteId : +d.trafficDisinviteId - 1
 
         };
     });
