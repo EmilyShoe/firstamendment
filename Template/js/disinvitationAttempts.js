@@ -35,7 +35,8 @@ DisinvitationAttempts.prototype.initVis = function(){
     //Initialize tooltips
     vis.tip = d3.tip()
         .attr('class', 'd3-tip')
-        .offset([-10, 0])
+        //.offset([-10, 0])
+        .direction('e')
         .html(function(d) {
             return "<strong>Speaker: </strong>" + d.Speaker + "</br>" +
                     "<strong>Year: </strong>" + d.Year + "</br>" +
