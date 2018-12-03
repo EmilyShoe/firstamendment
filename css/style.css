@@ -14,6 +14,8 @@ h3 {
     font-family: 'Abril Fatface', sans-serif;
 }
 
+
+
 #title {
   font-weight: 100;
   font-size: 80px;
@@ -230,6 +232,7 @@ h3 {
     height: 200px;
     background-color:  #3679A9;
     text-color: white;
+
 }
 
 .creds {
@@ -241,6 +244,7 @@ h3 {
     font-family: "Actor", sans-serif;
     font-size: 14px;
     padding-left: 50px;
+    text-decoration: underline;
 
 }
 
